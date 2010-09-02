@@ -1,0 +1,6 @@
+=link_to 'new list', new_list_path
+%ul#lists
+  -for list in @lists
+    %li.list
+      .name
+        =link_to h(list.name), list_path(list)

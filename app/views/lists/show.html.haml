@@ -1,0 +1,21 @@
+%form#new_item(method="post")
+  =text_field_tag "item[body]"
+%ul#items
+  -for item in @list.items
+    =render :partial => "lists/item", :object => item
+        
+:javascript
+  $(document).ready(function() {
+    $("#new_item").submit(function(e) {
+      e.preventDefault();
+      var url = "#{list_items_path(@list, :format => :js)}";
+      $.post(url, $(e.currentTarget).serialize(), function(data) {
+        $("#items").append(data);
+      });
+    });
+    
+    $("#items").sortable({axis:"y", containment:'parent', cursor:'move', update:function(event, ui) {
+      var data = {items : $("#items").sortable('toArray')};
+      $.post("#{reorder_list_items_path(@list)}", data);
+    }});
+  });
