@@ -6,7 +6,7 @@ if db_config[Rails.env] && db_config[Rails.env]['adapter'] == 'mongodb'
   mongo = db_config[Rails.env]
   
   if mongo["uri"]
-    MongoMapper.config = {RAILS_ENV => {'uri' => mongo['uri']}}
+    MongoMapper.config = {RAILS_ENV => {'uri' => 'mongodb://psmisc:stayclassyyo@flame.mongohq.com:27082/wickedlist'}}
     MongoMapper.connect(RAILS_ENV)
   else
     MongoMapper.connection = Mongo::Connection.new(mongo['host'], mongo['port'], :logger => Rails.logger)
