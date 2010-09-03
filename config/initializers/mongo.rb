@@ -1,16 +1,21 @@
 require "#{RAILS_ROOT}/lib/logger_format"
 
 db_config = YAML::load(File.read(RAILS_ROOT + "/config/database.yml"))
-MongoMapper.config = {RAILS_ENV => {'uri' => 'mongodb://psmisc:stayclassyyo@flame.mongohq.com:27082/wickedlist'}}
-MongoMapper.connect(RAILS_ENV)
+
 if db_config[Rails.env] && db_config[Rails.env]['adapter'] == 'mongodb'
   mongo = db_config[Rails.env]
   
-    MongoMapper.config = {RAILS_ENV => {'uri' => 'mongodb://psmisc:stayclassyyo@flame.mongohq.com:27082/wickedlist'}}
+  if mongo["uri"]
+    MongoMapper.config = {RAILS_ENV => {'uri' => mongo['uri']}}
     MongoMapper.connect(RAILS_ENV)
-#    MongoMapper.connection = Mongo::Connection.new(mongo['host'], mongo['port'], :logger => Rails.logger)
-#    MongoMapper.database = mongo['database']
-#    MongoMapper.database.authenticate(mongo['username'], mongo['password'])
+  else
+    MongoMapper.connection = Mongo::Connection.new(mongo['host'], mongo['port'], :logger => Rails.logger)
+    MongoMapper.database = mongo['database']
+    MongoMapper.database.authenticate(mongo['username'], mongo['password'])
+  end
+elsif Rails.env == 'production'
+  MongoMapper.config = {RAILS_ENV => {'uri' => 'mongodb://psmisc:stayclassyyo@flame.mongohq.com:27082/wickedlist'}}
+  MongoMapper.connect(RAILS_ENV)
 end
 
 #identity map plugin for mongomapper
