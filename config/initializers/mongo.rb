@@ -1,7 +1,8 @@
 require "#{RAILS_ROOT}/lib/logger_format"
 
 db_config = YAML::load(File.read(RAILS_ROOT + "/config/database.yml"))
-
+MongoMapper.config = {RAILS_ENV => {'uri' => 'mongodb://psmisc:stayclassyyo@flame.mongohq.com:27082/wickedlist'}}
+MongoMapper.connect(RAILS_ENV)
 if db_config[Rails.env] && db_config[Rails.env]['adapter'] == 'mongodb'
   mongo = db_config[Rails.env]
   
