@@ -3,3 +3,8 @@
     =form.input :name
   -form.buttons do
     =form.commit_button "create list"
+    
+:javascript
+  $(document).ready(function() {
+    $("#list_name").focus()
+  });

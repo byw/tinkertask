@@ -1,10 +1,10 @@
 #user[current_user]
-  =link_to 'new list', new_list_path
+  .nav
+    =link_to 'new list', new_list_path, :class => "new_list button"
   %ul#lists
     -for list in @lists
       %li.list{:id => list.id}
-        .handle(style="display:inline")
-          drag
+        .handle(style="display:inline") DRAG
         .name(style="display:inline")
           =link_to h(list.name), list_path(list)
         

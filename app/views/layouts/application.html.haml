@@ -5,8 +5,16 @@
     =stylesheet_link_tag "compiled/screen"
     =javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
     =javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"
+    %title
+      lists
   %body
-    #header
-      welcome
-      =current_user.username if current_user
-    =yield
+    #container
+      #header
+        =link_to "my lists", lists_path
+        #account
+          -if current_user
+            =link_to h(current_user.username), edit_user_path
+            \.
+            =link_to 'logout', session_path, :method => "delete"
+      #content
+        =yield

@@ -2,5 +2,5 @@
   .complete
   .body
     =h(item.body)
-  -form_for item, :url => list_item_path(@list, item, :format => :js), :html => {:style => "display:none"} do |form|
+  -form_for item, :html => {:style => "display:none"} do |form|
     =form.text_field :body, :class => "item_body"

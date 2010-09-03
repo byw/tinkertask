@@ -4,7 +4,7 @@ class User
   has_many :lists, :order => "position ASC"
   has_many :items
   
-  key :username, String, :index => true, :unique => true
+  key :username, String, :index => true, :unique => true, :required => true
   key :crypted_password, String
   key :salt, String
   attr_accessor :password, :password_confirmation

@@ -1,13 +1,16 @@
 class ItemsController < ApplicationController
   inherit_resources
   include InheritedResources::DSL
+  before_filter :require_user
   
   create! do |success|
     success.js {render :partial => "lists/item", :object => @item}
+    success.html {redirect_to list_path(@item.list)}
   end
   
   update! do |success|
     success.js {render :json => resource}
+    success.html {redirect_to list_path(@item.list)}
   end
   
   def reorder

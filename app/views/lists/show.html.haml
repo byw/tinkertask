@@ -1,15 +1,16 @@
 #list
-  %h3#info
-    #name
+  #info
+    %h3#name
       =h(@list.name)
-    -form_for @list, :url => list_path(@list, :format => :js), :html => {:style => "display:none"} do |form|
+    -form_for @list, :html => {:style => "display:none"} do |form|
       =form.text_field :name
       =form.submit "change list name"
+      %input(type="button" value="cancel" class="cancel button")
 
   %form#new_item(method="post")
     =text_field_tag "item[body]"
     =submit_tag "add item"
-  %ul#items(style="padding:5px")
+  %ul#items
     -for item in @list.items
       =render :partial => "lists/item", :object => item
         
@@ -43,8 +44,9 @@
       
       form.submit(function(event) {
         event.preventDefault();
-        $.post(form.attr("action"), form.serialize(), function(data) {
+        $.post(form.attr("action")+".js", form.serialize(), function(data) {
           body.text(data.body);
+          form.unbind();
           form.hide();
           body.show();
         }, "json");
@@ -58,13 +60,20 @@
           form = $(this).find("form:first");
       name.hide();
       form.show();
+      form.find("#list_name").focus();
       form.submit(function(formEvent) {
         formEvent.preventDefault();
-        $.post(form.attr("action"), form.serialize(), function(data) {
+        $.post(form.attr("action")+".js", form.serialize(), function(data) {
           name.text(data.name);
+          form.unbind();
           form.hide();
           name.show();
         }, "json");
+      });
+      form.find(".cancel.button").click(function(e) {
+        form.unbind();
+        form.hide();
+        name.show();
       });
     });
   });

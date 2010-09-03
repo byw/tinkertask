@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller => "session", :action => "new"
-  map.resources :users
+  map.resources :users, :only => [:new, :create], :as => "users"
+  map.resource :user, :only => [:edit, :update, :destroy], :as => "user"
   map.resource :session, :controller => 'session' do |session|
-    session.resource :user
+#    session.resource :user
   end
   map.resources :lists, :collection => {:reorder => :post} do |list|
     list.resources :items, :collection => {:reorder => :post}

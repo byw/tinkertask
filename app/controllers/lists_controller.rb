@@ -1,9 +1,11 @@
 class ListsController < ApplicationController
   inherit_resources
   include InheritedResources::DSL
+  before_filter :require_user
   
   update! do |success|
     success.js {render :json => @list}
+    success.html {redirect_to list_path(@list)}
   end
   
   def reorder
