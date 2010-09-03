@@ -6,6 +6,10 @@ class ItemsController < ApplicationController
     success.js {render :partial => "lists/item", :object => @item}
   end
   
+  update! do |success|
+    success.js {render :json => resource}
+  end
+  
   def reorder
     new_items = params[:items].map do |id|
       list.items.find(id)
@@ -17,13 +21,15 @@ class ItemsController < ApplicationController
   
   protected
   
+    def resource
+      @item ||= list.items.find(params[:id])
+    end
+  
     def list
       @list ||= current_user.lists.find(params[:list_id])
     end
   
     def build_resource
       @item ||= list.items.build(params[:item])
-      @item.user = current_user
-      @item
     end
 end

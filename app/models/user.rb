@@ -1,7 +1,7 @@
 class User
   include MongoMapper::Document
   
-  has_many :lists
+  has_many :lists, :order => "position ASC"
   has_many :items
   
   key :username, String, :index => true, :unique => true

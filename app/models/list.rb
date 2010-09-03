@@ -6,5 +6,6 @@ class List
   
   key :name, String, :required => true
   key :position, Integer
+  key :user_id, ObjectId
   
 end

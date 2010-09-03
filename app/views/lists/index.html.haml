@@ -1,6 +1,19 @@
 =link_to 'new list', new_list_path
 %ul#lists
   -for list in @lists
-    %li.list
-      .name
+    %li.list{:id => list.id}
+      .handle(style="display:inline")
+        drag
+      .name(style="display:inline")
         =link_to h(list.name), list_path(list)
+        
+:javascript
+  $(document).ready(function() {
+    $("#lists").sortable({axis:'y', handle:'.handle', update:function(event, ui) {
+      var url = "#{reorder_lists_path}",
+         data = {lists : $("#lists").sortable('toArray')};
+      $.post(url, data, function(data) {
+        
+      }, "json");
+    }});
+  });

@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session, :controller => 'session' do |session|
     session.resource :user
   end
-  map.resources :lists, :member => {:reorder => :post} do |list|
+  map.resources :lists, :collection => {:reorder => :post} do |list|
     list.resources :items, :collection => {:reorder => :post}
   end
   # The priority is based upon order of creation: first created -> highest priority.
