@@ -132,6 +132,7 @@ body #container #header #account {
   overflow: hidden;
   display: inline-block;
   padding: 1em;
+  padding-bottom: 1.2em;
   margin-bottom: 1px;
   background-color: #ddd;
 }
@@ -141,7 +142,6 @@ body #container #header #account {
 }
 /* line 63, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
-  float: right;
   background-color: #888;
   color: #fff;
   font-size: 0.5em;
@@ -149,59 +149,91 @@ body #container #header #account {
   cursor: move;
   margin-right: 0.5em;
 }
+/* line 72, ../../../app/stylesheets/screen.scss */
+#lists .list .delete.button {
+  float: right;
+}
 
-/* line 76, ../../../app/stylesheets/screen.scss */
+/* line 79, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
+  cursor: pointer;
 }
-/* line 78, ../../../app/stylesheets/screen.scss */
+/* line 82, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 1em;
 }
-/* line 83, ../../../app/stylesheets/screen.scss */
+/* line 87, ../../../app/stylesheets/screen.scss */
 #list #info #name:hover {
   background-color: #ddd;
 }
-/* line 86, ../../../app/stylesheets/screen.scss */
+/* line 90, ../../../app/stylesheets/screen.scss */
 #list #info form {
   background-color: #ddd;
   padding: 1em;
 }
-/* line 89, ../../../app/stylesheets/screen.scss */
+/* line 93, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   display: block;
   width: 458px;
 }
-/* line 95, ../../../app/stylesheets/screen.scss */
+/* line 99, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 1em;
 }
-/* line 99, ../../../app/stylesheets/screen.scss */
+/* line 103, ../../../app/stylesheets/screen.scss */
 #list form#new_item #item_body {
   width: 300px;
 }
-/* line 103, ../../../app/stylesheets/screen.scss */
-#list #items {
+/* line 107, ../../../app/stylesheets/screen.scss */
+#list .items {
   padding: 0px;
 }
-/* line 105, ../../../app/stylesheets/screen.scss */
-#list #items .item {
+/* line 109, ../../../app/stylesheets/screen.scss */
+#list .items .item {
   background-color: #777;
   color: #fff;
   padding: 0.8em;
   margin-bottom: 1px;
-  cursor: move;
   font-size: 0.8em;
+  overflow: hidden;
+  display: inline-block;
 }
-/* line 112, ../../../app/stylesheets/screen.scss */
-#list #items .item .body {
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+#list .items .item {
+  display: block;
+}
+/* line 116, ../../../app/stylesheets/screen.scss */
+#list .items .item .item_complete {
+  float: left;
+  margin-right: 5px;
+}
+/* line 120, ../../../app/stylesheets/screen.scss */
+#list .items .item .body {
   cursor: move;
+  float: left;
 }
-/* line 115, ../../../app/stylesheets/screen.scss */
-#list #items .item input[type="text"] {
-  width: 470px;
+/* line 124, ../../../app/stylesheets/screen.scss */
+#list .items .item input[type="text"] {
+  width: 438px;
+}
+/* line 125, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete.button {
+  float: right;
+}
+/* line 127, ../../../app/stylesheets/screen.scss */
+#list .items .item:hover {
+  background-color: #aaa;
+}
+/* line 130, ../../../app/stylesheets/screen.scss */
+#list .items .item.complete {
+  background-color: #ccc;
+}
+/* line 135, ../../../app/stylesheets/screen.scss */
+#list #completed_items {
+  margin-top: 2em;
 }

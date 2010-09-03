@@ -1,7 +1,7 @@
-%li.item{:id => item.id}
-  .complete
+%li.item{:id => item.id, :class => "#{'complete' if item.complete}"}
+  =check_box_tag "item[complete]", "1", item.complete, :class => "item_complete"
   .body
     =h(item.body)
-    (#{item.list.name})
+  =link_to 'x', list_item_path(@list, item), :method => :delete, :confirm => 'Are you sure?', :class => 'delete button'
   -form_for [@list, item], :html => {:style => "display:none"} do |form|
     =form.text_field :body, :class => "item_body"

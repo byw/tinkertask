@@ -7,6 +7,8 @@
         .handle(style="display:inline") DRAG
         .name(style="display:inline")
           =link_to h(list.name), list_path(list)
+        .delete.button
+          =link_to 'x', list_path(list), :method => :delete, :confirm => "Are you sure?"
         
 :javascript
   $(document).ready(function() {

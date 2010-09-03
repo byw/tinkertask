@@ -57,11 +57,11 @@ form#new_user {
   .list {
     @include clearfix;
     padding: 1em;
-//    padding-bottom: 1.2em;
+    padding-bottom: 1.2em;
     margin-bottom: 1px;
     background-color: #ddd;
     .handle {
-      float: right;
+//      float: right;
       background-color: #888;
       color: #fff;
       font-size: 0.5em;
@@ -69,12 +69,16 @@ form#new_user {
       cursor: move;
       margin-right: 0.5em;
     }
+    .delete.button {
+      float: right;
+    }
   }
 }
 
 #list {
   #info {
     text-align: center;
+    cursor: pointer;
     #name {
       font-size: 1.5em;
       font-weight: bold;
@@ -100,21 +104,35 @@ form#new_user {
       width: 300px;
     }
   }
-  #items {
+  .items {
     padding: 0px;
     .item {
       background-color: #777;
       color: #fff;
       padding: 0.8em;
       margin-bottom: 1px;
-      cursor: move;
       font-size: 0.8em;
+      @include clearfix;
+      .item_complete {
+        float: left;
+        margin-right: 5px;
+      }
       .body {
         cursor: move;
+        float: left;
       }
-      input[type="text"] {
-        width: 470px;
-      }
+      input[type="text"] {width: 438px;}
+      .delete.button {float: right;}
     }
+    .item:hover {
+      background-color: #aaa;
+    }
+    .item.complete {
+      background-color: #ccc;
+    }
+  }
+  
+  #completed_items {
+    margin-top: 2em;
   }
 }

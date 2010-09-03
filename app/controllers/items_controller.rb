@@ -13,6 +13,12 @@ class ItemsController < ApplicationController
     success.html {redirect_to list_path(@item.list)}
   end
   
+  def destroy
+    list.items.delete_if {|i| i == resource}
+    list.save
+    redirect_to list_path(list)
+  end
+  
   def reorder
     new_items = params[:items].map do |id|
       list.items.find(id)

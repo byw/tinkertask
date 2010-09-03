@@ -4,15 +4,19 @@
       =h(@list.name)
     -form_for @list, :html => {:style => "display:none"} do |form|
       =form.text_field :name
-      =form.submit "change list name"
-      %input(type="button" value="cancel" class="cancel button")
 
   %form#new_item(method="post")
     =text_field_tag "item[body]"
     =submit_tag "add item"
-  %ul#items
+  %ul#items.items
     -for item in @list.items
-      =render :partial => "lists/item", :object => item
+      -unless item.complete
+        =render :partial => "lists/item", :object => item
+      
+  %ul#completed_items.items
+    -for item in @list.items
+      -if item.complete
+        =render :partial => "lists/item", :object => item
         
 :javascript
   $(document).ready(function() {
@@ -55,25 +59,37 @@
         form.submit()});
     });
     
-    $("#info:first").dblclick(function(e) {
+    $("#info:first").click(function(e) {
       var name = $(this).find("#name"),
-          form = $(this).find("form:first");
+          form = $(this).find("form:first"),
+          nameField = form.find("#list_name");
       name.hide();
       form.show();
       form.find("#list_name").focus();
-      form.submit(function(formEvent) {
+      function updateList(formEvent) {
         formEvent.preventDefault();
         $.post(form.attr("action")+".js", form.serialize(), function(data) {
           name.text(data.name);
           form.unbind();
+          nameField.unbind();
           form.hide();
           name.show();
         }, "json");
-      });
-      form.find(".cancel.button").click(function(e) {
-        form.unbind();
-        form.hide();
-        name.show();
-      });
+      }
+      form.submit(updateList);
+      nameField.blur(updateList);
+    });
+    
+    $(".item_complete").change(function(e) {
+      var item = $(this).parents(".item:first"),
+          url = "/lists/#{@list.id}/items/" + item.attr("id") + ".js",
+          complete = false;
+      if (item.hasClass("complete")) {
+        item.removeClass("complete");
+      } else {
+        item.addClass("complete");
+        complete = true;
+      }
+      $.post(url, {_method:'put', item:{complete:complete}});
     });
   });
