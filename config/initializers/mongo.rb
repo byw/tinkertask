@@ -9,6 +9,8 @@ if db_config[Rails.env] && db_config[Rails.env]['adapter'] == 'mongodb'
   MongoMapper.database = mongo['database']
   MongoMapper.database.authenticate(mongo['username'], mongo['password'])
   
+  MongoMapper.connection.connect_to_master
+  
 end
 
 #identity map plugin for mongomapper
