@@ -1,0 +1,4 @@
+mongo_mapper
+haml
+inherited_resources -v 1.0.6
+formtastic
