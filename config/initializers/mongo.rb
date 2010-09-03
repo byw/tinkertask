@@ -4,8 +4,17 @@ db_config = YAML::load(File.read(RAILS_ROOT + "/config/database.yml"))
 
 if db_config[Rails.env] && db_config[Rails.env]['adapter'] == 'mongodb'
   mongo = db_config[Rails.env]
-  MongoMapper.connection = Mongo::Connection.new(mongo['hostname'], nil, :logger => Rails.logger)
+  
+  output = ""
+  mongo.each_pair do |k, v|
+    output << "#{k} : #{v}\n"
+  end
+#  raise output
+
+  MongoMapper.connection = Mongo::Connection.new(mongo['host'], mongo['port'], :logger => Rails.logger)
   MongoMapper.database = mongo['database']
+  MongoMapper.database.authenticate(mongo['username'], mongo['password'])
+  
 end
 
 #identity map plugin for mongomapper
