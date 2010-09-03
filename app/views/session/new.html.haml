@@ -1,5 +1,7 @@
 -form_tag session_path do
   =text_field_tag :username
   =password_field_tag :password
+  #login_error
+    =flash[:login_error] if flash[:login_error]
   =submit_tag "login"
 =link_to 'sign up', new_user_path

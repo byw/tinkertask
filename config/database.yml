@@ -14,8 +14,11 @@ test: &test
 
 production:
   adapter: mongodb
-  host: localhost
-  database: todo_production
+  host: flame.mongohq.com
+  port: 27082
+  database: wickedlist
+  username: psmisc
+  password: stayclassyyo
 
 cucumber:
   <<: *test
