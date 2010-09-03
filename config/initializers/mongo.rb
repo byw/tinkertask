@@ -11,7 +11,7 @@ if db_config[Rails.env] && db_config[Rails.env]['adapter'] == 'mongodb'
   else
     MongoMapper.connection = Mongo::Connection.new(mongo['host'], mongo['port'], :logger => Rails.logger)
     MongoMapper.database = mongo['database']
-    MongoMapper.database.authenticate(mongo['username'], mongo['password'])
+    MongoMapper.database.authenticate(mongo['username'], mongo['password']) if mongo['username'] && mongo['password']
   end
 elsif Rails.env == 'production'
   MongoMapper.config = {RAILS_ENV => {'uri' => 'mongodb://psmisc:stayclassyyo@flame.mongohq.com:27082/wickedlist'}}

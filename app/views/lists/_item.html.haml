@@ -2,5 +2,6 @@
   .complete
   .body
     =h(item.body)
-  -form_for item, :html => {:style => "display:none"} do |form|
+    (#{item.list.name})
+  -form_for [@list, item], :html => {:style => "display:none"} do |form|
     =form.text_field :body, :class => "item_body"

@@ -1,4 +1,4 @@
--semantic_form_for @user do |form|
+-semantic_form_for @user, :url => user_path, :method => 'put' do |form|
   =render :partial => "users/form", :object => form
   -form.buttons do
     =form.commit_button "update"
