@@ -79,6 +79,7 @@ form#new_user {
   #info {
     text-align: center;
     cursor: pointer;
+    height: 2em;
     #name {
       font-size: 1.5em;
       font-weight: bold;
@@ -112,13 +113,13 @@ form#new_user {
       padding: 0.8em;
       margin-bottom: 1px;
       font-size: 0.8em;
+      cursor: move;
       @include clearfix;
       .item_complete {
         float: left;
         margin-right: 5px;
       }
       .body {
-        cursor: move;
         float: left;
       }
       input[type="text"] {width: 438px;}

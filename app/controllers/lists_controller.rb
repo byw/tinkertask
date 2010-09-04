@@ -3,9 +3,15 @@ class ListsController < ApplicationController
   include InheritedResources::DSL
   before_filter :require_user
   
-  update! do |success|
+  update! do |success, failure|
     success.js {render :json => @list}
     success.html {redirect_to list_path(@list)}
+    
+    # use old list if validation fails
+    failure.js do
+      @list.reload
+      render :json => @list
+    end
   end
   
   def reorder
@@ -31,7 +37,7 @@ class ListsController < ApplicationController
     end
   
     def collection
-      @lists ||= current_user.lists.all :order => "position ASC"
+      @lists ||= current_user.lists.all
     end
     
 end

@@ -158,48 +158,50 @@ body #container #header #account {
 #list #info {
   text-align: center;
   cursor: pointer;
+  height: 2em;
 }
-/* line 82, ../../../app/stylesheets/screen.scss */
+/* line 83, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 1em;
 }
-/* line 87, ../../../app/stylesheets/screen.scss */
+/* line 88, ../../../app/stylesheets/screen.scss */
 #list #info #name:hover {
   background-color: #ddd;
 }
-/* line 90, ../../../app/stylesheets/screen.scss */
+/* line 91, ../../../app/stylesheets/screen.scss */
 #list #info form {
   background-color: #ddd;
   padding: 1em;
 }
-/* line 93, ../../../app/stylesheets/screen.scss */
+/* line 94, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   display: block;
   width: 458px;
 }
-/* line 99, ../../../app/stylesheets/screen.scss */
+/* line 100, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 1em;
 }
-/* line 103, ../../../app/stylesheets/screen.scss */
+/* line 104, ../../../app/stylesheets/screen.scss */
 #list form#new_item #item_body {
   width: 300px;
 }
-/* line 107, ../../../app/stylesheets/screen.scss */
+/* line 108, ../../../app/stylesheets/screen.scss */
 #list .items {
   padding: 0px;
 }
-/* line 109, ../../../app/stylesheets/screen.scss */
+/* line 110, ../../../app/stylesheets/screen.scss */
 #list .items .item {
   background-color: #777;
   color: #fff;
   padding: 0.8em;
   margin-bottom: 1px;
   font-size: 0.8em;
+  cursor: move;
   overflow: hidden;
   display: inline-block;
 }
@@ -207,33 +209,32 @@ body #container #header #account {
 #list .items .item {
   display: block;
 }
-/* line 116, ../../../app/stylesheets/screen.scss */
+/* line 118, ../../../app/stylesheets/screen.scss */
 #list .items .item .item_complete {
   float: left;
   margin-right: 5px;
 }
-/* line 120, ../../../app/stylesheets/screen.scss */
+/* line 122, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
-  cursor: move;
   float: left;
 }
-/* line 124, ../../../app/stylesheets/screen.scss */
+/* line 125, ../../../app/stylesheets/screen.scss */
 #list .items .item input[type="text"] {
   width: 438px;
 }
-/* line 125, ../../../app/stylesheets/screen.scss */
+/* line 126, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete.button {
   float: right;
 }
-/* line 127, ../../../app/stylesheets/screen.scss */
+/* line 128, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   background-color: #aaa;
 }
-/* line 130, ../../../app/stylesheets/screen.scss */
+/* line 131, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #ccc;
 }
-/* line 135, ../../../app/stylesheets/screen.scss */
+/* line 136, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-top: 2em;
 }

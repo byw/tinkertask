@@ -1,4 +1,10 @@
 class SessionController < ApplicationController
+  
+  def new
+    if current_user
+      redirect_to lists_path
+    end
+  end
 
   def create
     if user = User.authenticate(params[:username], params[:password])

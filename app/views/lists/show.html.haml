@@ -83,13 +83,14 @@
     $(".item_complete").change(function(e) {
       var item = $(this).parents(".item:first"),
           url = "/lists/#{@list.id}/items/" + item.attr("id") + ".js",
-          complete = false;
+          data = {'_method':'put', 'item':{'complete':false}};
       if (item.hasClass("complete")) {
         item.removeClass("complete");
+        $("#items").append(item);
       } else {
         item.addClass("complete");
-        complete = true;
+        data.item.complete = true;
       }
-      $.post(url, {_method:'put', item:{complete:complete}});
+      $.post(url, data);
     });
   });
