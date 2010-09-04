@@ -12,7 +12,7 @@
         
 :javascript
   $(document).ready(function() {
-    $("#lists").sortable({axis:'y', handle:'.handle', update:function(event, ui) {
+    $("#lists").sortable({axis:'y', handle:'.handle', tolerance:'pointer', containment:'parent', update:function(event, ui) {
       var url = "#{reorder_lists_path}",
          data = {lists : $("#lists").sortable('toArray')};
       $.post(url, data, function(data) {

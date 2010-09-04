@@ -5,14 +5,23 @@
 
 @import "compass/reset";
 @import "compass/utilities";
+@import "compass/css3/border-radius";
+@import "compass/css3/gradient";
+@import "compass/css3/box-shadow";
+@import "compass/css3/opacity";
 
 body {
+//  background: url('/images/bg.png');
+  background-color: #ddd;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
+  color: #777;
   #container {
     margin-left: auto;
     margin-right: auto;
     width: 500px;
     #header {
       @include clearfix;
+      @include border-bottom-radius(8px);
       background-color: #ddd;
       padding: 16px;
       margin-bottom: 1px;
@@ -23,15 +32,46 @@ body {
   }
 }
 
+a {
+  &:link {color: #888; text-decoration: none;};
+  &:visited {color: #888;}
+  &:hover {color: #aaa;}
+}
+
 .formtastic {
   background-color: #ddd;
   padding: 16px;
   label {
     display: block;
   }
-  input[type="text"] {
-    width: 458px;
+}  
+input[type="text"], input[type="password"] {
+  border: solid 3px #ccc;
+  padding: 5px;
+  @include border-radius(5px);
+}
+input[type="button"], input[type="submit"] {
+//  border: solid 1px #888;
+  border: none;
+  @include border-radius(3px);
+  padding: 5px 8px 5px 8px;
+  color: #fff;
+  &:hover {
+    background-color: #ccc;
   }
+}
+input[type="checkbox"] {
+  @include border-radius(2px);
+  -khtml-appearance: none;
+  background-color: #888;
+  vertical-align: middle;
+  width: 11px;
+  height: 11px;
+  &:hover {background-color: #aaa;};
+  &:checked {
+   background-color: #99CCFF;
+   border: solid 1px #888;
+  };
 }
 
 form#new_user {
@@ -68,6 +108,8 @@ form#new_user {
       padding: 0.5em;
       cursor: move;
       margin-right: 0.5em;
+      cursor: url(/images/grab.png), default;
+      &:active {cursor: url(/images/grabbing.png), default;};
     }
     .delete.button {
       float: right;
@@ -84,13 +126,15 @@ form#new_user {
       font-size: 1.5em;
       font-weight: bold;
       margin-top: 1em;
+      color: #555;
     }
     #name:hover {
       background-color: #ddd;
     }
     form {
+      @include clearfix;
       background-color: #ddd;
-      padding: 1em;
+      padding: 8px;
       input[type="text"] {
         display: block;
         width: 458px;
@@ -98,42 +142,80 @@ form#new_user {
     }
   }
   form#new_item {
+    @include clearfix;
     text-align: center;;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 8px;
+    margin-top: 8px;
     #item_body {
       width: 300px;
     }
   }
   .items {
-    padding: 0px;
+    background-color: #ddd;
+    @include border-radius(7px);
     .item {
+      $top-color: #bbb;
+      $bottom-color: #a3a3a3;
+//      @include box-shadow(#aaa, 1px, 0px, 2px);
+      @include border-radius(5px);
       background-color: #777;
+      @include linear-gradient(color-stops($top-color, $bottom-color));
       color: #fff;
       padding: 0.8em;
-      margin-bottom: 1px;
+      margin-bottom: 3px;
       font-size: 0.8em;
-      cursor: move;
       @include clearfix;
-      .item_complete {
-        float: left;
-        margin-right: 5px;
+      cursor: url(/images/grab.png), default;
+      &:active {cursor: url(/images/grabbing.png), default;};
+      &:hover {
+        @include linear-gradient(color-stops(lighten($top-color, 5), lighten($bottom-color, 5)));
+        background-color: #aaa;
       }
-      .body {
-        float: left;
+      table {
+        width: 100%;
+        border: 0;
+        .left {
+          width: 1px;
+          padding: 0;
+          .item_complete {
+          }
+        }
+        .center {
+          font-weight: bold;
+          position: absolute;
+          margin-top: 2px;
+          padding: 0 8px 0 8px;
+          input[type="text"] {
+            width: 411px;
+            padding: 1px;
+            margin-top: -1px;
+          }
+        }
+        .right {
+          width: 1px;
+          .delete.button {
+            text-decoration: none;
+            color: #fff;
+            font-family: verdana, arial;
+            &:hover {@include opacity(0.5);};
+          }
+        }
       }
-      input[type="text"] {width: 438px;}
-      .delete.button {float: right;}
-    }
-    .item:hover {
-      background-color: #aaa;
     }
     .item.complete {
       background-color: #ccc;
     }
   }
-  
   #completed_items {
     margin-top: 2em;
+  }
+  
+  #hint {
+    text-align: center;
+    padding: 16px;
+    margin-top: 32px;
+    color: #aaa;
+    background-color: #fff;
+    @include border-radius(8px)
   }
 }
