@@ -9,6 +9,7 @@
 @import "compass/css3/gradient";
 @import "compass/css3/box-shadow";
 @import "compass/css3/opacity";
+@import "compass/css3/box";
 
 body {
 //  background: url('/images/bg.png');
@@ -23,7 +24,7 @@ body {
       @include clearfix;
       @include border-bottom-radius(8px);
       background-color: #ddd;
-      padding: 16px;
+      padding: 16px 0 16px 0;
       margin-bottom: 1px;
       #account {
         float: right;
@@ -46,7 +47,7 @@ a {
   }
 }  
 input[type="text"], input[type="password"] {
-  border: solid 3px #ccc;
+//  border: solid 3px #ccc;
   padding: 5px;
   @include border-radius(5px);
 }
@@ -54,7 +55,8 @@ input[type="button"], input[type="submit"] {
 //  border: solid 1px #888;
   border: none;
   @include border-radius(3px);
-  padding: 5px 8px 5px 8px;
+  background-color: #aaa;
+  padding: 7px 8px 7px 8px;
   color: #fff;
   &:hover {
     background-color: #ccc;
@@ -70,7 +72,7 @@ input[type="checkbox"] {
   &:hover {background-color: #aaa;};
   &:checked {
    background-color: #99CCFF;
-   border: solid 1px #888;
+   border: solid 1px #6699CC;
   };
 }
 
@@ -120,35 +122,29 @@ form#new_user {
 #list {
   #info {
     text-align: center;
-    cursor: pointer;
-    height: 2em;
+    margin: 8px 0 16px 0;
     #name {
+      display: inline;
       font-size: 1.5em;
       font-weight: bold;
-      margin-top: 1em;
       color: #555;
     }
-    #name:hover {
-      background-color: #ddd;
-    }
     form {
-      @include clearfix;
       background-color: #ddd;
-      padding: 8px;
       input[type="text"] {
+        margin-left: auto;
+        margin-right: auto;
         display: block;
-        width: 458px;
+        width: 455px;
       }
     }
   }
   form#new_item {
-    @include clearfix;
     text-align: center;;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     margin-top: 8px;
-    #item_body {
-      width: 300px;
-    }
+    #item_body {width: 300px; margin-right: 11px;}
+    input[type="submit"] {width: 80px;}
   }
   .items {
     background-color: #ddd;
@@ -167,8 +163,9 @@ form#new_user {
       @include clearfix;
       cursor: default;
       &:hover {
-        @include linear-gradient(color-stops(lighten($top-color, 5), lighten($bottom-color, 5)));
-        background-color: #aaa;
+        $top-color-light: lighten($top-color, 5);
+        $bottom-color-light: lighten($bottom-color, 5);
+        @include linear-gradient(color-stops($top-color-light, $bottom-color-light));
       }
       table {
         width: 100%;
@@ -185,9 +182,9 @@ form#new_user {
           margin-top: 2px;
           padding: 0 8px 0 8px;
           input[type="text"] {
-            width: 411px;
-            padding: 1px;
-            margin-top: -1px;
+            width: 425px;
+            padding: 0px;
+            margin-top: -2px;
           }
         }
         .right {
@@ -202,6 +199,7 @@ form#new_user {
       }
     }
     .item.complete {
+      @include linear-gradient(color-stops(#ccc, #ccc));
       background-color: #ccc;
     }
   }

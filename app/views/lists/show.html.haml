@@ -1,6 +1,6 @@
 #list
   #info
-    %h3#name
+    %a#name(title="click to edit" href="#")
       =h(@list.name)
     -form_for @list, :html => {:style => "display:none"} do |form|
       =form.text_field :name
@@ -59,6 +59,8 @@
       field.blur(function() {
         form.submit()});
     });
+    
+    $("#info #name").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
     
     $("#info:first").click(function(e) {
       var name = $(this).find("#name"),
