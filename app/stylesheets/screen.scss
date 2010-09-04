@@ -165,8 +165,7 @@ form#new_user {
       margin-bottom: 3px;
       font-size: 0.8em;
       @include clearfix;
-      cursor: url(/images/grab.png), default;
-      &:active {cursor: url(/images/grabbing.png), default;};
+      cursor: default;
       &:hover {
         @include linear-gradient(color-stops(lighten($top-color, 5), lighten($bottom-color, 5)));
         background-color: #aaa;

@@ -316,56 +316,52 @@ input[type="checkbox"]:checked {
   font-size: 0.8em;
   overflow: hidden;
   display: inline-block;
-  cursor: url(/images/grab.png), default;
+  cursor: default;
 }
 /* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
 #list .items .item {
   display: block;
 }
 /* line 169, ../../../app/stylesheets/screen.scss */
-#list .items .item:active {
-  cursor: url(/images/grabbing.png), default;
-}
-/* line 170, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #c8c8c8), color-stop(100%, #b0b0b0));
   background-image: -moz-linear-gradient(top, #c8c8c8 0%, #b0b0b0 100%);
   background-color: #aaa;
 }
-/* line 174, ../../../app/stylesheets/screen.scss */
+/* line 173, ../../../app/stylesheets/screen.scss */
 #list .items .item table {
   width: 100%;
   border: 0;
 }
-/* line 177, ../../../app/stylesheets/screen.scss */
+/* line 176, ../../../app/stylesheets/screen.scss */
 #list .items .item table .left {
   width: 1px;
   padding: 0;
 }
-/* line 183, ../../../app/stylesheets/screen.scss */
+/* line 182, ../../../app/stylesheets/screen.scss */
 #list .items .item table .center {
   font-weight: bold;
   position: absolute;
   margin-top: 2px;
   padding: 0 8px 0 8px;
 }
-/* line 188, ../../../app/stylesheets/screen.scss */
+/* line 187, ../../../app/stylesheets/screen.scss */
 #list .items .item table .center input[type="text"] {
   width: 411px;
   padding: 1px;
   margin-top: -1px;
 }
-/* line 194, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 #list .items .item table .right {
   width: 1px;
 }
-/* line 196, ../../../app/stylesheets/screen.scss */
+/* line 195, ../../../app/stylesheets/screen.scss */
 #list .items .item table .right .delete.button {
   text-decoration: none;
   color: #fff;
   font-family: verdana, arial;
 }
-/* line 200, ../../../app/stylesheets/screen.scss */
+/* line 199, ../../../app/stylesheets/screen.scss */
 #list .items .item table .right .delete.button:hover {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -375,15 +371,15 @@ input[type="checkbox"]:checked {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 205, ../../../app/stylesheets/screen.scss */
+/* line 204, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #ccc;
 }
-/* line 209, ../../../app/stylesheets/screen.scss */
+/* line 208, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-top: 2em;
 }
-/* line 213, ../../../app/stylesheets/screen.scss */
+/* line 212, ../../../app/stylesheets/screen.scss */
 #list #hint {
   text-align: center;
   padding: 16px;
