@@ -12,11 +12,12 @@
   %body
     #container
       #header
-        =link_to("my lists", lists_path, :id => "my_lists") if current_user
+        -if current_user
+          =link_to("< back to my lists", lists_path, :id => "my_lists") unless request.path == lists_path
         #account
           -if current_user
             =link_to h(current_user.username), edit_user_path
-            \.
+            %span.separator .
             =link_to 'logout', session_path, :method => "delete"
       #content
         =yield

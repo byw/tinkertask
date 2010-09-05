@@ -99,46 +99,59 @@ body #container #header {
   display: block;
 }
 /* line 29, ../../../app/stylesheets/screen.scss */
+body #container #header .logo_small {
+  width: 21px;
+  height: 21px;
+  background-color: #ccc;
+  float: left;
+  margin-right: 8px;
+}
+/* line 37, ../../../app/stylesheets/screen.scss */
 body #container #header #my_lists {
   font-weight: bold;
   font-size: 1.2em;
 }
-/* line 33, ../../../app/stylesheets/screen.scss */
+/* line 41, ../../../app/stylesheets/screen.scss */
 body #container #header #account {
   float: right;
 }
-/* line 36, ../../../app/stylesheets/screen.scss */
+/* line 43, ../../../app/stylesheets/screen.scss */
+body #container #header #account .separator {
+  color: #CC6600;
+  font-weight: bold;
+}
+/* line 48, ../../../app/stylesheets/screen.scss */
 body #container #header a:link {
   text-decoration: none;
 }
 
-/* line 42, ../../../app/stylesheets/screen.scss */
+/* line 54, ../../../app/stylesheets/screen.scss */
 a:link {
   color: #888;
 }
-/* line 46, ../../../app/stylesheets/screen.scss */
+/* line 58, ../../../app/stylesheets/screen.scss */
 a:visited {
   color: #888;
 }
-/* line 47, ../../../app/stylesheets/screen.scss */
+/* line 59, ../../../app/stylesheets/screen.scss */
 a:hover {
   color: #aaa;
 }
 
-/* line 51, ../../../app/stylesheets/screen.scss */
+/* line 63, ../../../app/stylesheets/screen.scss */
 .formtastic li {
   margin: 8px 0 8px 0;
 }
-/* line 52, ../../../app/stylesheets/screen.scss */
+/* line 64, ../../../app/stylesheets/screen.scss */
 .formtastic label {
   display: block;
   margin-bottom: 8px;
 }
-/* line 56, ../../../app/stylesheets/screen.scss */
+/* line 68, ../../../app/stylesheets/screen.scss */
 .formtastic abbr {
   color: #993333;
 }
-/* line 57, ../../../app/stylesheets/screen.scss */
+/* line 69, ../../../app/stylesheets/screen.scss */
 .formtastic .inline-errors {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -155,7 +168,7 @@ a:hover {
   font-size: 0.8em;
 }
 
-/* line 68, ../../../app/stylesheets/screen.scss */
+/* line 80, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   padding: 5px;
   -moz-border-radius: 5px;
@@ -166,7 +179,7 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 73, ../../../app/stylesheets/screen.scss */
+/* line 85, ../../../app/stylesheets/screen.scss */
 input[type="button"], input[type="submit"] {
   border: none;
   -moz-border-radius: 3px;
@@ -179,12 +192,12 @@ input[type="button"], input[type="submit"] {
   padding: 7px 8px 7px 8px;
   color: #fff;
 }
-/* line 80, ../../../app/stylesheets/screen.scss */
+/* line 92, ../../../app/stylesheets/screen.scss */
 input[type="button"]:hover, input[type="submit"]:hover {
   background-color: #ccc;
 }
 
-/* line 84, ../../../app/stylesheets/screen.scss */
+/* line 96, ../../../app/stylesheets/screen.scss */
 input[type="checkbox"] {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -198,16 +211,16 @@ input[type="checkbox"] {
   width: 11px;
   height: 11px;
 }
-/* line 91, ../../../app/stylesheets/screen.scss */
+/* line 103, ../../../app/stylesheets/screen.scss */
 input[type="checkbox"]:hover {
   background-color: #aaa;
 }
-/* line 92, ../../../app/stylesheets/screen.scss */
+/* line 104, ../../../app/stylesheets/screen.scss */
 input[type="checkbox"]:checked {
   background-color: #FFFFCC;
 }
 
-/* line 98, ../../../app/stylesheets/screen.scss */
+/* line 110, ../../../app/stylesheets/screen.scss */
 #login_error {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -230,7 +243,7 @@ input[type="checkbox"]:checked {
   display: block;
 }
 
-/* line 109, ../../../app/stylesheets/screen.scss */
+/* line 121, ../../../app/stylesheets/screen.scss */
 form#new_session {
   overflow: hidden;
   display: inline-block;
@@ -240,17 +253,17 @@ form#new_session {
 form#new_session {
   display: block;
 }
-/* line 112, ../../../app/stylesheets/screen.scss */
+/* line 124, ../../../app/stylesheets/screen.scss */
 form#new_session input[type="submit"] {
   width: 100px;
 }
-/* line 113, ../../../app/stylesheets/screen.scss */
+/* line 125, ../../../app/stylesheets/screen.scss */
 form#new_session a {
   display: inline;
   margin-left: 11px;
 }
 
-/* line 116, ../../../app/stylesheets/screen.scss */
+/* line 128, ../../../app/stylesheets/screen.scss */
 .nav {
   overflow: hidden;
   display: inline-block;
@@ -261,7 +274,7 @@ form#new_session a {
 .nav {
   display: block;
 }
-/* line 121, ../../../app/stylesheets/screen.scss */
+/* line 133, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button {
   padding: 0.8em;
   background-color: #888;
@@ -275,7 +288,7 @@ form#new_session a {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 128, ../../../app/stylesheets/screen.scss */
+/* line 140, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -286,7 +299,7 @@ form#new_session a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 133, ../../../app/stylesheets/screen.scss */
+/* line 145, ../../../app/stylesheets/screen.scss */
 #lists {
   overflow: hidden;
   display: inline-block;
@@ -295,7 +308,7 @@ form#new_session a {
 #lists {
   display: block;
 }
-/* line 135, ../../../app/stylesheets/screen.scss */
+/* line 147, ../../../app/stylesheets/screen.scss */
 #lists .list {
   overflow: hidden;
   display: inline-block;
@@ -308,7 +321,7 @@ form#new_session a {
 #lists .list {
   display: block;
 }
-/* line 141, ../../../app/stylesheets/screen.scss */
+/* line 153, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
   float: left;
   background-color: #888;
@@ -319,67 +332,68 @@ form#new_session a {
   margin-right: 0.5em;
   cursor: url(/images/grab.png), default;
 }
-/* line 150, ../../../app/stylesheets/screen.scss */
+/* line 162, ../../../app/stylesheets/screen.scss */
 #lists .list .handle:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 152, ../../../app/stylesheets/screen.scss */
+/* line 164, ../../../app/stylesheets/screen.scss */
 #lists .list .name {
   float: left;
   margin-left: 13px;
   width: 388px;
 }
-/* line 156, ../../../app/stylesheets/screen.scss */
+/* line 168, ../../../app/stylesheets/screen.scss */
 #lists .list .name .items_count {
   display: inline;
   color: #888;
   font-size: 0.5em;
   font-weight: bold;
 }
-/* line 163, ../../../app/stylesheets/screen.scss */
+/* line 175, ../../../app/stylesheets/screen.scss */
 #lists .list .delete.button {
   text-decoration: none;
   float: right;
 }
 
-/* line 171, ../../../app/stylesheets/screen.scss */
+/* line 183, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
   margin: 8px 0 16px 0;
 }
-/* line 174, ../../../app/stylesheets/screen.scss */
+/* line 186, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   display: inline;
   font-size: 1.5em;
   font-weight: bold;
+  text-decoration: none;
 }
-/* line 180, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 #list #info form {
   background-color: #ddd;
 }
-/* line 182, ../../../app/stylesheets/screen.scss */
+/* line 195, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 455px;
 }
-/* line 190, ../../../app/stylesheets/screen.scss */
+/* line 203, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin-bottom: 16px;
   margin-top: 8px;
 }
-/* line 194, ../../../app/stylesheets/screen.scss */
+/* line 207, ../../../app/stylesheets/screen.scss */
 #list form#new_item #item_body {
   width: 300px;
   margin-right: 11px;
 }
-/* line 195, ../../../app/stylesheets/screen.scss */
+/* line 208, ../../../app/stylesheets/screen.scss */
 #list form#new_item input[type="submit"] {
   width: 80px;
 }
-/* line 197, ../../../app/stylesheets/screen.scss */
+/* line 210, ../../../app/stylesheets/screen.scss */
 #list .items {
   background-color: #ddd;
   -moz-border-radius: 7px;
@@ -389,7 +403,7 @@ form#new_session a {
   -khtml-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 200, ../../../app/stylesheets/screen.scss */
+/* line 213, ../../../app/stylesheets/screen.scss */
 #list .items .item {
   overflow: hidden;
   display: inline-block;
@@ -418,35 +432,35 @@ form#new_session a {
 #list .items .item {
   display: block;
 }
-/* line 213, ../../../app/stylesheets/screen.scss */
+/* line 226, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #c8c8c8), color-stop(100%, #b0b0b0));
   background-image: -moz-linear-gradient(top, #c8c8c8 0%, #b0b0b0 100%);
 }
-/* line 218, ../../../app/stylesheets/screen.scss */
+/* line 231, ../../../app/stylesheets/screen.scss */
 #list .items .item .item_complete {
   float: left;
 }
-/* line 221, ../../../app/stylesheets/screen.scss */
+/* line 234, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
   margin: 2px 0 5px 10px;
   float: left;
   width: 421px;
   font-weight: bold;
 }
-/* line 227, ../../../app/stylesheets/screen.scss */
+/* line 240, ../../../app/stylesheets/screen.scss */
 #list .items .item input[type="text"] {
   float: left;
   width: 421px;
   padding: 0px;
   margin: 1px 0 0px 10px;
 }
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 246, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete.button {
   float: right;
   margin-top: 1px;
 }
-/* line 235, ../../../app/stylesheets/screen.scss */
+/* line 248, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete.button:hover {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -456,17 +470,17 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 239, ../../../app/stylesheets/screen.scss */
+/* line 252, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
   background-image: -moz-linear-gradient(top, #cccccc 0%, #cccccc 100%);
   background-color: #ccc;
 }
-/* line 244, ../../../app/stylesheets/screen.scss */
+/* line 257, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-top: 2em;
 }
-/* line 248, ../../../app/stylesheets/screen.scss */
+/* line 261, ../../../app/stylesheets/screen.scss */
 #list #hint {
   text-align: center;
   padding: 16px;

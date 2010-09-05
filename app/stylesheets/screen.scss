@@ -26,12 +26,24 @@ body {
       background-color: #ddd;
       padding: 16px 0 16px 0;
       margin-bottom: 1px;
+      .logo_small {
+        width: 21px;
+        height: 21px;
+        background-color: #ccc;
+//        @include border-radius(5px);
+        float: left;
+        margin-right: 8px;
+      }
       #my_lists {
         font-weight: bold;
         font-size: 1.2em;
       }
       #account {
         float: right;
+        .separator {
+          color: #CC6600;
+          font-weight: bold;
+        }
       }
       a:link {text-decoration: none;}
     }
@@ -175,6 +187,7 @@ form#new_session {
       display: inline;
       font-size: 1.5em;
       font-weight: bold;
+      text-decoration: none;
 //      color: #555;
     }
     form {
