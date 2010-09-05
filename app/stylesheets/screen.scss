@@ -125,6 +125,7 @@ form#new_session {
     text-transform: uppercase;
     text-decoration: none;
     @include border-radius(8px);
+    &:hover {@include opacity(0.8);};
   }
 }
 
@@ -152,7 +153,12 @@ form#new_session {
       float: left;
       margin-left: 13px;
       width: 388px;
-//      background-color: #aaa;
+      .items_count {
+        display: inline;
+        color: #888;
+        font-size: 0.5em;
+        font-weight: bold;
+      }
     }
     .delete.button {
       text-decoration: none;
@@ -195,7 +201,6 @@ form#new_session {
       @include clearfix;
       $top-color: #bbb;
       $bottom-color: #a3a3a3;
-//      @include box-shadow(#aaa, 1px, 0px, 2px);
       @include border-radius(5px);
       background-color: #777;
       @include linear-gradient(color-stops($top-color, $bottom-color));

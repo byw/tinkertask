@@ -7,6 +7,8 @@
         .handle(style="display:inline") DRAG
         .name(style="display:inline")
           =link_to h(list.name), list_path(list)
+          .items_count
+            #{pluralize(list.items.size, "item")}
         =link_to 'x', list_path(list), :method => :delete, :confirm => "Delete this list?", :class => 'delete button'
         
 :javascript
