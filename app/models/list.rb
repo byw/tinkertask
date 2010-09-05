@@ -8,4 +8,10 @@ class List
   key :position, Integer
   key :user_id, ObjectId
   
+  def active_items_count
+    count = 0
+    items.each {|i| count += 1 unless i.complete}
+    count
+  end
+  
 end
