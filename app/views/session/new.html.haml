@@ -1,4 +1,6 @@
-#login_error #{flash[:login_error] if flash[:login_error]}
+-if flash[:login_error]
+  #login_error 
+    =flash[:login_error]
 -form_tag session_path, :id => 'new_session' do
   =text_field_tag :username
   =password_field_tag :password
