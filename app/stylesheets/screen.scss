@@ -95,7 +95,19 @@ input[type="checkbox"] {
   };
 }
 
+#login_error {
+  @include border-radius(8px);
+  @include clearfix;
+  width: 7em;
+  margin: 0 auto 16px auto;  
+  padding: 11px;
+  color: #fff;
+  background-color: #CC3333;
+  font-weight: bold;
+  display: inline;
+}
 form#new_session {
+  @include clearfix;
   text-align: center;
   input[type="submit"] {width: 100px;}
   a {display: inline; margin-left: 11px;}
