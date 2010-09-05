@@ -140,15 +140,15 @@ a:hover {
 }
 /* line 57, ../../../app/stylesheets/screen.scss */
 .formtastic .inline-errors {
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -o-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -khtml-border-radius: 16px;
-  border-radius: 16px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
   display: inline;
   position: absolute;
-  padding: 8px 21px 8px 21px;
+  padding: 8px 16px 8px 16px;
   margin-top: 2px;
   background-color: #CC3333;
   color: #fff;
@@ -204,7 +204,7 @@ input[type="checkbox"]:hover {
 }
 /* line 92, ../../../app/stylesheets/screen.scss */
 input[type="checkbox"]:checked {
-  background-color: #CCFFFF;
+  background-color: #FFFFCC;
 }
 
 /* line 98, ../../../app/stylesheets/screen.scss */
