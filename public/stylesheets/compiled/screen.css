@@ -99,35 +99,63 @@ body #container #header {
   display: block;
 }
 /* line 29, ../../../app/stylesheets/screen.scss */
+body #container #header #my_lists {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+/* line 33, ../../../app/stylesheets/screen.scss */
 body #container #header #account {
   float: right;
 }
-
-/* line 37, ../../../app/stylesheets/screen.scss */
-a:link {
-  color: #888;
+/* line 36, ../../../app/stylesheets/screen.scss */
+body #container #header a:link {
   text-decoration: none;
 }
-/* line 38, ../../../app/stylesheets/screen.scss */
+
+/* line 42, ../../../app/stylesheets/screen.scss */
+a:link {
+  color: #888;
+}
+/* line 46, ../../../app/stylesheets/screen.scss */
 a:visited {
   color: #888;
 }
-/* line 39, ../../../app/stylesheets/screen.scss */
+/* line 47, ../../../app/stylesheets/screen.scss */
 a:hover {
   color: #aaa;
 }
 
-/* line 42, ../../../app/stylesheets/screen.scss */
-.formtastic {
-  background-color: #ddd;
-  padding: 16px;
+/* line 51, ../../../app/stylesheets/screen.scss */
+.formtastic li {
+  margin: 8px 0 8px 0;
 }
-/* line 45, ../../../app/stylesheets/screen.scss */
+/* line 52, ../../../app/stylesheets/screen.scss */
 .formtastic label {
   display: block;
+  margin-bottom: 8px;
+}
+/* line 56, ../../../app/stylesheets/screen.scss */
+.formtastic abbr {
+  color: #993333;
+}
+/* line 57, ../../../app/stylesheets/screen.scss */
+.formtastic .inline-errors {
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -o-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -khtml-border-radius: 16px;
+  border-radius: 16px;
+  display: inline;
+  position: absolute;
+  padding: 8px 21px 8px 21px;
+  margin-top: 2px;
+  background-color: #CC3333;
+  color: #fff;
+  font-size: 0.8em;
 }
 
-/* line 49, ../../../app/stylesheets/screen.scss */
+/* line 68, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   padding: 5px;
   -moz-border-radius: 5px;
@@ -138,7 +166,7 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 54, ../../../app/stylesheets/screen.scss */
+/* line 73, ../../../app/stylesheets/screen.scss */
 input[type="button"], input[type="submit"] {
   border: none;
   -moz-border-radius: 3px;
@@ -151,12 +179,12 @@ input[type="button"], input[type="submit"] {
   padding: 7px 8px 7px 8px;
   color: #fff;
 }
-/* line 61, ../../../app/stylesheets/screen.scss */
+/* line 80, ../../../app/stylesheets/screen.scss */
 input[type="button"]:hover, input[type="submit"]:hover {
   background-color: #ccc;
 }
 
-/* line 65, ../../../app/stylesheets/screen.scss */
+/* line 84, ../../../app/stylesheets/screen.scss */
 input[type="checkbox"] {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -170,36 +198,55 @@ input[type="checkbox"] {
   width: 11px;
   height: 11px;
 }
-/* line 72, ../../../app/stylesheets/screen.scss */
+/* line 91, ../../../app/stylesheets/screen.scss */
 input[type="checkbox"]:hover {
   background-color: #aaa;
 }
-/* line 73, ../../../app/stylesheets/screen.scss */
+/* line 92, ../../../app/stylesheets/screen.scss */
 input[type="checkbox"]:checked {
-  background-color: #99CCFF;
-  border: solid 1px #6699CC;
+  background-color: #CCFFFF;
 }
 
-/* line 83, ../../../app/stylesheets/screen.scss */
+/* line 98, ../../../app/stylesheets/screen.scss */
+form#new_session {
+  text-align: center;
+}
+/* line 100, ../../../app/stylesheets/screen.scss */
+form#new_session input[type="submit"] {
+  width: 100px;
+}
+/* line 101, ../../../app/stylesheets/screen.scss */
+form#new_session a {
+  display: inline;
+}
+
+/* line 104, ../../../app/stylesheets/screen.scss */
 .nav {
   overflow: hidden;
   display: inline-block;
-  padding: 1.5em 0 1.5em 0;
+  padding: 1.5em 0 38px 0;
+  text-align: center;
 }
 /* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
 .nav {
   display: block;
 }
-/* line 87, ../../../app/stylesheets/screen.scss */
+/* line 109, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button {
   padding: 0.8em;
   background-color: #888;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
 }
 
-/* line 97, ../../../app/stylesheets/screen.scss */
+/* line 120, ../../../app/stylesheets/screen.scss */
 #lists {
   overflow: hidden;
   display: inline-block;
@@ -208,21 +255,22 @@ input[type="checkbox"]:checked {
 #lists {
   display: block;
 }
-/* line 99, ../../../app/stylesheets/screen.scss */
+/* line 122, ../../../app/stylesheets/screen.scss */
 #lists .list {
   overflow: hidden;
   display: inline-block;
   padding: 1em;
   padding-bottom: 1.2em;
   margin-bottom: 1px;
-  background-color: #ddd;
+  background-color: #ccc;
 }
 /* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
 #lists .list {
   display: block;
 }
-/* line 105, ../../../app/stylesheets/screen.scss */
+/* line 128, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
+  float: left;
   background-color: #888;
   color: #fff;
   font-size: 0.5em;
@@ -231,54 +279,60 @@ input[type="checkbox"]:checked {
   margin-right: 0.5em;
   cursor: url(/images/grab.png), default;
 }
-/* line 114, ../../../app/stylesheets/screen.scss */
+/* line 137, ../../../app/stylesheets/screen.scss */
 #lists .list .handle:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 116, ../../../app/stylesheets/screen.scss */
+/* line 139, ../../../app/stylesheets/screen.scss */
+#lists .list .name {
+  float: left;
+  margin-left: 13px;
+  width: 388px;
+}
+/* line 145, ../../../app/stylesheets/screen.scss */
 #lists .list .delete.button {
+  text-decoration: none;
   float: right;
 }
 
-/* line 123, ../../../app/stylesheets/screen.scss */
+/* line 153, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
   margin: 8px 0 16px 0;
 }
-/* line 126, ../../../app/stylesheets/screen.scss */
+/* line 156, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   display: inline;
   font-size: 1.5em;
   font-weight: bold;
-  color: #555;
 }
-/* line 132, ../../../app/stylesheets/screen.scss */
+/* line 162, ../../../app/stylesheets/screen.scss */
 #list #info form {
   background-color: #ddd;
 }
-/* line 134, ../../../app/stylesheets/screen.scss */
+/* line 164, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 455px;
 }
-/* line 142, ../../../app/stylesheets/screen.scss */
+/* line 172, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin-bottom: 16px;
   margin-top: 8px;
 }
-/* line 146, ../../../app/stylesheets/screen.scss */
+/* line 176, ../../../app/stylesheets/screen.scss */
 #list form#new_item #item_body {
   width: 300px;
   margin-right: 11px;
 }
-/* line 147, ../../../app/stylesheets/screen.scss */
+/* line 177, ../../../app/stylesheets/screen.scss */
 #list form#new_item input[type="submit"] {
   width: 80px;
 }
-/* line 149, ../../../app/stylesheets/screen.scss */
+/* line 179, ../../../app/stylesheets/screen.scss */
 #list .items {
   background-color: #ddd;
   -moz-border-radius: 7px;
@@ -288,8 +342,10 @@ input[type="checkbox"]:checked {
   -khtml-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 152, ../../../app/stylesheets/screen.scss */
+/* line 182, ../../../app/stylesheets/screen.scss */
 #list .items .item {
+  overflow: hidden;
+  display: inline-block;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -311,46 +367,40 @@ input[type="checkbox"]:checked {
 #list .items .item {
   display: block;
 }
-/* line 165, ../../../app/stylesheets/screen.scss */
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+#list .items .item {
+  display: block;
+}
+/* line 196, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #c8c8c8), color-stop(100%, #b0b0b0));
   background-image: -moz-linear-gradient(top, #c8c8c8 0%, #b0b0b0 100%);
 }
-/* line 170, ../../../app/stylesheets/screen.scss */
-#list .items .item table {
-  width: 100%;
-  border: 0;
+/* line 201, ../../../app/stylesheets/screen.scss */
+#list .items .item .item_complete {
+  float: left;
 }
-/* line 173, ../../../app/stylesheets/screen.scss */
-#list .items .item table .left {
-  width: 1px;
-  padding: 0;
-}
-/* line 179, ../../../app/stylesheets/screen.scss */
-#list .items .item table .center {
+/* line 204, ../../../app/stylesheets/screen.scss */
+#list .items .item .body {
+  margin: 2px 0 5px 10px;
+  float: left;
+  width: 421px;
   font-weight: bold;
-  position: absolute;
-  margin-top: 2px;
-  padding: 0 8px 0 8px;
 }
-/* line 184, ../../../app/stylesheets/screen.scss */
-#list .items .item table .center input[type="text"] {
-  width: 425px;
+/* line 210, ../../../app/stylesheets/screen.scss */
+#list .items .item input[type="text"] {
+  float: left;
+  width: 421px;
   padding: 0px;
-  margin-top: -2px;
+  margin: 1px 0 0px 10px;
 }
-/* line 190, ../../../app/stylesheets/screen.scss */
-#list .items .item table .right {
-  width: 1px;
+/* line 216, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete.button {
+  float: right;
+  margin-top: 1px;
 }
-/* line 192, ../../../app/stylesheets/screen.scss */
-#list .items .item table .right .delete.button {
-  text-decoration: none;
-  color: #fff;
-  font-family: verdana, arial;
-}
-/* line 196, ../../../app/stylesheets/screen.scss */
-#list .items .item table .right .delete.button:hover {
+/* line 218, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete.button:hover {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
   -o-opacity: 0.5;
@@ -359,17 +409,17 @@ input[type="checkbox"]:checked {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 201, ../../../app/stylesheets/screen.scss */
+/* line 222, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
   background-image: -moz-linear-gradient(top, #cccccc 0%, #cccccc 100%);
   background-color: #ccc;
 }
-/* line 206, ../../../app/stylesheets/screen.scss */
+/* line 227, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-top: 2em;
 }
-/* line 210, ../../../app/stylesheets/screen.scss */
+/* line 231, ../../../app/stylesheets/screen.scss */
 #list #hint {
   text-align: center;
   padding: 16px;

@@ -12,7 +12,7 @@
   %body
     #container
       #header
-        =link_to "my lists", lists_path if current_user
+        =link_to("my lists", lists_path, :id => "my_lists") if current_user
         #account
           -if current_user
             =link_to h(current_user.username), edit_user_path

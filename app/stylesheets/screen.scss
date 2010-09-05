@@ -26,24 +26,43 @@ body {
       background-color: #ddd;
       padding: 16px 0 16px 0;
       margin-bottom: 1px;
+      #my_lists {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
       #account {
         float: right;
       }
+      a:link {text-decoration: none;}
     }
   }
 }
 
 a {
-  &:link {color: #888; text-decoration: none;};
+  &:link {
+    color: #888; 
+//    text-decoration: none;
+  };
   &:visited {color: #888;}
   &:hover {color: #aaa;}
 }
 
 .formtastic {
-  background-color: #ddd;
-  padding: 16px;
+  li {margin: 8px 0 8px 0;}
   label {
     display: block;
+    margin-bottom: 8px;
+  }
+  abbr {color: #993333;}
+  .inline-errors {
+    @include border-radius(16px);
+    display: inline;
+    position: absolute;
+    padding: 8px 21px 8px 21px;
+    margin-top: 2px;
+    background-color: #CC3333;
+    color: #fff;
+    font-size: 0.8em;
   }
 }  
 input[type="text"], input[type="password"] {
@@ -71,25 +90,29 @@ input[type="checkbox"] {
   height: 11px;
   &:hover {background-color: #aaa;};
   &:checked {
-   background-color: #99CCFF;
-   border: solid 1px #6699CC;
+   background-color: #CCFFFF;
+//   border: solid 1px #6699CC;
   };
 }
 
-form#new_user {
-  
+form#new_session {
+  text-align: center;
+  input[type="submit"] {width: 100px;}
+  a {display: inline;}
 }
 
 .nav {
   @include clearfix;
-  padding: 1.5em 0 1.5em 0;
+  padding: 1.5em 0 38px 0;
 //    margin: 1em 0 1em 0;
+  text-align: center;
   .new_list.button {
     padding: 0.8em;
     background-color: #888;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
+    @include border-radius(8px);
   }
 }
 
@@ -101,9 +124,9 @@ form#new_user {
     padding: 1em;
     padding-bottom: 1.2em;
     margin-bottom: 1px;
-    background-color: #ddd;
+    background-color: #ccc;
     .handle {
-//      float: right;
+      float: left;
       background-color: #888;
       color: #fff;
       font-size: 0.5em;
@@ -113,7 +136,14 @@ form#new_user {
       cursor: url(/images/grab.png), default;
       &:active {cursor: url(/images/grabbing.png), default;};
     }
+    .name {
+      float: left;
+      margin-left: 13px;
+      width: 388px;
+//      background-color: #aaa;
+    }
     .delete.button {
+      text-decoration: none;
       float: right;
     }
   }
@@ -127,7 +157,7 @@ form#new_user {
       display: inline;
       font-size: 1.5em;
       font-weight: bold;
-      color: #555;
+//      color: #555;
     }
     form {
       background-color: #ddd;
@@ -150,6 +180,7 @@ form#new_user {
     background-color: #ddd;
     @include border-radius(7px);
     .item {
+      @include clearfix;
       $top-color: #bbb;
       $bottom-color: #a3a3a3;
 //      @include box-shadow(#aaa, 1px, 0px, 2px);
@@ -167,35 +198,25 @@ form#new_user {
         $bottom-color-light: lighten($bottom-color, 5);
         @include linear-gradient(color-stops($top-color-light, $bottom-color-light));
       }
-      table {
-        width: 100%;
-        border: 0;
-        .left {
-          width: 1px;
-          padding: 0;
-          .item_complete {
-          }
-        }
-        .center {
-          font-weight: bold;
-          position: absolute;
-          margin-top: 2px;
-          padding: 0 8px 0 8px;
-          input[type="text"] {
-            width: 425px;
-            padding: 0px;
-            margin-top: -2px;
-          }
-        }
-        .right {
-          width: 1px;
-          .delete.button {
-            text-decoration: none;
-            color: #fff;
-            font-family: verdana, arial;
-            &:hover {@include opacity(0.5);};
-          }
-        }
+      .item_complete {
+        float: left;;
+      }
+      .body {
+        margin: 2px 0 5px 10px;
+        float: left;
+        width: 421px;
+        font-weight: bold;
+      }
+      input[type="text"] {
+        float: left;
+        width: 421px;
+        padding: 0px;
+        margin: 1px 0 0px 10px;
+      }  
+      .delete.button {
+        float: right;
+        &:hover {@include opacity(0.5);};
+        margin-top: 1px
       }
     }
     .item.complete {

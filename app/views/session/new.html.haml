@@ -1,7 +1,7 @@
--form_tag session_path do
-  =text_field_tag :username
-  =password_field_tag :password
+-form_tag session_path, :id => 'new_session' do
   #login_error
     =flash[:login_error] if flash[:login_error]
+  =text_field_tag :username
+  =password_field_tag :password
   =submit_tag "login"
-=link_to 'sign up', new_user_path
+  =link_to 'sign up', new_user_path

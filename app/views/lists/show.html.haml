@@ -29,6 +29,7 @@
       var url = "#{list_items_path(@list, :format => :js)}";
       $.post(url, $(e.currentTarget).serialize(), function(data) {
         $("#items").append(data);
+        $("#items .item:last").dblclick(editItem);
         new_item_body.val('');
       });
     });
@@ -38,7 +39,7 @@
       $.post("#{reorder_list_items_path(@list)}", data);
     }});
     
-    $(".item").dblclick(function(e) {
+    function editItem(e) {
       var form = $(this).find("form:first"),
           body = $(this).find(".body:first"),
           field = form.find(".item_body:first");
@@ -58,7 +59,9 @@
       });
       field.blur(function() {
         form.submit()});
-    });
+    }
+    
+    $(".item").dblclick(editItem);
     
     $("#info #name").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
     
