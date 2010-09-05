@@ -218,6 +218,7 @@ form#new_session input[type="submit"] {
 /* line 101, ../../../app/stylesheets/screen.scss */
 form#new_session a {
   display: inline;
+  margin-left: 11px;
 }
 
 /* line 104, ../../../app/stylesheets/screen.scss */
