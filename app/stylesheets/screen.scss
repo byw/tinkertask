@@ -207,7 +207,7 @@ form#new_session {
   form#new_item {
     text-align: center;;
     margin-bottom: 16px;
-    margin-top: 8px;
+    margin-top: 16px;
     #item_body {width: 300px; margin-right: 11px;}
     input[type="submit"] {width: 80px;}
   }
@@ -251,9 +251,10 @@ form#new_session {
         font-weight: bold;
         line-height: 1.5em;
       }
-      input[type="text"] {
+      .item_body {
         float: left;
         width: 411px;
+//        height: 30px;
         padding: 0px;
         margin: 12px 0 12px 0;
       }  
@@ -270,7 +271,6 @@ form#new_session {
     }
   }
   #completed_items {
-    margin-top: 2em;
   }
   
   #hint {

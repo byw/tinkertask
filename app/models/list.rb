@@ -8,6 +8,8 @@ class List
   key :position, Integer
   key :user_id, ObjectId
   
+  validates_length_of :name, :maximum => 500
+  
   def active_items_count
     count = 0
     items.each {|i| count += 1 unless i.complete}

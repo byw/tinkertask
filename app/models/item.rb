@@ -8,6 +8,8 @@ class Item
   key :position, Integer
   key :complete, Boolean, :default => false
   
+  validates_length_of :body, :maximum => 500
+  
   def user
     self.list.user
   end

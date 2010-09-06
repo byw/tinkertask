@@ -388,7 +388,7 @@ form#new_session a {
 #list form#new_item {
   text-align: center;
   margin-bottom: 16px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 /* line 211, ../../../app/stylesheets/screen.scss */
 #list form#new_item #item_body {
@@ -468,18 +468,18 @@ form#new_session a {
   line-height: 1.5em;
 }
 /* line 254, ../../../app/stylesheets/screen.scss */
-#list .items .item input[type="text"] {
+#list .items .item .item_body {
   float: left;
   width: 411px;
   padding: 0px;
   margin: 12px 0 12px 0;
 }
-/* line 260, ../../../app/stylesheets/screen.scss */
+/* line 261, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete.button {
   float: right;
   padding: 13px;
 }
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 263, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete.button:hover {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -489,19 +489,15 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 266, ../../../app/stylesheets/screen.scss */
+/* line 267, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
   background-image: -moz-linear-gradient(top, #cccccc 0%, #cccccc 100%);
   background-color: #ccc;
 }
-/* line 269, ../../../app/stylesheets/screen.scss */
+/* line 270, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .body {
   text-shadow: #aaaaaa -1px -1px 1px;
-}
-/* line 272, ../../../app/stylesheets/screen.scss */
-#list #completed_items {
-  margin-top: 2em;
 }
 /* line 276, ../../../app/stylesheets/screen.scss */
 #list #hint {
