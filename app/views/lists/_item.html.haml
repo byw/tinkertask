@@ -1,5 +1,6 @@
 .item{:id => item.id, :class => "#{'complete' if item.complete}"}
-  =check_box_tag "item[complete]", "1", item.complete, :class => "item_complete"
+  .checkbox_wrapper
+    =check_box_tag "item[complete]", "1", item.complete, :class => "item_complete"
   .body
     =h(item.body)
   -form_for [@list, item], :html => {:style => "display:none"} do |form|

@@ -12,6 +12,8 @@
         =link_to 'x', list_path(list), :method => :delete, :confirm => "Delete this list?", :class => 'delete button'
         
 :javascript
+  // dragging cursor works properly
+  document.onselectstart = function () { return false; }
   $(document).ready(function() {
     $("#lists").sortable({axis:'y', handle:'.handle', tolerance:'pointer', containment:'parent', update:function(event, ui) {
       var url = "#{reorder_lists_path}",

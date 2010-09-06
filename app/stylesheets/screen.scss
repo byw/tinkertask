@@ -100,6 +100,7 @@ input[type="checkbox"] {
   vertical-align: middle;
   width: 11px;
   height: 11px;
+  margin: 0px;
   &:hover {background-color: #aaa;};
   &:checked {
    background-color: #FFFFCC;
@@ -213,40 +214,49 @@ form#new_session {
     .item {
       @include clearfix;
       $top-color: #bbb;
-      $bottom-color: #a3a3a3;
+      $bottom-color: #999;
+      cursor: url(/images/grab.png), default;
       @include border-radius(5px);
-      background-color: #777;
+      background-color: $bottom-color;
       @include linear-gradient(color-stops($top-color, $bottom-color));
       color: #fff;
-      padding: 0.8em;
       margin-bottom: 3px;
       font-size: 0.8em;
       @include clearfix;
-      cursor: default;
+      &:active {cursor: url(/images/grabbing.png), default;}
       &:hover {
         $top-color-light: lighten($top-color, 5);
         $bottom-color-light: lighten($bottom-color, 5);
         @include linear-gradient(color-stops($top-color-light, $bottom-color-light));
+        background-color: lighten($bottom-color, 20);
+      }
+      .checkbox_wrapper {
+//        background-color: #ccc;
+        display: inline;
+        float: left;
+        padding: 16px;
+        cursor: default;
       }
       .item_complete {
         float: left;;
       }
       .body {
-        margin: 2px 0 5px 10px;
+        padding: 12px 0 12px 0;
         float: left;
-        width: 421px;
+        width: 415px;
         font-weight: bold;
+        line-height: 1.5em;
       }
       input[type="text"] {
         float: left;
-        width: 421px;
+        width: 411px;
         padding: 0px;
-        margin: 1px 0 0px 10px;
+        margin: 12px 0 12px 0;
       }  
       .delete.button {
         float: right;
         &:hover {@include opacity(0.5);};
-        margin-top: 1px
+        padding: 13px
       }
     }
     .item.complete {

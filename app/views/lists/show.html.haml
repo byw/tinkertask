@@ -20,6 +20,8 @@
   #hint hint: double-click an item to edit
         
 :javascript
+  // dragging cursor works properly
+  document.onselectstart = function () { return false; }
   $(document).ready(function() {
     var new_item_body = $("#new_item #item_body");
     new_item_body.focus();
@@ -35,7 +37,7 @@
       });
     });
     
-    $("#items").sortable({axis:"y", cursor:'url(/images/grabbing.png)', containment:'parent', tolerance:'pointer', update:function(event, ui) {
+    $("#items").sortable({axis:"y", containment:'parent', tolerance:'pointer', update:function(event, ui) {
       var data = {items : $("#items").sortable('toArray')};
       $.post("#{reorder_list_items_path(@list)}", data);
     }});
