@@ -499,7 +499,11 @@ form#new_session a {
 #list .items .item.complete .body {
   text-shadow: #aaaaaa -1px -1px 1px;
 }
-/* line 277, ../../../app/stylesheets/screen.scss */
+/* line 275, ../../../app/stylesheets/screen.scss */
+#list #completed_items .item {
+  cursor: default;
+}
+/* line 280, ../../../app/stylesheets/screen.scss */
 #list #hint {
   display: none;
   text-align: center;
