@@ -80,6 +80,7 @@ a {
 input[type="text"], input[type="password"] {
 //  border: solid 3px #ccc;
   padding: 5px;
+  width: 450px;
   @include border-radius(5px);
 }
 input[type="button"], input[type="submit"] {
@@ -123,6 +124,7 @@ form#new_session {
   @include clearfix;
   text-align: center;
   input[type="submit"] {width: 100px;}
+  input[type="text"], input[type="password"] {width: 110px;}
   a {display: inline; margin-left: 11px;}
 }
 
