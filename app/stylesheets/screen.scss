@@ -10,6 +10,7 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/opacity";
 @import "compass/css3/box";
+@import "compass/css3/text-shadow";
 
 body {
 //  background: url('/images/bg.png');
@@ -243,9 +244,10 @@ form#new_session {
         float: left;;
       }
       .body {
+        @include text-shadow(#888, -1px, -1px, 1px);
         padding: 12px 0 12px 0;
         float: left;
-        width: 415px;
+        width: 411px;
         font-weight: bold;
         line-height: 1.5em;
       }

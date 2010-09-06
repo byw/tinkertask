@@ -8,6 +8,9 @@ class SessionController < ApplicationController
 
   def create
     if user = User.authenticate(params[:username], params[:password])
+      if params[:remember_me]
+        
+      end
       session[:user_id] = user.id
       redirect_to lists_path
     else
