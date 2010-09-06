@@ -14,8 +14,9 @@ class UsersController < ApplicationController
     end
   end
   
-  update! do |success|
+  update! do |success, failure|
     success.html {redirect_to lists_path}
+    failure.html {render :edit}
   end
   
   protected

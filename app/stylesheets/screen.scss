@@ -72,7 +72,7 @@ a {
     display: inline;
     position: absolute;
     padding: 8px 16px 8px 16px;
-    margin-top: 2px;
+    margin: 2px 0 0 8px;
     background-color: #CC3333;
     color: #fff;
     font-size: 0.8em;
@@ -81,7 +81,7 @@ a {
 input[type="text"], input[type="password"] {
 //  border: solid 3px #ccc;
   padding: 5px;
-  width: 450px;
+  width: 350px;
   @include border-radius(5px);
 }
 input[type="button"], input[type="submit"] {
@@ -266,6 +266,7 @@ form#new_session {
     .item.complete {
       @include linear-gradient(color-stops(#ccc, #ccc));
       background-color: #ccc;
+      .body {@include text-shadow(#aaa, -1px, -1px, 1px);}
     }
   }
   #completed_items {
