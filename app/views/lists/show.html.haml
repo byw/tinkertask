@@ -28,6 +28,8 @@
     var new_item_body = $("#new_item #item_body");
     new_item_body.focus();
     
+    $(".item").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
+    
     $("#new_item").submit(function(e) {
       e.preventDefault();
       var url = "#{list_items_path(@list, :format => :js)}";

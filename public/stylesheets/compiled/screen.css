@@ -387,8 +387,8 @@ form#new_session a {
 /* line 207, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
-  margin-bottom: 16px;
-  margin-top: 16px;
+  margin-bottom: 32px;
+  margin-top: 32px;
 }
 /* line 211, ../../../app/stylesheets/screen.scss */
 #list form#new_item #item_body {
@@ -493,14 +493,15 @@ form#new_session a {
 #list .items .item.complete {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cccccc), color-stop(100%, #cccccc));
   background-image: -moz-linear-gradient(top, #cccccc 0%, #cccccc 100%);
-  background-color: #ccc;
+  background-color: #cccccc;
 }
-/* line 270, ../../../app/stylesheets/screen.scss */
+/* line 271, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .body {
   text-shadow: #aaaaaa -1px -1px 1px;
 }
-/* line 276, ../../../app/stylesheets/screen.scss */
+/* line 277, ../../../app/stylesheets/screen.scss */
 #list #hint {
+  display: none;
   text-align: center;
   padding: 16px;
   margin-top: 32px;

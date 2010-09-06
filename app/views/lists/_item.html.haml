@@ -1,4 +1,4 @@
-.item{:id => item.id, :class => "#{'complete' if item.complete}"}
+.item{:id => item.id, :class => "#{'complete' if item.complete}", :title => "double-click to edit"}
   .checkbox_wrapper
     =check_box_tag "item[complete]", "1", item.complete, :class => "item_complete"
   .body

@@ -206,8 +206,8 @@ form#new_session {
   }
   form#new_item {
     text-align: center;;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    margin-bottom: 32px;
+    margin-top: 32px;
     #item_body {width: 300px; margin-right: 11px;}
     input[type="submit"] {width: 80px;}
   }
@@ -265,8 +265,9 @@ form#new_session {
       }
     }
     .item.complete {
-      @include linear-gradient(color-stops(#ccc, #ccc));
-      background-color: #ccc;
+      $background: #ccc;
+      @include linear-gradient(color-stops($background, $background));
+      background-color: $background;
       .body {@include text-shadow(#aaa, -1px, -1px, 1px);}
     }
   }
@@ -274,6 +275,7 @@ form#new_session {
   }
   
   #hint {
+    display: none;
     text-align: center;
     padding: 16px;
     margin-top: 32px;
