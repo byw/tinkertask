@@ -7,5 +7,5 @@
     =form.text_field :body, :class => "item_body"
   
   .delete_wrapper
-    =#link_to 'x', list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"
-    =link_to image_tag("delete_lite.png"), list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"
+    =link_to 'x', list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"
+    =#link_to image_tag("delete_lite.png"), list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"

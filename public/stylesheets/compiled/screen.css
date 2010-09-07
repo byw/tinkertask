@@ -446,7 +446,7 @@ form#new_session a {
 #list .items .item .checkbox_wrapper {
   display: inline;
   float: left;
-  padding: 16px;
+  padding: 11px;
   cursor: default;
 }
 /* line 244, ../../../app/stylesheets/screen.scss */
@@ -455,22 +455,22 @@ form#new_session a {
 }
 /* line 247, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
-  padding: 15px 0 15px 0;
+  padding: 10px 0 8px 0;
   float: left;
   width: 388px;
-  line-height: 2em;
+  line-height: 1.6em;
 }
 /* line 253, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   float: left;
-  width: 391px;
+  width: 398px;
   padding: 0px;
-  margin: 15px 0 16px 0;
+  margin: 12px 0 12px 0;
 }
 /* line 259, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper {
   float: right;
-  padding: 16px;
+  padding: 12px;
 }
 /* line 262, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
