@@ -174,7 +174,7 @@ input[type="text"], input[type="password"] {
   border-bottom: solid 3px #fff;
   border-right: solid 3px #fff;
   background-color: #fff;
-  color: #777;
+  color: #555;
   padding: 5px;
   width: 350px;
   -moz-border-radius: 5px;
@@ -458,26 +458,26 @@ form#new_session a {
   padding: 15px 0 15px 0;
   float: left;
   width: 388px;
-  line-height: 1.5em;
+  line-height: 2em;
 }
-/* line 254, ../../../app/stylesheets/screen.scss */
+/* line 253, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   float: left;
   width: 391px;
   padding: 0px;
   margin: 15px 0 16px 0;
 }
-/* line 260, ../../../app/stylesheets/screen.scss */
+/* line 259, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper {
   float: right;
   padding: 16px;
 }
-/* line 263, ../../../app/stylesheets/screen.scss */
+/* line 262, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   text-decoration: none;
   color: #777;
 }
-/* line 266, ../../../app/stylesheets/screen.scss */
+/* line 265, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -487,12 +487,12 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 270, ../../../app/stylesheets/screen.scss */
+/* line 269, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #eee;
   color: #aaa;
 }
-/* line 273, ../../../app/stylesheets/screen.scss */
+/* line 272, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -502,7 +502,7 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 275, ../../../app/stylesheets/screen.scss */
+/* line 274, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.3;
   -webkit-opacity: 0.3;
@@ -512,15 +512,15 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
-/* line 279, ../../../app/stylesheets/screen.scss */
+/* line 278, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-bottom: 32px;
 }
-/* line 281, ../../../app/stylesheets/screen.scss */
+/* line 280, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }
-/* line 284, ../../../app/stylesheets/screen.scss */
+/* line 283, ../../../app/stylesheets/screen.scss */
 #list #hint {
   display: none;
   text-align: center;
