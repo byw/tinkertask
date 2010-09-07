@@ -26,7 +26,7 @@
   document.onselectstart = function () { return false; }
   $(document).ready(function() {
     var new_item_body = $("#new_item #item_body");
-    new_item_body.focus();
+    new_item_body.select();
     
     bindNewItem($("#items .item"));
     
@@ -62,7 +62,8 @@
           
       body.hide();
       form.show();
-      field.focus();
+      //field.focus();
+      field.select();
       
       form.submit(function(event) {
         event.preventDefault();
@@ -85,7 +86,7 @@
           nameField = form.find("#list_name");
       name.hide();
       form.show();
-      form.find("#list_name").focus();
+      form.find("#list_name").select();
       function updateList(formEvent) {
         formEvent.preventDefault();
         $.post(form.attr("action")+".js", form.serialize(), function(data) {

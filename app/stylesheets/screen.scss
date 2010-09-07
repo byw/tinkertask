@@ -46,7 +46,7 @@ body {
           font-weight: bold;
         }
       }
-      a:link {text-decoration: none;}
+      a {text-decoration: none;}
     }
   }
 }
@@ -79,7 +79,13 @@ a {
   }
 }  
 input[type="text"], input[type="password"] {
-//  border: solid 3px #ccc;
+  border: {
+    top: solid 3px #aaa;
+    left: solid 3px #aaa;
+    bottom: solid 3px #eee;
+    right: solid 3px #eee;
+  }
+  background-color: #fff;
   padding: 5px;
   width: 350px;
   @include border-radius(5px);
@@ -95,9 +101,9 @@ input[type="button"], input[type="submit"] {
     background-color: #ccc;
   }
 }
-input[type="checkbox"] {
+input[type="zcheckboxz"] {
   @include border-radius(2px);
-  -khtml-appearance: none;
+//  -khtml-appearance: none;
   background-color: #888;
   vertical-align: middle;
   $length: 15px;
@@ -221,7 +227,7 @@ form#new_session {
       $bottom-color: #999;
       cursor: url(/images/grab.png), default;
       @include border-radius(5px);
-      background-color: $bottom-color;
+      background-color: #b5b5b5;
       @include linear-gradient(color-stops($top-color, $bottom-color));
       color: #fff;
       margin-bottom: 3px;
@@ -232,7 +238,7 @@ form#new_session {
         $top-color-light: lighten($top-color, 5);
         $bottom-color-light: lighten($bottom-color, 5);
         @include linear-gradient(color-stops($top-color-light, $bottom-color-light));
-        background-color: lighten($bottom-color, 20);
+        background-color: #bbb;
       }
       .checkbox_wrapper {
 //        background-color: #ccc;
@@ -240,6 +246,7 @@ form#new_session {
         float: left;
         padding: 16px;
         cursor: default;
+//        input[type="checkbox"] {margin: 0px;}
       }
       .item_complete {
         float: left;;
@@ -249,13 +256,13 @@ form#new_session {
         @include text-shadow(#888, -1px, -1px, 1px);
         padding: 15px 0 15px 0;
         float: left;
-        width: 405px;
+        width: 400px;
         font-weight: bold;
         line-height: 1.5em;
       }
       input.item_body {
         float: left;
-        width: 401px;
+        width: 391px;
 //        height: 30px;
         padding: 0px;
         margin: 15px 0 16px 0;
@@ -282,6 +289,7 @@ form#new_session {
     }
   }
   #completed_items {
+    margin-bottom: 32px;
     .item {cursor: default;}
   }
   
