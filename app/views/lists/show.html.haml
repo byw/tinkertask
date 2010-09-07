@@ -26,7 +26,7 @@
   document.onselectstart = function () { return false; }
   $(document).ready(function() {
     var new_item_body = $("#new_item #item_body");
-    new_item_body.select();
+    new_item_body.focus();
     
     bindNewItem($(".items .item"));
     
