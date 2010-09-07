@@ -46,8 +46,8 @@
       item.find(".body:first").dblclick(editItem);
       
       //item.find(".item_complete:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
-      item.find(".body:first").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
-      item.find(".delete.button:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
+      item.find(".body:first").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0, delay:1500});
+      //item.find(".delete.button:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
     }
     
     $("#items").sortable({axis:"y", containment:'parent', tolerance:'pointer', update:function(event, ui) {
@@ -81,9 +81,10 @@
     
     $("#info #name").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
     
-    $("#info:first").click(function(e) {
-      var name = $(this).find("#name"),
-          form = $(this).find("form:first"),
+    $("#info #name").click(function(e) {
+      var info = $(this).parents("#info:first"),
+          name = $(this),
+          form = info.find("form:first"),
           nameField = form.find("#list_name");
       name.hide();
       form.show();

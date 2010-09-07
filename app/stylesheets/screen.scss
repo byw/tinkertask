@@ -26,20 +26,15 @@ body {
       @include border-bottom-radius(8px);
       padding: 16px 0 16px 0;
       margin-bottom: 1px;
-      .logo_small {
-        width: 21px;
-        height: 21px;
-        background-color: #ccc;
-//        @include border-radius(5px);
-        float: left;
-        margin-right: 8px;
-      }
       #my_lists {
+        @include float-left;
         font-weight: bold;
         font-size: 1.2em;
       }
       #account {
-        float: right;
+        //float: right;
+        @include float-right;
+        display: inline;
         .separator {
           color: #CC6600;
           font-weight: bold;
@@ -131,7 +126,7 @@ input[type="zcheckboxz"] {
 form#new_session {
   @include clearfix;
   text-align: center;
-  input[type="submit"] {width: 100px;}
+//  input[type="submit"] {width: 100px;}
   input[type="text"], input[type="password"] {width: 110px;}
   a {display: inline; margin-left: 11px;}
 }
@@ -248,7 +243,7 @@ form#new_session {
         padding: 10px 0 8px 0;
         float: left;
         width: 388px;
-        line-height: 1.6em;
+        line-height: 1.8em;
       }
       input.item_body {
         float: left;
@@ -257,12 +252,12 @@ form#new_session {
         margin: 12px 0 12px 0;
       }  
       .delete_wrapper {
-        float: right;
-        padding: 12px;
         .delete.button {
+          float: right;
+          padding: 12px;
           text-decoration: none;
           color: #aaa;
-          &:hover {@include opacity(0.5);};
+          &:hover {color: #c60;};
         }
       }
     }

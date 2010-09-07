@@ -98,59 +98,55 @@ body #container #header {
   display: block;
 }
 /* line 29, ../../../app/stylesheets/screen.scss */
-body #container #header .logo_small {
-  width: 21px;
-  height: 21px;
-  background-color: #ccc;
-  float: left;
-  margin-right: 8px;
-}
-/* line 37, ../../../app/stylesheets/screen.scss */
 body #container #header #my_lists {
+  display: inline;
+  float: left;
   font-weight: bold;
   font-size: 1.2em;
 }
-/* line 41, ../../../app/stylesheets/screen.scss */
+/* line 34, ../../../app/stylesheets/screen.scss */
 body #container #header #account {
+  display: inline;
   float: right;
+  display: inline;
 }
-/* line 43, ../../../app/stylesheets/screen.scss */
+/* line 38, ../../../app/stylesheets/screen.scss */
 body #container #header #account .separator {
   color: #CC6600;
   font-weight: bold;
 }
-/* line 48, ../../../app/stylesheets/screen.scss */
+/* line 43, ../../../app/stylesheets/screen.scss */
 body #container #header a {
   text-decoration: none;
 }
 
-/* line 54, ../../../app/stylesheets/screen.scss */
+/* line 49, ../../../app/stylesheets/screen.scss */
 a:link {
   color: #888;
 }
-/* line 58, ../../../app/stylesheets/screen.scss */
+/* line 53, ../../../app/stylesheets/screen.scss */
 a:visited {
   color: #888;
 }
-/* line 59, ../../../app/stylesheets/screen.scss */
+/* line 54, ../../../app/stylesheets/screen.scss */
 a:hover {
   color: #aaa;
 }
 
-/* line 63, ../../../app/stylesheets/screen.scss */
+/* line 58, ../../../app/stylesheets/screen.scss */
 .formtastic li {
   margin: 8px 0 8px 0;
 }
-/* line 64, ../../../app/stylesheets/screen.scss */
+/* line 59, ../../../app/stylesheets/screen.scss */
 .formtastic label {
   display: block;
   margin-bottom: 8px;
 }
-/* line 68, ../../../app/stylesheets/screen.scss */
+/* line 63, ../../../app/stylesheets/screen.scss */
 .formtastic abbr {
   color: #993333;
 }
-/* line 69, ../../../app/stylesheets/screen.scss */
+/* line 64, ../../../app/stylesheets/screen.scss */
 .formtastic .inline-errors {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -167,7 +163,7 @@ a:hover {
   font-size: 0.8em;
 }
 
-/* line 80, ../../../app/stylesheets/screen.scss */
+/* line 75, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   border-top: solid 3px #ccc;
   border-left: solid 3px #ccc;
@@ -185,7 +181,7 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* line 93, ../../../app/stylesheets/screen.scss */
+/* line 88, ../../../app/stylesheets/screen.scss */
 input[type="button"], input[type="submit"] {
   border: none;
   -moz-border-radius: 3px;
@@ -198,12 +194,12 @@ input[type="button"], input[type="submit"] {
   padding: 7px 8px 7px 8px;
   color: #fff;
 }
-/* line 100, ../../../app/stylesheets/screen.scss */
+/* line 95, ../../../app/stylesheets/screen.scss */
 input[type="button"]:hover, input[type="submit"]:hover {
   background-color: #ccc;
 }
 
-/* line 104, ../../../app/stylesheets/screen.scss */
+/* line 99, ../../../app/stylesheets/screen.scss */
 input[type="zcheckboxz"] {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -217,16 +213,16 @@ input[type="zcheckboxz"] {
   height: 15px;
   margin: 0px;
 }
-/* line 113, ../../../app/stylesheets/screen.scss */
+/* line 108, ../../../app/stylesheets/screen.scss */
 input[type="zcheckboxz"]:hover {
   background-color: #ddd;
 }
-/* line 114, ../../../app/stylesheets/screen.scss */
+/* line 109, ../../../app/stylesheets/screen.scss */
 input[type="zcheckboxz"]:checked {
   background-color: #FFFFCC;
 }
 
-/* line 120, ../../../app/stylesheets/screen.scss */
+/* line 115, ../../../app/stylesheets/screen.scss */
 #login_error {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -249,7 +245,7 @@ input[type="zcheckboxz"]:checked {
   display: block;
 }
 
-/* line 131, ../../../app/stylesheets/screen.scss */
+/* line 126, ../../../app/stylesheets/screen.scss */
 form#new_session {
   overflow: hidden;
   display: inline-block;
@@ -259,21 +255,17 @@ form#new_session {
 form#new_session {
   display: block;
 }
-/* line 134, ../../../app/stylesheets/screen.scss */
-form#new_session input[type="submit"] {
-  width: 100px;
-}
-/* line 135, ../../../app/stylesheets/screen.scss */
+/* line 130, ../../../app/stylesheets/screen.scss */
 form#new_session input[type="text"], form#new_session input[type="password"] {
   width: 110px;
 }
-/* line 136, ../../../app/stylesheets/screen.scss */
+/* line 131, ../../../app/stylesheets/screen.scss */
 form#new_session a {
   display: inline;
   margin-left: 11px;
 }
 
-/* line 139, ../../../app/stylesheets/screen.scss */
+/* line 134, ../../../app/stylesheets/screen.scss */
 .nav {
   overflow: hidden;
   display: inline-block;
@@ -284,7 +276,7 @@ form#new_session a {
 .nav {
   display: block;
 }
-/* line 144, ../../../app/stylesheets/screen.scss */
+/* line 139, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button {
   padding: 0.8em;
   background-color: #888;
@@ -298,7 +290,7 @@ form#new_session a {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 151, ../../../app/stylesheets/screen.scss */
+/* line 146, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -309,7 +301,7 @@ form#new_session a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 156, ../../../app/stylesheets/screen.scss */
+/* line 151, ../../../app/stylesheets/screen.scss */
 #lists {
   overflow: hidden;
   display: inline-block;
@@ -318,7 +310,7 @@ form#new_session a {
 #lists {
   display: block;
 }
-/* line 158, ../../../app/stylesheets/screen.scss */
+/* line 153, ../../../app/stylesheets/screen.scss */
 #lists .list {
   overflow: hidden;
   display: inline-block;
@@ -331,7 +323,7 @@ form#new_session a {
 #lists .list {
   display: block;
 }
-/* line 164, ../../../app/stylesheets/screen.scss */
+/* line 159, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
   float: left;
   background-color: #888;
@@ -342,64 +334,64 @@ form#new_session a {
   margin-right: 0.5em;
   cursor: url(/images/grab.png), default;
 }
-/* line 173, ../../../app/stylesheets/screen.scss */
+/* line 168, ../../../app/stylesheets/screen.scss */
 #lists .list .handle:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 175, ../../../app/stylesheets/screen.scss */
+/* line 170, ../../../app/stylesheets/screen.scss */
 #lists .list .name {
   float: left;
   margin-left: 13px;
   width: 388px;
 }
-/* line 179, ../../../app/stylesheets/screen.scss */
+/* line 174, ../../../app/stylesheets/screen.scss */
 #lists .list .name .items_count {
   display: inline;
   color: #888;
   font-size: 0.5em;
   font-weight: bold;
 }
-/* line 186, ../../../app/stylesheets/screen.scss */
+/* line 181, ../../../app/stylesheets/screen.scss */
 #lists .list .delete.button {
   text-decoration: none;
   float: right;
 }
 
-/* line 194, ../../../app/stylesheets/screen.scss */
+/* line 189, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
   margin: 8px 0 16px 0;
 }
-/* line 197, ../../../app/stylesheets/screen.scss */
+/* line 192, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   display: inline;
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 199, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 455px;
 }
-/* line 212, ../../../app/stylesheets/screen.scss */
+/* line 207, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin-bottom: 32px;
   margin-top: 32px;
 }
-/* line 216, ../../../app/stylesheets/screen.scss */
+/* line 211, ../../../app/stylesheets/screen.scss */
 #list form#new_item #item_body {
   width: 300px;
   margin-right: 11px;
 }
-/* line 217, ../../../app/stylesheets/screen.scss */
+/* line 212, ../../../app/stylesheets/screen.scss */
 #list form#new_item input[type="submit"] {
   width: 80px;
 }
-/* line 219, ../../../app/stylesheets/screen.scss */
+/* line 214, ../../../app/stylesheets/screen.scss */
 #list .items {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -408,7 +400,7 @@ form#new_session a {
   -khtml-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 221, ../../../app/stylesheets/screen.scss */
+/* line 216, ../../../app/stylesheets/screen.scss */
 #list .items .item {
   overflow: hidden;
   display: inline-block;
@@ -434,65 +426,56 @@ form#new_session a {
 #list .items .item {
   display: block;
 }
-/* line 232, ../../../app/stylesheets/screen.scss */
+/* line 229, ../../../app/stylesheets/screen.scss */
 #list .items .item:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 230, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   background-color: #e5e5e5;
 }
-/* line 238, ../../../app/stylesheets/screen.scss */
+/* line 235, ../../../app/stylesheets/screen.scss */
 #list .items .item .checkbox_wrapper {
   display: inline;
   float: left;
   padding: 11px;
   cursor: default;
 }
-/* line 244, ../../../app/stylesheets/screen.scss */
+/* line 241, ../../../app/stylesheets/screen.scss */
 #list .items .item .item_complete {
   float: left;
 }
-/* line 247, ../../../app/stylesheets/screen.scss */
+/* line 244, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
   padding: 10px 0 8px 0;
   float: left;
   width: 388px;
-  line-height: 1.6em;
+  line-height: 1.8em;
 }
-/* line 253, ../../../app/stylesheets/screen.scss */
+/* line 250, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   float: left;
   width: 398px;
   padding: 0px;
   margin: 12px 0 12px 0;
 }
-/* line 259, ../../../app/stylesheets/screen.scss */
-#list .items .item .delete_wrapper {
+/* line 257, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete_wrapper .delete.button {
   float: right;
   padding: 12px;
-}
-/* line 262, ../../../app/stylesheets/screen.scss */
-#list .items .item .delete_wrapper .delete.button {
   text-decoration: none;
   color: #aaa;
 }
-/* line 265, ../../../app/stylesheets/screen.scss */
+/* line 262, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
-  -moz-opacity: 0.5;
-  -webkit-opacity: 0.5;
-  -o-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  color: #c60;
 }
-/* line 269, ../../../app/stylesheets/screen.scss */
+/* line 266, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #eee;
   color: #aaa;
 }
-/* line 272, ../../../app/stylesheets/screen.scss */
+/* line 269, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -502,7 +485,7 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 274, ../../../app/stylesheets/screen.scss */
+/* line 271, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.3;
   -webkit-opacity: 0.3;
@@ -512,15 +495,15 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
-/* line 278, ../../../app/stylesheets/screen.scss */
+/* line 275, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-bottom: 32px;
 }
-/* line 280, ../../../app/stylesheets/screen.scss */
+/* line 277, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }
-/* line 283, ../../../app/stylesheets/screen.scss */
+/* line 280, ../../../app/stylesheets/screen.scss */
 #list #hint {
   display: none;
   text-align: center;
