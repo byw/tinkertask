@@ -261,7 +261,7 @@ form#new_session {
         padding: 12px;
         .delete.button {
           text-decoration: none;
-          color: #777;
+          color: #aaa;
           &:hover {@include opacity(0.5);};
         }
       }

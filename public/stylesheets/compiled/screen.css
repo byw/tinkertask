@@ -475,7 +475,7 @@ form#new_session a {
 /* line 262, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   text-decoration: none;
-  color: #777;
+  color: #aaa;
 }
 /* line 265, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
