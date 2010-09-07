@@ -420,6 +420,7 @@ form#new_session a {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   background-color: #ddd;
+  color: #555;
   margin-bottom: 3px;
   font-size: 0.8em;
   overflow: hidden;
@@ -459,24 +460,24 @@ form#new_session a {
   width: 400px;
   line-height: 1.5em;
 }
-/* line 255, ../../../app/stylesheets/screen.scss */
+/* line 254, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   float: left;
   width: 391px;
   padding: 0px;
   margin: 15px 0 16px 0;
 }
-/* line 261, ../../../app/stylesheets/screen.scss */
+/* line 260, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper {
   float: right;
   padding: 16px;
 }
-/* line 264, ../../../app/stylesheets/screen.scss */
+/* line 263, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   text-decoration: none;
   color: #777;
 }
-/* line 267, ../../../app/stylesheets/screen.scss */
+/* line 266, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -486,11 +487,12 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 271, ../../../app/stylesheets/screen.scss */
+/* line 270, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
-  background-color: #eeeeee;
+  background-color: #eee;
+  color: #aaa;
 }
-/* line 274, ../../../app/stylesheets/screen.scss */
+/* line 273, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -500,7 +502,7 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 276, ../../../app/stylesheets/screen.scss */
+/* line 275, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.3;
   -webkit-opacity: 0.3;
@@ -510,15 +512,15 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
-/* line 280, ../../../app/stylesheets/screen.scss */
+/* line 279, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-bottom: 32px;
 }
-/* line 282, ../../../app/stylesheets/screen.scss */
+/* line 281, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }
-/* line 285, ../../../app/stylesheets/screen.scss */
+/* line 284, ../../../app/stylesheets/screen.scss */
 #list #hint {
   display: none;
   text-align: center;

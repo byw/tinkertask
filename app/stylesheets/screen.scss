@@ -225,7 +225,7 @@ form#new_session {
       cursor: url(/images/grab.png), default;
       @include border-radius(5px);
       background-color: #ddd;
-
+      color: #555;
       margin-bottom: 3px;
       font-size: 0.8em;
       @include clearfix;
@@ -245,7 +245,6 @@ form#new_session {
         float: left;;
       }
       .body {
-//        color: #aaa;
 //        font-weight: bold;
         padding: 15px 0 15px 0;
         float: left;
@@ -269,8 +268,8 @@ form#new_session {
       }
     }
     .item.complete {
-      $background: #eee;
-      background-color: $background;
+      background-color: #eee;
+      color: #aaa;
       .delete.button {
         @include opacity(0.5);
         &:hover {@include opacity(0.3);}
