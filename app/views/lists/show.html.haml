@@ -28,18 +28,26 @@
     var new_item_body = $("#new_item #item_body");
     new_item_body.focus();
     
-    $(".item").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
+    bindNewItem($("#items .item"));
     
     $("#new_item").submit(function(e) {
       e.preventDefault();
       var url = "#{list_items_path(@list, :format => :js)}";
       $.post(url, $(e.currentTarget).serialize(), function(data) {
         $("#items").append(data);
-        $("#items .item:last").dblclick(editItem);
         new_item_body.val('');
-        $(".item_complete").change(markComplete);
+        bindNewItem($("#items .item:last"));
       });
     });
+    
+    function bindNewItem(item) {
+      item.find(".item_complete").change(markComplete);
+      item.find(".body:first").dblclick(editItem);
+      
+      //item.find(".item_complete:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
+      item.find(".body:first").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
+      item.find(".delete.button:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
+    }
     
     $("#items").sortable({axis:"y", containment:'parent', tolerance:'pointer', update:function(event, ui) {
       var data = {items : $("#items").sortable('toArray')};
@@ -47,8 +55,9 @@
     }});
     
     function editItem(e) {
-      var form = $(this).find("form:first"),
-          body = $(this).find(".body:first"),
+      var item = $(this).parents(".item:first"),
+          form = item.find("form:first"),
+          body = item.find(".body:first"),
           field = form.find(".item_body:first");
           
       body.hide();
@@ -67,8 +76,6 @@
       field.blur(function() {
         form.submit()});
     }
-    
-    $(".item").dblclick(editItem);
     
     $("#info #name").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
     
@@ -106,6 +113,4 @@
       }
       $.post(url, data);
     }
-    
-    $(".item_complete").change(markComplete);
   });

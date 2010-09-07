@@ -9,12 +9,13 @@
           =link_to h(list.name), list_path(list)
           .items_count
             #{pluralize(list.active_items_count, "item")}
-        =link_to 'x', list_path(list), :method => :delete, :confirm => "Delete this list?", :class => 'delete button'
+        =link_to 'x', list_path(list), :method => :delete, :confirm => "Delete this list?", :class => 'delete button', :title => "delete"
         
 :javascript
   // dragging cursor works properly
   document.onselectstart = function () { return false; }
   $(document).ready(function() {
+    $(".delete.button").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
     $("#lists").sortable({axis:'y', handle:'.handle', tolerance:'pointer', containment:'parent', update:function(event, ui) {
       var url = "#{reorder_lists_path}",
          data = {lists : $("#lists").sortable('toArray')};

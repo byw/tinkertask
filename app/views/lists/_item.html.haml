@@ -1,9 +1,11 @@
-.item{:id => item.id, :class => "#{'complete' if item.complete}", :title => "double-click to edit"}
+.item{:id => item.id, :class => "#{'complete' if item.complete}"}
   .checkbox_wrapper
     =check_box_tag "item[complete]", "1", item.complete, :class => "item_complete"
-  .body
+  .body(title="double-click to edit")
     =h(item.body)
   -form_for [@list, item], :html => {:style => "display:none"} do |form|
     =form.text_field :body, :class => "item_body"
   
-  =link_to image_tag("delete.png"), list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button'
+  .delete_wrapper
+    =#link_to 'x', list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"
+    =link_to image_tag("delete.png"), list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"
