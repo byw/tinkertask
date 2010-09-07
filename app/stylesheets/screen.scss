@@ -14,7 +14,7 @@
 
 body {
 //  background: url('/images/bg.png');
-  background-color: #ddd;
+  background-color: #eee;
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
   color: #777;
   #container {
@@ -24,7 +24,6 @@ body {
     #header {
       @include clearfix;
       @include border-bottom-radius(8px);
-      background-color: #ddd;
       padding: 16px 0 16px 0;
       margin-bottom: 1px;
       .logo_small {
@@ -80,12 +79,13 @@ a {
 }  
 input[type="text"], input[type="password"] {
   border: {
-    top: solid 3px #aaa;
-    left: solid 3px #aaa;
-    bottom: solid 3px #eee;
-    right: solid 3px #eee;
+    top: solid 3px #ccc;
+    left: solid 3px #ccc;
+    bottom: solid 3px #fff;
+    right: solid 3px #fff;
   }
   background-color: #fff;
+  color: #777;
   padding: 5px;
   width: 350px;
   @include border-radius(5px);
@@ -160,7 +160,7 @@ form#new_session {
     padding: 1em;
     padding-bottom: 1.2em;
     margin-bottom: 1px;
-    background-color: #ccc;
+    background-color: #ddd;
     .handle {
       float: left;
       background-color: #888;
@@ -199,10 +199,8 @@ form#new_session {
       font-size: 1.5em;
       font-weight: bold;
       text-decoration: none;
-//      color: #555;
     }
     form {
-      background-color: #ddd;
       input[type="text"] {
         margin-left: auto;
         margin-right: auto;
@@ -219,7 +217,6 @@ form#new_session {
     input[type="submit"] {width: 80px;}
   }
   .items {
-    background-color: #ddd;
     @include border-radius(7px);
     .item {
       @include clearfix;
@@ -227,9 +224,8 @@ form#new_session {
       $bottom-color: #999;
       cursor: url(/images/grab.png), default;
       @include border-radius(5px);
-      background-color: #b5b5b5;
-      @include linear-gradient(color-stops($top-color, $bottom-color));
-      color: #fff;
+      background-color: #ddd;
+
       margin-bottom: 3px;
       font-size: 0.8em;
       @include clearfix;
@@ -237,33 +233,28 @@ form#new_session {
       &:hover {
         $top-color-light: lighten($top-color, 5);
         $bottom-color-light: lighten($bottom-color, 5);
-        @include linear-gradient(color-stops($top-color-light, $bottom-color-light));
-        background-color: #bbb;
+        background-color: #e5e5e5;
       }
       .checkbox_wrapper {
-//        background-color: #ccc;
         display: inline;
         float: left;
         padding: 16px;
         cursor: default;
-//        input[type="checkbox"] {margin: 0px;}
       }
       .item_complete {
         float: left;;
       }
       .body {
-//        background-color: #ccc;
-        @include text-shadow(#888, -1px, -1px, 1px);
+//        color: #aaa;
+//        font-weight: bold;
         padding: 15px 0 15px 0;
         float: left;
         width: 400px;
-        font-weight: bold;
         line-height: 1.5em;
       }
       input.item_body {
         float: left;
         width: 391px;
-//        height: 30px;
         padding: 0px;
         margin: 15px 0 16px 0;
       }  
@@ -278,10 +269,8 @@ form#new_session {
       }
     }
     .item.complete {
-      $background: #ccc;
-      @include linear-gradient(color-stops($background, $background));
+      $background: #eee;
       background-color: $background;
-      .body {@include text-shadow(#aaa, -1px, -1px, 1px);}
       .delete.button {
         @include opacity(0.5);
         &:hover {@include opacity(0.3);}
