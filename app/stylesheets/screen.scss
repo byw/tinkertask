@@ -123,36 +123,33 @@ input[type="zcheckboxz"] {
   font-weight: bold;
   display: inline;
 }
+
 form#new_session {
-  text-align: center;
-  display: inline;
-//  input[type="submit"] {width: 100px;}
-  .wrapper {
-    background-color: #ccc;
-    display: inline;
-    padding: 8px;
-    .text_fields {
-      input[type="text"], input[type="password"] {width: 131px;}
-      #login_button {
-        padding-left: 1em;
-        padding-right: 1em;
-      }
+  width: 300px;
+  margin: 0 auto 0 auto;
+  
+  .fields {
+    @include clearfix;
+    input[type="text"], input[type="password"] {
+      display: block;
+      margin-bottom: 8px;
+      width: 283px;
     }
-    .options {
-      @include clearfix;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 16px;
-      width: 350px;
-  //    background-color:#bbb;
-      .remember_label {float: left;}
+    label {
+      float: left;
+      margin-top: 11px;
+    }
+    input[type="submit"] {
+  //    display: block;
+      float: right;
+      font-size: 1em;
+      margin: 3px 0 8px 0;
     }
   }
+  
   .links {
-    @include clearfix;
-    background-color: #ccc;
-    text-align: center;
-    padding: 8px;
+    margin-top: 8px;
+    text-align: right;
   }
 }
 
