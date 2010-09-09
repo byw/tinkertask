@@ -250,8 +250,9 @@ form#new_session {
   width: 300px;
   margin: 0 auto 0 auto;
 }
-/* line 131, ../../../app/stylesheets/screen.scss */
+/* line 130, ../../../app/stylesheets/screen.scss */
 form#new_session .fields {
+  padding: 2px;
   overflow: hidden;
   display: inline-block;
 }
@@ -263,7 +264,7 @@ form#new_session .fields {
 form#new_session .fields input[type="text"], form#new_session .fields input[type="password"] {
   display: block;
   margin-bottom: 8px;
-  width: 283px;
+  width: 280px;
 }
 /* line 138, ../../../app/stylesheets/screen.scss */
 form#new_session .fields label {
@@ -501,7 +502,7 @@ form#new_session .links {
 /* line 288, ../../../app/stylesheets/screen.scss */
 #list .items .item .loader {
   margin: 12px 0px 12px 12px;
-  display: inline;
+  visibility: hidden;
   float: left;
 }
 /* line 294, ../../../app/stylesheets/screen.scss */

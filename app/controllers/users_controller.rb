@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   include InheritedResources::DSL
   before_filter :require_user, :except => [:new, :create]
 #  before_filter {|c|c.render :text => c.action_name}
+  filter_param :user, :allow => [:username, :password, :password_confirmation, :email]
   
   create! do |success, failure|
     success.html do

@@ -64,7 +64,8 @@
       var item = $(this).parents(".item:first"),
           form = item.find("form:first"),
           body = item.find(".body:first"),
-          field = form.find(".item_body:first");
+          field = form.find(".item_body:first"),
+          loader = form.find(".loader:first");
           
       body.hide();
       form.show();
@@ -73,12 +74,15 @@
       
       form.submit(function(event) {
         event.preventDefault();
+        loader.css("visibility", "visible");
         $.post(form.attr("action")+".js", form.serialize(), function(data) {
           body.text(data.body);
           form.unbind();
           form.hide();
           body.show();
+          loader.css("visibility", "hidden");
         }, "json");
+        return false;
       });
       field.blur(function() {
         form.submit()});
@@ -106,6 +110,7 @@
           name.show();
           loader.css("visibility", "hidden");
         }, "json");
+        return false;
       }
       form.submit(updateList);
       nameField.blur(updateList);

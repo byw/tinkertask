@@ -2,10 +2,10 @@ class ListsController < ApplicationController
   inherit_resources
   include InheritedResources::DSL
   before_filter :require_user
+  filter_param :list, :allow => [:name]
   
   update! do |success, failure|
-    success.js {sleep 2
-      render :json => @list}
+    success.js {render :json => @list}
     success.html {redirect_to list_path(@list)}
     
     # use old list if validation fails

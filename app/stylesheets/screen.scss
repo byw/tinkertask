@@ -127,13 +127,13 @@ input[type="zcheckboxz"] {
 form#new_session {
   width: 300px;
   margin: 0 auto 0 auto;
-  
   .fields {
+    padding: 2px; // make focus outlines display properly
     @include clearfix;
     input[type="text"], input[type="password"] {
       display: block;
       margin-bottom: 8px;
-      width: 283px;
+      width: 280px;
     }
     label {
       float: left;
@@ -287,7 +287,7 @@ form#new_session {
       }
       .loader {
         margin: 12px 0px 12px 12px;
-        display: inline;
+        visibility: hidden;
         float: left;
       }
       .delete_wrapper {

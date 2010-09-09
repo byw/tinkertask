@@ -30,4 +30,14 @@ class ApplicationController < ActionController::Base
         redirect_to new_session_path
       end
     end
+    
+    # filter params for mass assignment, in controller rather than model
+    def self.filter_param(name, opts={})
+      self.prepend_before_filter(opts.slice(:only, :except)) do |controller|
+        if controller.params[name]
+          controller.params[name].slice!(*opts[:allow]) if opts[:allow]
+          controller.params[name].except!(*opts[:deny]) if opts[:deny]
+        end
+      end
+    end
 end
