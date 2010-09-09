@@ -4,7 +4,8 @@ class ListsController < ApplicationController
   before_filter :require_user
   
   update! do |success, failure|
-    success.js {render :json => @list}
+    success.js {sleep 2
+      render :json => @list}
     success.html {redirect_to list_path(@list)}
     
     # use old list if validation fails

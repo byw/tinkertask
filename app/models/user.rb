@@ -19,6 +19,10 @@ class User
     end
   end
   
+  def cookie_code
+    Digest::SHA1.hexdigest(self.username)[4,18]
+  end
+  
   def self.generate_salt
     [Array.new(6){rand(256).chr}.join].pack("m").chomp
   end
@@ -34,4 +38,5 @@ class User
       end
     end
   end
+  
 end

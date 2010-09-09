@@ -124,11 +124,36 @@ input[type="zcheckboxz"] {
   display: inline;
 }
 form#new_session {
-  @include clearfix;
   text-align: center;
+  display: inline;
 //  input[type="submit"] {width: 100px;}
-  input[type="text"], input[type="password"] {width: 110px;}
-  a {display: inline; margin-left: 11px;}
+  .wrapper {
+    background-color: #ccc;
+    display: inline;
+    padding: 8px;
+    .text_fields {
+      input[type="text"], input[type="password"] {width: 131px;}
+      #login_button {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
+    .options {
+      @include clearfix;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 16px;
+      width: 350px;
+  //    background-color:#bbb;
+      .remember_label {float: left;}
+    }
+  }
+  .links {
+    @include clearfix;
+    background-color: #ccc;
+    text-align: center;
+    padding: 8px;
+  }
 }
 
 .nav {
@@ -199,8 +224,13 @@ form#new_session {
       input[type="text"] {
         margin-left: auto;
         margin-right: auto;
-        display: block;
-        width: 455px;
+        display: inline;
+        width: 300px;
+      }
+      .loader {
+        padding: 8px;
+        position: absolute;
+        visibility: hidden;
       }
     }
   }
@@ -208,8 +238,16 @@ form#new_session {
     text-align: center;;
     margin-bottom: 32px;
     margin-top: 32px;
-    #item_body {width: 300px; margin-right: 11px;}
-    input[type="submit"] {width: 80px;}
+    .fields{
+      display: inline;
+      #item_body {width: 300px; margin-right: 11px;}
+      input[type="submit"] {width: 80px;}
+    }
+    .loader {
+      margin: 8px 0 8px 3px;
+      position: absolute;
+      visibility: hidden;
+    }
   }
   .items {
     @include border-radius(7px);
@@ -220,15 +258,14 @@ form#new_session {
       cursor: url(/images/grab.png), default;
       @include border-radius(5px);
       background-color: #ddd;
-      color: #555;
+      color: #333;
       margin-bottom: 3px;
       font-size: 0.8em;
       @include clearfix;
       &:active {cursor: url(/images/grabbing.png), default;}
       &:hover {
-        $top-color-light: lighten($top-color, 5);
-        $bottom-color-light: lighten($bottom-color, 5);
-        background-color: #e5e5e5;
+//        background-color: #e5e5e5;
+        @include opacity(0.7);
       }
       .checkbox_wrapper {
         display: inline;
@@ -247,10 +284,15 @@ form#new_session {
       }
       input.item_body {
         float: left;
-        width: 398px;
+        width: 393px;
         padding: 0px;
         margin: 12px 0 12px 0;
-      }  
+      }
+      .loader {
+        margin: 12px 0px 12px 12px;
+        display: inline;
+        float: left;
+      }
       .delete_wrapper {
         .delete.button {
           float: right;

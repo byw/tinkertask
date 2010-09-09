@@ -5,6 +5,7 @@
       =h(@list.name)
     -form_for @list, :html => {:style => "display:none"} do |form|
       =form.text_field :name
+      =image_tag("loader_ccc_on_eee.gif", :class => "loader")
 
 
   %ul#items.items
@@ -15,6 +16,7 @@
   %form#new_item(method="post")
     =text_field_tag "item[body]"
     =submit_tag "add item"
+    =image_tag "loader_ccc_on_eee.gif", :class => "loader"
       
   %ul#completed_items.items
     -for item in @list.items
@@ -33,11 +35,14 @@
     
     $("#new_item").submit(function(e) {
       e.preventDefault();
-      var url = "#{list_items_path(@list, :format => :js)}";
+      var url = "#{list_items_path(@list, :format => :js)}",
+          loader = $(this).find(".loader:first");
+      loader.css("visibility", "visible");
       $.post(url, $(e.currentTarget).serialize(), function(data) {
         $("#items").append(data);
         new_item_body.val('');
         bindNewItem($("#items .item:last"));
+        loader.css("visibility", "hidden");
       });
     });
     
@@ -46,7 +51,7 @@
       item.find(".body:first").dblclick(editItem);
       
       //item.find(".item_complete:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
-      item.find(".body:first").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0, delay:1500});
+      //item.find(".body:first").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0, delay:1500});
       //item.find(".delete.button:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
     }
     
@@ -79,24 +84,27 @@
         form.submit()});
     }
     
-    $("#info #name").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
+    //$("#info #name").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
     
     $("#info #name").click(function(e) {
       var info = $(this).parents("#info:first"),
           name = $(this),
           form = info.find("form:first"),
-          nameField = form.find("#list_name");
+          nameField = form.find("#list_name"),
+          loader = form.find(".loader:first");
       name.hide();
       form.show();
       form.find("#list_name").select();
       function updateList(formEvent) {
         formEvent.preventDefault();
+        loader.css("visibility", "visible");
         $.post(form.attr("action")+".js", form.serialize(), function(data) {
           name.text(data.name);
           form.unbind();
           nameField.unbind();
           form.hide();
           name.show();
+          loader.css("visibility", "hidden");
         }, "json");
       }
       form.submit(updateList);

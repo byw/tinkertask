@@ -2,8 +2,16 @@
 -if flash[:login_error]
   #login_error 
     =flash[:login_error]
+
 -form_tag session_path, :id => 'new_session' do
-  =text_field_tag :username
-  =password_field_tag :password
-  =submit_tag "login"
-  =link_to 'sign up', new_user_path
+  .wrapper
+    .text_fields
+      =text_field_tag :username
+      =password_field_tag :password
+      =submit_tag "login", :id => "login_button"
+    .options
+      %label.remember_label(for="remember_me")
+        =check_box_tag :remember_me
+        remember me
+  .links
+    =link_to 'sign up', new_user_path, :class => "signup"

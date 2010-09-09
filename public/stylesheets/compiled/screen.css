@@ -247,25 +247,55 @@ input[type="zcheckboxz"]:checked {
 
 /* line 126, ../../../app/stylesheets/screen.scss */
 form#new_session {
-  overflow: hidden;
-  display: inline-block;
   text-align: center;
-}
-/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-form#new_session {
-  display: block;
+  display: inline;
 }
 /* line 130, ../../../app/stylesheets/screen.scss */
-form#new_session input[type="text"], form#new_session input[type="password"] {
-  width: 110px;
-}
-/* line 131, ../../../app/stylesheets/screen.scss */
-form#new_session a {
+form#new_session .wrapper {
+  background-color: #ccc;
   display: inline;
-  margin-left: 11px;
+  padding: 8px;
+}
+/* line 135, ../../../app/stylesheets/screen.scss */
+form#new_session .wrapper .text_fields input[type="text"], form#new_session .wrapper .text_fields input[type="password"] {
+  width: 131px;
+}
+/* line 136, ../../../app/stylesheets/screen.scss */
+form#new_session .wrapper .text_fields #login_button {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 141, ../../../app/stylesheets/screen.scss */
+form#new_session .wrapper .options {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  width: 350px;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+form#new_session .wrapper .options {
+  display: block;
+}
+/* line 148, ../../../app/stylesheets/screen.scss */
+form#new_session .wrapper .options .remember_label {
+  float: left;
+}
+/* line 151, ../../../app/stylesheets/screen.scss */
+form#new_session .links {
+  overflow: hidden;
+  display: inline-block;
+  background-color: #ccc;
+  text-align: center;
+  padding: 8px;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+form#new_session .links {
+  display: block;
 }
 
-/* line 134, ../../../app/stylesheets/screen.scss */
+/* line 159, ../../../app/stylesheets/screen.scss */
 .nav {
   overflow: hidden;
   display: inline-block;
@@ -276,7 +306,7 @@ form#new_session a {
 .nav {
   display: block;
 }
-/* line 139, ../../../app/stylesheets/screen.scss */
+/* line 164, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button {
   padding: 0.8em;
   background-color: #888;
@@ -290,7 +320,7 @@ form#new_session a {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 146, ../../../app/stylesheets/screen.scss */
+/* line 171, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -301,7 +331,7 @@ form#new_session a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 151, ../../../app/stylesheets/screen.scss */
+/* line 176, ../../../app/stylesheets/screen.scss */
 #lists {
   overflow: hidden;
   display: inline-block;
@@ -310,7 +340,7 @@ form#new_session a {
 #lists {
   display: block;
 }
-/* line 153, ../../../app/stylesheets/screen.scss */
+/* line 178, ../../../app/stylesheets/screen.scss */
 #lists .list {
   overflow: hidden;
   display: inline-block;
@@ -323,7 +353,7 @@ form#new_session a {
 #lists .list {
   display: block;
 }
-/* line 159, ../../../app/stylesheets/screen.scss */
+/* line 184, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
   float: left;
   background-color: #888;
@@ -334,64 +364,80 @@ form#new_session a {
   margin-right: 0.5em;
   cursor: url(/images/grab.png), default;
 }
-/* line 168, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 #lists .list .handle:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 170, ../../../app/stylesheets/screen.scss */
+/* line 195, ../../../app/stylesheets/screen.scss */
 #lists .list .name {
   float: left;
   margin-left: 13px;
   width: 388px;
 }
-/* line 174, ../../../app/stylesheets/screen.scss */
+/* line 199, ../../../app/stylesheets/screen.scss */
 #lists .list .name .items_count {
   display: inline;
   color: #888;
   font-size: 0.5em;
   font-weight: bold;
 }
-/* line 181, ../../../app/stylesheets/screen.scss */
+/* line 206, ../../../app/stylesheets/screen.scss */
 #lists .list .delete.button {
   text-decoration: none;
   float: right;
 }
 
-/* line 189, ../../../app/stylesheets/screen.scss */
+/* line 214, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
   margin: 8px 0 16px 0;
 }
-/* line 192, ../../../app/stylesheets/screen.scss */
+/* line 217, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   display: inline;
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 199, ../../../app/stylesheets/screen.scss */
+/* line 224, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  width: 455px;
+  display: inline;
+  width: 300px;
 }
-/* line 207, ../../../app/stylesheets/screen.scss */
+/* line 230, ../../../app/stylesheets/screen.scss */
+#list #info form .loader {
+  padding: 8px;
+  position: absolute;
+  visibility: hidden;
+}
+/* line 237, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin-bottom: 32px;
   margin-top: 32px;
 }
-/* line 211, ../../../app/stylesheets/screen.scss */
-#list form#new_item #item_body {
+/* line 241, ../../../app/stylesheets/screen.scss */
+#list form#new_item .fields {
+  display: inline;
+}
+/* line 243, ../../../app/stylesheets/screen.scss */
+#list form#new_item .fields #item_body {
   width: 300px;
   margin-right: 11px;
 }
-/* line 212, ../../../app/stylesheets/screen.scss */
-#list form#new_item input[type="submit"] {
+/* line 244, ../../../app/stylesheets/screen.scss */
+#list form#new_item .fields input[type="submit"] {
   width: 80px;
 }
-/* line 214, ../../../app/stylesheets/screen.scss */
+/* line 246, ../../../app/stylesheets/screen.scss */
+#list form#new_item .loader {
+  margin: 8px 0 8px 3px;
+  position: absolute;
+  visibility: hidden;
+}
+/* line 252, ../../../app/stylesheets/screen.scss */
 #list .items {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -400,7 +446,7 @@ form#new_session a {
   -khtml-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 216, ../../../app/stylesheets/screen.scss */
+/* line 254, ../../../app/stylesheets/screen.scss */
 #list .items .item {
   overflow: hidden;
   display: inline-block;
@@ -412,7 +458,7 @@ form#new_session a {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   background-color: #ddd;
-  color: #555;
+  color: #333;
   margin-bottom: 3px;
   font-size: 0.8em;
   overflow: hidden;
@@ -426,56 +472,68 @@ form#new_session a {
 #list .items .item {
   display: block;
 }
-/* line 229, ../../../app/stylesheets/screen.scss */
+/* line 265, ../../../app/stylesheets/screen.scss */
 #list .items .item:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 230, ../../../app/stylesheets/screen.scss */
+/* line 266, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
-  background-color: #e5e5e5;
+  -moz-opacity: 0.7;
+  -webkit-opacity: 0.7;
+  -o-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 }
-/* line 235, ../../../app/stylesheets/screen.scss */
+/* line 270, ../../../app/stylesheets/screen.scss */
 #list .items .item .checkbox_wrapper {
   display: inline;
   float: left;
   padding: 11px;
   cursor: default;
 }
-/* line 241, ../../../app/stylesheets/screen.scss */
+/* line 276, ../../../app/stylesheets/screen.scss */
 #list .items .item .item_complete {
   float: left;
 }
-/* line 244, ../../../app/stylesheets/screen.scss */
+/* line 279, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
   padding: 10px 0 8px 0;
   float: left;
   width: 388px;
   line-height: 1.8em;
 }
-/* line 250, ../../../app/stylesheets/screen.scss */
+/* line 285, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   float: left;
-  width: 398px;
+  width: 393px;
   padding: 0px;
   margin: 12px 0 12px 0;
 }
-/* line 257, ../../../app/stylesheets/screen.scss */
+/* line 291, ../../../app/stylesheets/screen.scss */
+#list .items .item .loader {
+  margin: 12px 0px 12px 12px;
+  display: inline;
+  float: left;
+}
+/* line 297, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   float: right;
   padding: 12px;
   text-decoration: none;
   color: #aaa;
 }
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 302, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
   color: #c60;
 }
-/* line 266, ../../../app/stylesheets/screen.scss */
+/* line 306, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #eee;
   color: #aaa;
 }
-/* line 269, ../../../app/stylesheets/screen.scss */
+/* line 309, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
@@ -485,7 +543,7 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 271, ../../../app/stylesheets/screen.scss */
+/* line 311, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.3;
   -webkit-opacity: 0.3;
@@ -495,15 +553,15 @@ form#new_session a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
-/* line 275, ../../../app/stylesheets/screen.scss */
+/* line 315, ../../../app/stylesheets/screen.scss */
 #list #completed_items {
   margin-bottom: 32px;
 }
-/* line 277, ../../../app/stylesheets/screen.scss */
+/* line 317, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }
-/* line 280, ../../../app/stylesheets/screen.scss */
+/* line 320, ../../../app/stylesheets/screen.scss */
 #list #hint {
   display: none;
   text-align: center;

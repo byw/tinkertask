@@ -10,7 +10,17 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
   
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    unless @current_user
+      unless session[:user_id]
+        if cookies[:remember_me_id] && cookies[:remember_me_code] && 
+           (user = User.find(cookies[:remember_me_id])) && user.cookie_code == cookies[:remember_me_code]
+          
+          session[:user_id] = user.id
+        end
+      end
+      @current_user = User.find(session[:user_id])
+    end
+    @current_user
   end
   
   protected
