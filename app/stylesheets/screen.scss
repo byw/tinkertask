@@ -128,29 +128,24 @@ form#new_session {
   width: 300px;
   margin: 0 auto 0 auto;
   .fields {
-    padding: 2px; // make focus outlines display properly
-    @include clearfix;
+    float: left;
     input[type="text"], input[type="password"] {
       display: block;
       margin-bottom: 8px;
-      width: 280px;
+      width: 283px;
+      float: left;
     }
     label {
       float: left;
       margin-top: 11px;
     }
     input[type="submit"] {
-  //    display: block;
       float: right;
       font-size: 1em;
       margin: 3px 0 8px 0;
     }
   }
-  
-  .links {
-    margin-top: 8px;
-    text-align: right;
-  }
+  a {float: right;}
 }
 
 .nav {

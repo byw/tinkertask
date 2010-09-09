@@ -31,7 +31,44 @@
     var new_item_body = $("#new_item #item_body");
     new_item_body.focus();
     
+    
+    
     bindNewItem($(".items .item"));
+    function bindNewItem(item) {
+      item.find(".item_complete").change(markComplete);
+      item.find(".body:first").dblclick(editItem);
+      var form = item.find("form:first");
+      form.submit(submitItem);
+      item.find('form:first input.item_body').blur(function() {form.submit()});
+    }
+    function editItem(e) {
+      var item = $(this).parents(".item:first"),
+          form = item.find("form:first"),
+          body = item.find(".body:first"),
+          field = form.find(".item_body:first"),
+          loader = form.find(".loader:first");
+      body.hide();
+      form.show();
+      //field.focus();
+      field.select();
+    }
+    function submitItem(event) {
+      event.preventDefault();
+      var item = $(this).parents(".item:first"),
+          form = item.find("form:first"),
+          body = item.find(".body:first"),
+          loader = form.find(".loader:first");
+      loader.css("visibility", "visible");
+      $.post(form.attr("action")+".js", form.serialize(), function(data) {
+        body.text(data.body);
+        form.hide();
+        body.show();
+        loader.css("visibility", "hidden");
+      }, "json");
+      return false;
+    }
+    
+    
     
     $("#new_item").submit(function(e) {
       e.preventDefault();
@@ -46,49 +83,14 @@
       });
     });
     
-    function bindNewItem(item) {
-      item.find(".item_complete").change(markComplete);
-      item.find(".body:first").dblclick(editItem);
-      
-      //item.find(".item_complete:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
-      //item.find(".body:first").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0, delay:1500});
-      //item.find(".delete.button:first").tipTip({defaultPosition:'top', fadeIn:0, fadeOut:0});
-    }
+    
     
     $("#items").sortable({axis:"y", containment:'parent', tolerance:'pointer', update:function(event, ui) {
       var data = {items : $("#items").sortable('toArray')};
       $.post("#{reorder_list_items_path(@list)}", data);
     }});
     
-    function editItem(e) {
-      var item = $(this).parents(".item:first"),
-          form = item.find("form:first"),
-          body = item.find(".body:first"),
-          field = form.find(".item_body:first"),
-          loader = form.find(".loader:first");
-          
-      body.hide();
-      form.show();
-      //field.focus();
-      field.select();
-      
-      form.submit(function(event) {
-        event.preventDefault();
-        loader.css("visibility", "visible");
-        $.post(form.attr("action")+".js", form.serialize(), function(data) {
-          body.text(data.body);
-          form.unbind();
-          form.hide();
-          body.show();
-          loader.css("visibility", "hidden");
-        }, "json");
-        return false;
-      });
-      field.blur(function() {
-        form.submit()});
-    }
     
-    //$("#info #name").tipTip({defaultPosition:'right', fadeIn:0, fadeOut:0});
     
     $("#info #name").click(function(e) {
       var info = $(this).parents("#info:first"),
@@ -99,22 +101,27 @@
       name.hide();
       form.show();
       form.find("#list_name").select();
-      function updateList(formEvent) {
-        formEvent.preventDefault();
-        loader.css("visibility", "visible");
-        $.post(form.attr("action")+".js", form.serialize(), function(data) {
-          name.text(data.name);
-          form.unbind();
-          nameField.unbind();
-          form.hide();
-          name.show();
-          loader.css("visibility", "hidden");
-        }, "json");
-        return false;
-      }
-      form.submit(updateList);
-      nameField.blur(updateList);
     });
+    function updateList(formEvent) {
+      formEvent.preventDefault();
+      var info = $(this).parents("#info:first"),
+          name = info.find("#name"),
+          form = info.find("form:first"),
+          nameField = form.find("#list_name"),
+          loader = form.find(".loader:first");
+      loader.css("visibility", "visible");
+      $.post(form.attr("action")+".js", form.serialize(), function(data) {
+        name.text(data.name);
+        form.hide();
+        name.show();
+        loader.css("visibility", "hidden");
+      }, "json");
+      return false;
+    }
+    $("#info form:first").submit(updateList);
+    $("#info #list_name").blur(updateList);
+    
+    
     
     function markComplete(e) {
       var item = $(this).parents(".item:first"),

@@ -6,12 +6,12 @@ class ItemsController < ApplicationController
   
   create! do |success|
     success.js {render :partial => "lists/item", :object => @item}
-    success.html {redirect_to list_path(@item.list)}
+    success.html {redirect_to list_path(list)}
   end
   
   update! do |success|
     success.js {render :json => resource}
-    success.html {redirect_to list_path(@item.list)}
+    success.html {redirect_to list_path(list)}
   end
   
   def destroy

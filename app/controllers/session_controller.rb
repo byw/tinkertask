@@ -15,9 +15,9 @@ class SessionController < ApplicationController
       end
       session[:user_id] = user.id
       redirect_to lists_path
-    else
-      render :new
+    else  
       flash[:login_error] = "Login failed."
+      render :new
     end
   end
   
