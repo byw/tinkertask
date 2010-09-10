@@ -5,3 +5,4 @@ haml
 inherited_resources -v 1.0.6
 formtastic
 bson_ext --version '>=1.0.7'
+exceptional --version '>=2.0.25'
