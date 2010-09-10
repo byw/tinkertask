@@ -13,7 +13,6 @@
 @import "compass/css3/text-shadow";
 
 body {
-//  background: url('/images/bg.png');
   background-color: #eee;
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
   color: #777;
@@ -23,33 +22,28 @@ body {
     width: 500px;
     #header {
       @include clearfix;
-      @include border-bottom-radius(8px);
       padding: 16px 0 16px 0;
-      margin-bottom: 1px;
-      #my_lists {
+      a#my_lists {
         @include float-left;
         font-weight: bold;
         font-size: 1.2em;
       }
       #account {
-        //float: right;
         @include float-right;
-        display: inline;
-        .separator {
-          color: #CC6600;
-          font-weight: bold;
-        }
+        .separator {color: #CC6600; font-weight: bold;}
       }
       a {text-decoration: none;}
+    }
+    #footer {
+      color: #ccc;
+      padding: 32px;
+      text-align: center;
     }
   }
 }
 
 a {
-  &:link {
-    color: #888; 
-//    text-decoration: none;
-  };
+  &:link {color: #888;}
   &:visited {color: #888;}
   &:hover {color: #aaa;}
 }
@@ -74,10 +68,9 @@ a {
 }  
 input[type="text"], input[type="password"] {
   border: {
-    top: solid 3px #ccc;
-    left: solid 3px #ccc;
-    bottom: solid 3px #fff;
-    right: solid 3px #fff;
+    width: 3px;
+    color: #ccc #fff #fff #ccc;
+    style: solid;
   }
   background-color: #fff;
   color: #555;
@@ -86,30 +79,12 @@ input[type="text"], input[type="password"] {
   @include border-radius(5px);
 }
 input[type="button"], input[type="submit"] {
-//  border: solid 1px #888;
   border: none;
   @include border-radius(3px);
   background-color: #aaa;
   padding: 7px 8px 7px 8px;
   color: #fff;
-  &:hover {
-    background-color: #ccc;
-  }
-}
-input[type="zcheckboxz"] {
-  @include border-radius(2px);
-//  -khtml-appearance: none;
-  background-color: #888;
-  vertical-align: middle;
-  $length: 15px;
-  width: $length;
-  height: $length;
-  margin: 0px;
-  &:hover {background-color: #ddd;};
-  &:checked {
-   background-color: #FFFFCC;
-//   border: solid 1px #6699CC;
-  };
+  &:hover {background-color: #ccc;}
 }
 
 #login_error {
@@ -121,40 +96,38 @@ input[type="zcheckboxz"] {
   color: #fff;
   background-color: #CC3333;
   font-weight: bold;
-  display: inline;
 }
 
 form#new_session {
   width: 300px;
   margin: 0 auto 0 auto;
   .fields {
-    float: left;
+    @include float-left;
     input[type="text"], input[type="password"] {
       display: block;
       margin-bottom: 8px;
       width: 283px;
-      float: left;
+      @include float-left;
     }
     label {
-      float: left;
+      @include float-left;
       margin-top: 11px;
     }
     input[type="submit"] {
-      float: right;
+      @include float-right;
       font-size: 1em;
       margin: 3px 0 8px 0;
     }
   }
-  a {float: right;}
+  a {@include float-right;}
 }
 
 .nav {
   @include clearfix;
   padding: 1.5em 0 38px 0;
-//    margin: 1em 0 1em 0;
   text-align: center;
   .new_list.button {
-    padding: 0.8em;
+    padding: 0.8em 1em 0.8em 1em;
     background-color: #888;
     color: #fff;
     text-transform: uppercase;
@@ -166,27 +139,23 @@ form#new_session {
 
 
 #lists {
-  @include clearfix;
   .list {
     @include clearfix;
     padding: 1em;
-    padding-bottom: 1.2em;
     margin-bottom: 1px;
     background-color: #ddd;
     .handle {
-      float: left;
+      @include float-left;
       background-color: #888;
       color: #fff;
       font-size: 0.5em;
       padding: 0.5em;
-      cursor: move;
-      margin-right: 0.5em;
-      cursor: url(/images/grab.png), default;
-      &:active {cursor: url(/images/grabbing.png), default;};
+      cursor: url(/images/grab.png), move;
+      &:active {cursor: url(/images/grabbing.png), move;};
     }
     .name {
-      float: left;
-      margin-left: 13px;
+      @include float-left;
+      margin-left: 16px;
       width: 388px;
       .items_count {
         display: inline;
@@ -197,7 +166,7 @@ form#new_session {
     }
     .delete.button {
       text-decoration: none;
-      float: right;
+      @include float-right;
     }
   }
 }
@@ -205,18 +174,15 @@ form#new_session {
 #list {
   #info {
     text-align: center;
-    margin: 8px 0 16px 0;
+    margin: 3px 0 16px 0;
     #name {
-      display: inline;
       font-size: 1.5em;
       font-weight: bold;
       text-decoration: none;
     }
     form {
       input[type="text"] {
-        margin-left: auto;
-        margin-right: auto;
-        display: inline;
+        margin: 0 auto 0 auto;
         width: 300px;
       }
       .loader {
@@ -227,11 +193,9 @@ form#new_session {
     }
   }
   form#new_item {
-    text-align: center;;
-    margin-bottom: 32px;
-    margin-top: 32px;
+    text-align: center;
+    margin: 32px 0 25px 0;
     .fields{
-      display: inline;
       #item_body {width: 300px; margin-right: 11px;}
       input[type="submit"] {width: 80px;}
     }
@@ -242,52 +206,41 @@ form#new_session {
     }
   }
   .items {
-    @include border-radius(7px);
     .item {
       @include clearfix;
-      $top-color: #bbb;
-      $bottom-color: #999;
-      cursor: url(/images/grab.png), default;
       @include border-radius(5px);
       background-color: #ddd;
       color: #333;
       margin-bottom: 3px;
       font-size: 0.8em;
-      @include clearfix;
+      cursor: url(/images/grab.png), default;
       &:active {cursor: url(/images/grabbing.png), default;}
-      &:hover {
-//        background-color: #e5e5e5;
-        @include opacity(0.7);
-      }
+      &:hover {@include opacity(0.7);}
       .checkbox_wrapper {
-        display: inline;
-        float: left;
+        @include float-left;
         padding: 11px;
         cursor: default;
       }
-      .item_complete {
-        float: left;;
-      }
       .body {
         padding: 10px 0 8px 0;
-        float: left;
+        @include float-left;
         width: 388px;
         line-height: 1.8em;
       }
       input.item_body {
-        float: left;
+        @include float-left;
         width: 393px;
         padding: 0px;
         margin: 12px 0 12px 0;
       }
       .loader {
+        @include float-left;
         margin: 12px 0px 12px 12px;
         visibility: hidden;
-        float: left;
       }
       .delete_wrapper {
         .delete.button {
-          float: right;
+          @include float-right;
           padding: 12px;
           text-decoration: none;
           color: #aaa;
@@ -298,24 +251,10 @@ form#new_session {
     .item.complete {
       background-color: #eee;
       color: #aaa;
-      .delete.button {
-        @include opacity(0.5);
-        &:hover {@include opacity(0.3);}
-      }
+      .delete.button {@include opacity(0.8); &:hover {@include opacity(0.8);}}
     }
   }
   #completed_items {
-    margin-bottom: 32px;
     .item {cursor: default;}
-  }
-  
-  #hint {
-    display: none;
-    text-align: center;
-    padding: 16px;
-    margin-top: 32px;
-    color: #aaa;
-    background-color: #fff;
-    @include border-radius(8px)
   }
 }

@@ -1,7 +1,7 @@
 -@title = "My lists"
 #user[current_user]
   .nav
-    =link_to 'new list', new_list_path, :class => "new_list button"
+    =link_to 'create new list', new_list_path, :class => "new_list button"
   %ul#lists
     -for list in @lists
       %li.list{:id => list.id}

@@ -1,5 +1,4 @@
 class SessionController < ApplicationController
-  
   def new
     if current_user
       redirect_to lists_path
