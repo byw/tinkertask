@@ -1,5 +1,5 @@
 rails -v 2.3.8
-formtastic -v 0.9.10
+formtastic --version '>=1.1.0'
 mongo --version '>=1.0.8'
 mongo_mapper --version '>=0.8.4'
 haml
