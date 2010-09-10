@@ -3,6 +3,6 @@ mongo --version '>=1.0.8'
 mongo_mapper --version '>=0.8.4'
 haml
 inherited_resources -v 1.0.6
-formtastic
+formtastic -v 0.9.10
 bson_ext --version '>=1.0.7'
 exceptional --version '>=2.0.25'
