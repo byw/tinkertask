@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   helper_method :current_user
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  rescue_from MongoMapper::DocumentNotFound, :with => :render_404
 
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
@@ -39,5 +40,9 @@ class ApplicationController < ActionController::Base
           controller.params[name].except!(*opts[:deny]) if opts[:deny]
         end
       end
+    end
+    
+    def render_404
+      render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
     end
 end
