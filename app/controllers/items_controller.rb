@@ -32,11 +32,11 @@ class ItemsController < ApplicationController
   protected
   
     def resource
-      @item ||= list.items.find(params[:id])
+      @item ||= list.items.find!(params[:id])
     end
   
     def list
-      @list ||= current_user.lists.find(params[:list_id])
+      @list ||= current_user.lists.find!(params[:list_id])
     end
   
     def build_resource

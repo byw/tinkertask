@@ -34,7 +34,7 @@ class ListsController < ApplicationController
     end
     
     def resource
-      @list ||= current_user.lists.find(params[:id])
+      @list ||= current_user.lists.find!(params[:id])
     end
   
     def collection
