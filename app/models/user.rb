@@ -10,10 +10,12 @@ class User
   key :email, String
   attr_accessor :password, :password_confirmation
   
+  EMAIL_MATCHER = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates_length_of :username, :within => 2..100, :message => 'should be 2 to 100 characters long'
   validates_format_of :username, :with => /^[a-z|0-9|-]+$/, :message => 'can only contain letters, numbers, and -'
-  validates_length_of :password, :within => 5..100, :message => 'should be 5 to 100 characters long'
-  validates_confirmation_of :password
+  validates_length_of :password, :within => 5..100, :message => 'should be 5 to 100 characters long', :allow_blank => true
+  validates_confirmation_of :password, :allow_blank => true
+  validates_format_of :email, :with => EMAIL_MATCHER, :allow_blank => true, :message => "please enter a valid email"
   
   def password=(pw)
     unless pw.blank?

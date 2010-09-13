@@ -56,8 +56,12 @@ a {
 }
 
 .formtastic {
-  li {margin: 8px 0 8px 0;}
+  li {
+    margin: 8px 0 8px 0;
+    list-style: none;
+  }
   label {
+    text-transform: lowercase;
     display: block;
     margin-bottom: 8px;
   }
@@ -116,22 +120,6 @@ input[type="button"], input[type="submit"] {
   color: #fff;
   background-color: #CC3333;
   font-weight: bold;
-}
-
-#new_feedback {
-  text-align: center;
-  .fields {
-    width: 350px;
-    margin: 50px auto 0px auto;
-    label {
-      text-align: left;
-      margin-bottom: 8px;
-    }
-    input {margin-bottom: 8px;}
-  }
-  input[type="submit"] {
-    margin-top: 21px;
-  }
 }
 
 #home {
