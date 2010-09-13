@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :lists, :collection => {:reorder => :post} do |list|
     list.resources :items, :collection => {:reorder => :post}
   end
+  map.resources :feedbacks, :only => [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

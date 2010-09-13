@@ -1,0 +1,13 @@
+-semantic_form_for @feedback do |form|
+  .fields
+    -email = current_user && current_user.email
+    -unless email
+      =form.input :email
+    =#text_area_tag "feedback[body]", '', :class => 'field'
+    =form.input :body, :as => :text
+    =submit_tag "submit feedback"
+    
+:javascript
+  $(document).ready(function(e) {
+    $("#new_feedback .field:first").focus();
+  });

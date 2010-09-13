@@ -7,8 +7,12 @@ class User
   key :username, String, :unique => true, :required => true
   key :crypted_password, String
   key :salt, String
+  key :email, String
   attr_accessor :password, :password_confirmation
   
+  validates_length_of :username, :within => 2..100, :message => 'should be 2 to 100 characters long'
+  validates_format_of :username, :with => /^[a-z|0-9|-]+$/, :message => 'can only contain letters, numbers, and -'
+  validates_length_of :password, :within => 5..100, :message => 'should be 5 to 100 characters long'
   validates_confirmation_of :password
   
   def password=(pw)
@@ -28,7 +32,7 @@ class User
   end
   
   def self.encrypt_password(pass, saline)
-    Digest::SHA256.hexdigest(pass + "bompalompalomp" + saline)
+    Digest::SHA256.hexdigest(pass + "iampopeyethesailormanhoothoot" + saline)
   end
   
   def self.authenticate(login, pass)

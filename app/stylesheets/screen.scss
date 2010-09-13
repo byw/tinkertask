@@ -35,9 +35,16 @@ body {
       a {text-decoration: none;}
     }
     #footer {
+      display: block;
       color: #ccc;
-      padding: 32px;
+      padding: 32px 0 32px 0;
       text-align: center;
+      a.feedback {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        &:hover {@include opacity(0.8);}
+      }
     }
   }
 }
@@ -78,6 +85,19 @@ input[type="text"], input[type="password"] {
   width: 350px;
   @include border-radius(5px);
 }
+label {display: block;
+}
+textarea {
+  width: 350px;
+  height: 200px;
+  padding: 5px;
+  @include border-radius(5px);
+  border: {
+    width: 3px;
+    color: #ccc #fff #fff #ccc;
+    style: solid;
+  }
+}
 input[type="button"], input[type="submit"] {
   border: none;
   @include border-radius(3px);
@@ -98,7 +118,58 @@ input[type="button"], input[type="submit"] {
   font-weight: bold;
 }
 
+#new_feedback {
+  text-align: center;
+  .fields {
+    width: 350px;
+    margin: 50px auto 0px auto;
+    label {
+      text-align: left;
+      margin-bottom: 8px;
+    }
+    input {margin-bottom: 8px;}
+  }
+  input[type="submit"] {
+    margin-top: 21px;
+  }
+}
+
+#home {
+  padding-left: 88px;
+  @include clearfix;
+  margin: 0 auto 21px auto;
+  
+  .logo {
+    float: left;
+    margin-right: 3px;
+  }
+  
+  #description {
+    margin-top: 25px;
+    #app_name {
+      font-family: 'courier';
+      font-size: 2em;
+      font-weight: bold;
+      #task {
+        margin-left: -0.5em;
+        color: #aaa;
+      }
+    }
+    .pitch {
+  //    font-weight: bold;
+      list-style: square;
+      font-family: 'courier';
+      color: #888;
+      font-size: 1em;
+      line-height: 1.5em;
+  //    list-style: square;
+      margin-left: 50px;
+    }
+  }
+}
+
 form#new_session {
+//    @include clearfix;
   width: 300px;
   margin: 0 auto 0 auto;
   .fields {
@@ -111,7 +182,7 @@ form#new_session {
     }
     label {
       @include float-left;
-      margin-top: 11px;
+      margin: 11px 0 0 0;
     }
     input[type="submit"] {
       @include float-right;
@@ -119,7 +190,16 @@ form#new_session {
       margin: 3px 0 8px 0;
     }
   }
-  a {@include float-right;}
+  a.signup {
+    @include border-radius(5px);
+    margin-top: 16px;
+    background-color: #aaa;
+    color: #fff;
+    @include float-right;
+    padding: 16px;
+    text-decoration: none;
+    &:hover{background-color: #ccc;}
+  }
 }
 
 .nav {

@@ -1,3 +1,17 @@
+#home
+  =image_tag "logo_medium.png", :title => "Tinker the taskbot", :class => 'logo'
+  #description
+    #app_name
+      Tinker
+      %span#task Task
+      %br
+      \----------
+    %ul.pitch
+      %li darn-simple todo-list
+      %li in-place sorting
+      %li double-click editing
+
+
 -@title = "Login"
 -if flash[:login_error]
   #login_error 
@@ -12,4 +26,9 @@
       remember me
     =submit_tag "login", :id => "login_button"
 
-  =link_to 'instant sign up', new_user_path, :class => "signup"
+  =link_to '(almost) instant <b>sign up</b>', new_user_path, :class => "signup"
+  
+:javascript
+  $(document).ready(function() {
+    $("#username").select();
+  });
