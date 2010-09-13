@@ -3,3 +3,8 @@
   =render :partial => "users/form", :object => form
   -form.buttons do
     =form.commit_button "sign up instantly"
+    
+:javascript
+  $(document).ready(function() {
+    $("#user_username").select();
+  });
