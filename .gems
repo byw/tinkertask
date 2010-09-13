@@ -2,7 +2,7 @@ rails -v 2.3.8
 formtastic -v 1.0.1
 mongo --version '>=1.0.8'
 mongo_mapper --version '>=0.8.4'
-bson_ext
+bson_ext --version '>=1.0.7'
 haml
 inherited_resources -v 1.0.6
 bson_ext --version '>=1.0.7'
