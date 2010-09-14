@@ -4,7 +4,7 @@
     -email = current_user && current_user.email || ''
     =form.input :email, :label => "your email address"
     =#text_area_tag "feedback[body]", '', :class => 'field'
-    =form.input :body, :as => :text
+    =form.input :body, :as => :text, :label => "feedback"
     =submit_tag "submit feedback"
     
 :javascript

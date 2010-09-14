@@ -1,11 +1,16 @@
 #home
-  =image_tag "logo_medium.png", :title => "Tinker the taskbot", :class => 'logo'
+  =link_to image_tag("logo_medium.png", :title => "Tinker the taskbot", :class => 'logo'), "/"
   #description
     #app_name
       Tinker
       %span#task Task
       %br
-      \----------
+      \--
+      %span.foo>< -
+      \---
+      %span.bar>< -
+      %span.baz>< -
+      \--
     %ul.pitch
       %li darn-simple todo-list
       %li in-place sorting
@@ -13,8 +18,9 @@
 
 
 -if flash[:login_error]
-  #login_error 
-    =flash[:login_error]
+  #error_wrapper
+    #login_error
+      =flash[:login_error]
 
 -form_tag session_path, :id => 'new_session' do
   .fields

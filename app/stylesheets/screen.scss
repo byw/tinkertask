@@ -30,14 +30,15 @@ body {
       }
       #account {
         @include float-right;
-        .separator {color: #CC6600; font-weight: bold;}
+        .separator {color: goldenrod; font-weight: bold;}
       }
       a {text-decoration: none;}
     }
     #footer {
       display: block;
       color: #ccc;
-      padding: 32px 0 32px 0;
+      padding: 58px 0 32px 0;
+      @include clearfix;
       text-align: center;
       a.feedback {
         display: block;
@@ -101,15 +102,20 @@ input[type="button"], input[type="submit"] {
   &:hover {background-color: #ccc;}
 }
 
-#login_error {
-  @include border-radius(8px);
+#error_wrapper {
   @include clearfix;
-  width: 7em;
-  margin: 0 auto 16px auto;  
   padding: 11px;
-  color: #fff;
-  background-color: #CC3333;
-  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+  #login_error {
+    @include border-radius(8px);
+    display: inline;
+    padding: 11px;
+    color: #fff;
+    background-color: #CC3333;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
 #home {
@@ -128,6 +134,9 @@ input[type="button"], input[type="submit"] {
       font-family: 'courier';
       font-size: 2em;
       font-weight: bold;
+      .foo {color: cyan;}
+      .bar {color: magenta;}
+      .baz {color: yellow;}
       #task {
         margin-left: -0.5em;
         color: #aaa;
@@ -147,8 +156,9 @@ input[type="button"], input[type="submit"] {
 }
 
 form#new_session {
-//    @include clearfix;
+  @include clearfix;
   width: 300px;
+  padding: 8px;
   margin: 0 auto 0 auto;
   .fields {
     @include float-left;

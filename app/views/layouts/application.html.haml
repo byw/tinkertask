@@ -23,5 +23,7 @@
       #content
         =yield
       #footer
-        -unless controller_name == 'session' || controller_name == 'feedbacks'
-          =link_to "#{image_tag("logo_tiny_dim.png", :title => "Tinker the taskbot", :class => 'logo')}<br />feedback", new_feedback_path, :class => 'feedback'
+        -unless controller_name == 'feedbacks'
+          %a.feedback{:href => new_feedback_path}
+            =image_tag("logo_tiny_dim.png", :title => "Tinker the taskbot", :class => 'logo') unless controller_name == 'session'
+            feedback

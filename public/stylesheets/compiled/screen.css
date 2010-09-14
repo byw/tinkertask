@@ -98,7 +98,7 @@ body #container #header #account {
 }
 /* line 33, ../../../app/stylesheets/screen.scss */
 body #container #header #account .separator {
-  color: #CC6600;
+  color: goldenrod;
   font-weight: bold;
 }
 /* line 35, ../../../app/stylesheets/screen.scss */
@@ -109,16 +109,22 @@ body #container #header a {
 body #container #footer {
   display: block;
   color: #ccc;
-  padding: 32px 0 32px 0;
+  padding: 58px 0 32px 0;
+  overflow: hidden;
+  display: inline-block;
   text-align: center;
 }
-/* line 42, ../../../app/stylesheets/screen.scss */
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body #container #footer {
+  display: block;
+}
+/* line 43, ../../../app/stylesheets/screen.scss */
 body #container #footer a.feedback {
   display: block;
   color: #ccc;
   text-decoration: none;
 }
-/* line 46, ../../../app/stylesheets/screen.scss */
+/* line 47, ../../../app/stylesheets/screen.scss */
 body #container #footer a.feedback:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -129,35 +135,35 @@ body #container #footer a.feedback:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 53, ../../../app/stylesheets/screen.scss */
+/* line 54, ../../../app/stylesheets/screen.scss */
 a:link {
   color: #888;
 }
-/* line 54, ../../../app/stylesheets/screen.scss */
+/* line 55, ../../../app/stylesheets/screen.scss */
 a:visited {
   color: #888;
 }
-/* line 55, ../../../app/stylesheets/screen.scss */
+/* line 56, ../../../app/stylesheets/screen.scss */
 a:hover {
   color: #aaa;
 }
 
-/* line 59, ../../../app/stylesheets/screen.scss */
+/* line 60, ../../../app/stylesheets/screen.scss */
 .formtastic li {
   margin: 8px 0 8px 0;
   list-style: none;
 }
-/* line 63, ../../../app/stylesheets/screen.scss */
+/* line 64, ../../../app/stylesheets/screen.scss */
 .formtastic label {
   text-transform: lowercase;
   display: block;
   margin-bottom: 8px;
 }
-/* line 68, ../../../app/stylesheets/screen.scss */
+/* line 69, ../../../app/stylesheets/screen.scss */
 .formtastic abbr {
   color: #993333;
 }
-/* line 69, ../../../app/stylesheets/screen.scss */
+/* line 70, ../../../app/stylesheets/screen.scss */
 .formtastic .inline-errors {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -174,7 +180,7 @@ a:hover {
   font-size: 0.8em;
 }
 
-/* line 80, ../../../app/stylesheets/screen.scss */
+/* line 81, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"], textarea {
   border-width: 3px;
   border-color: #ccc #fff #fff #ccc;
@@ -191,12 +197,12 @@ input[type="text"], input[type="password"], textarea {
   border-radius: 5px;
 }
 
-/* line 92, ../../../app/stylesheets/screen.scss */
+/* line 93, ../../../app/stylesheets/screen.scss */
 textarea {
   height: 200px;
 }
 
-/* line 95, ../../../app/stylesheets/screen.scss */
+/* line 96, ../../../app/stylesheets/screen.scss */
 input[type="button"], input[type="submit"] {
   border: none;
   -moz-border-radius: 3px;
@@ -209,34 +215,40 @@ input[type="button"], input[type="submit"] {
   padding: 7px 8px 7px 8px;
   color: #fff;
 }
-/* line 101, ../../../app/stylesheets/screen.scss */
+/* line 102, ../../../app/stylesheets/screen.scss */
 input[type="button"]:hover, input[type="submit"]:hover {
   background-color: #ccc;
 }
 
-/* line 104, ../../../app/stylesheets/screen.scss */
-#login_error {
+/* line 105, ../../../app/stylesheets/screen.scss */
+#error_wrapper {
+  overflow: hidden;
+  display: inline-block;
+  padding: 11px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+#error_wrapper {
+  display: block;
+}
+/* line 110, ../../../app/stylesheets/screen.scss */
+#error_wrapper #login_error {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   -o-border-radius: 8px;
   -ms-border-radius: 8px;
   -khtml-border-radius: 8px;
   border-radius: 8px;
-  overflow: hidden;
-  display: inline-block;
-  width: 7em;
-  margin: 0 auto 16px auto;
+  display: inline;
   padding: 11px;
   color: #fff;
   background-color: #CC3333;
   font-weight: bold;
-}
-/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-#login_error {
-  display: block;
+  text-align: center;
 }
 
-/* line 115, ../../../app/stylesheets/screen.scss */
+/* line 121, ../../../app/stylesheets/screen.scss */
 #home {
   padding-left: 88px;
   overflow: hidden;
@@ -247,27 +259,39 @@ input[type="button"]:hover, input[type="submit"]:hover {
 #home {
   display: block;
 }
-/* line 120, ../../../app/stylesheets/screen.scss */
+/* line 126, ../../../app/stylesheets/screen.scss */
 #home .logo {
   float: left;
   margin-right: 3px;
 }
-/* line 125, ../../../app/stylesheets/screen.scss */
+/* line 131, ../../../app/stylesheets/screen.scss */
 #home #description {
   margin-top: 25px;
 }
-/* line 127, ../../../app/stylesheets/screen.scss */
+/* line 133, ../../../app/stylesheets/screen.scss */
 #home #description #app_name {
   font-family: 'courier';
   font-size: 2em;
   font-weight: bold;
 }
-/* line 131, ../../../app/stylesheets/screen.scss */
+/* line 137, ../../../app/stylesheets/screen.scss */
+#home #description #app_name .foo {
+  color: cyan;
+}
+/* line 138, ../../../app/stylesheets/screen.scss */
+#home #description #app_name .bar {
+  color: magenta;
+}
+/* line 139, ../../../app/stylesheets/screen.scss */
+#home #description #app_name .baz {
+  color: yellow;
+}
+/* line 140, ../../../app/stylesheets/screen.scss */
 #home #description #app_name #task {
   margin-left: -0.5em;
   color: #aaa;
 }
-/* line 136, ../../../app/stylesheets/screen.scss */
+/* line 145, ../../../app/stylesheets/screen.scss */
 #home #description .pitch {
   list-style: square;
   font-family: 'courier';
@@ -277,17 +301,24 @@ input[type="button"]:hover, input[type="submit"]:hover {
   margin-left: 50px;
 }
 
-/* line 149, ../../../app/stylesheets/screen.scss */
+/* line 158, ../../../app/stylesheets/screen.scss */
 form#new_session {
+  overflow: hidden;
+  display: inline-block;
   width: 300px;
+  padding: 8px;
   margin: 0 auto 0 auto;
 }
-/* line 153, ../../../app/stylesheets/screen.scss */
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+form#new_session {
+  display: block;
+}
+/* line 163, ../../../app/stylesheets/screen.scss */
 form#new_session .fields {
   display: inline;
   float: left;
 }
-/* line 155, ../../../app/stylesheets/screen.scss */
+/* line 165, ../../../app/stylesheets/screen.scss */
 form#new_session .fields input[type="text"], form#new_session .fields input[type="password"] {
   display: block;
   margin-bottom: 8px;
@@ -295,20 +326,20 @@ form#new_session .fields input[type="text"], form#new_session .fields input[type
   display: inline;
   float: left;
 }
-/* line 161, ../../../app/stylesheets/screen.scss */
+/* line 171, ../../../app/stylesheets/screen.scss */
 form#new_session .fields label {
   display: inline;
   float: left;
   margin: 11px 0 0 0;
 }
-/* line 165, ../../../app/stylesheets/screen.scss */
+/* line 175, ../../../app/stylesheets/screen.scss */
 form#new_session .fields input[type="submit"] {
   display: inline;
   float: right;
   font-size: 1em;
   margin: 3px 0 8px 0;
 }
-/* line 171, ../../../app/stylesheets/screen.scss */
+/* line 181, ../../../app/stylesheets/screen.scss */
 form#new_session a.signup {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -324,12 +355,12 @@ form#new_session a.signup {
   padding: 16px;
   text-decoration: none;
 }
-/* line 179, ../../../app/stylesheets/screen.scss */
+/* line 189, ../../../app/stylesheets/screen.scss */
 form#new_session a.signup:hover {
   background-color: #ccc;
 }
 
-/* line 183, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 .nav {
   overflow: hidden;
   display: inline-block;
@@ -340,7 +371,7 @@ form#new_session a.signup:hover {
 .nav {
   display: block;
 }
-/* line 187, ../../../app/stylesheets/screen.scss */
+/* line 197, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button {
   padding: 0.8em 1em 0.8em 1em;
   background-color: #888;
@@ -354,7 +385,7 @@ form#new_session a.signup:hover {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 194, ../../../app/stylesheets/screen.scss */
+/* line 204, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -365,7 +396,7 @@ form#new_session a.signup:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 200, ../../../app/stylesheets/screen.scss */
+/* line 210, ../../../app/stylesheets/screen.scss */
 #lists .list {
   overflow: hidden;
   display: inline-block;
@@ -377,7 +408,7 @@ form#new_session a.signup:hover {
 #lists .list {
   display: block;
 }
-/* line 205, ../../../app/stylesheets/screen.scss */
+/* line 215, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
   display: inline;
   float: left;
@@ -387,74 +418,74 @@ form#new_session a.signup:hover {
   padding: 0.5em;
   cursor: url(/images/grab.png), move;
 }
-/* line 212, ../../../app/stylesheets/screen.scss */
+/* line 222, ../../../app/stylesheets/screen.scss */
 #lists .list .handle:active {
   cursor: url(/images/grabbing.png), move;
 }
-/* line 214, ../../../app/stylesheets/screen.scss */
+/* line 224, ../../../app/stylesheets/screen.scss */
 #lists .list .name {
   display: inline;
   float: left;
   margin-left: 16px;
   width: 388px;
 }
-/* line 218, ../../../app/stylesheets/screen.scss */
+/* line 228, ../../../app/stylesheets/screen.scss */
 #lists .list .name .items_count {
   display: inline;
   color: #888;
   font-size: 0.5em;
   font-weight: bold;
 }
-/* line 225, ../../../app/stylesheets/screen.scss */
+/* line 235, ../../../app/stylesheets/screen.scss */
 #lists .list .delete.button {
   text-decoration: none;
   display: inline;
   float: right;
 }
 
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 243, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
   margin: 3px 0 16px 0;
 }
-/* line 236, ../../../app/stylesheets/screen.scss */
+/* line 246, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 242, ../../../app/stylesheets/screen.scss */
+/* line 252, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   margin: 0 auto 0 auto;
   width: 300px;
 }
-/* line 246, ../../../app/stylesheets/screen.scss */
+/* line 256, ../../../app/stylesheets/screen.scss */
 #list #info form .loader {
   padding: 8px;
   position: absolute;
   visibility: hidden;
 }
-/* line 253, ../../../app/stylesheets/screen.scss */
+/* line 263, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin: 32px 0 25px 0;
 }
-/* line 257, ../../../app/stylesheets/screen.scss */
+/* line 267, ../../../app/stylesheets/screen.scss */
 #list form#new_item .fields #item_body {
   width: 300px;
   margin-right: 11px;
 }
-/* line 258, ../../../app/stylesheets/screen.scss */
+/* line 268, ../../../app/stylesheets/screen.scss */
 #list form#new_item .fields input[type="submit"] {
   width: 80px;
 }
-/* line 260, ../../../app/stylesheets/screen.scss */
+/* line 270, ../../../app/stylesheets/screen.scss */
 #list form#new_item .loader {
   margin: 8px 0 8px 3px;
   position: absolute;
   visibility: hidden;
 }
-/* line 267, ../../../app/stylesheets/screen.scss */
+/* line 277, ../../../app/stylesheets/screen.scss */
 #list .items .item {
   overflow: hidden;
   display: inline-block;
@@ -474,11 +505,11 @@ form#new_session a.signup:hover {
 #list .items .item {
   display: block;
 }
-/* line 275, ../../../app/stylesheets/screen.scss */
+/* line 285, ../../../app/stylesheets/screen.scss */
 #list .items .item:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 276, ../../../app/stylesheets/screen.scss */
+/* line 286, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   -moz-opacity: 0.7;
   -webkit-opacity: 0.7;
@@ -488,14 +519,14 @@ form#new_session a.signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 }
-/* line 277, ../../../app/stylesheets/screen.scss */
+/* line 287, ../../../app/stylesheets/screen.scss */
 #list .items .item .checkbox_wrapper {
   display: inline;
   float: left;
   padding: 11px;
   cursor: default;
 }
-/* line 282, ../../../app/stylesheets/screen.scss */
+/* line 292, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
   padding: 10px 0 8px 0;
   display: inline;
@@ -503,7 +534,7 @@ form#new_session a.signup:hover {
   width: 388px;
   line-height: 1.8em;
 }
-/* line 288, ../../../app/stylesheets/screen.scss */
+/* line 298, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   display: inline;
   float: left;
@@ -511,14 +542,14 @@ form#new_session a.signup:hover {
   padding: 0px;
   margin: 12px 0 12px 0;
 }
-/* line 294, ../../../app/stylesheets/screen.scss */
+/* line 304, ../../../app/stylesheets/screen.scss */
 #list .items .item .loader {
   display: inline;
   float: left;
   margin: 12px 0px 12px 12px;
   visibility: hidden;
 }
-/* line 300, ../../../app/stylesheets/screen.scss */
+/* line 310, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   display: inline;
   float: right;
@@ -526,16 +557,16 @@ form#new_session a.signup:hover {
   text-decoration: none;
   color: #aaa;
 }
-/* line 305, ../../../app/stylesheets/screen.scss */
+/* line 315, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
   color: #c60;
 }
-/* line 309, ../../../app/stylesheets/screen.scss */
+/* line 319, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #eee;
   color: #aaa;
 }
-/* line 312, ../../../app/stylesheets/screen.scss */
+/* line 322, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -545,7 +576,7 @@ form#new_session a.signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 312, ../../../app/stylesheets/screen.scss */
+/* line 322, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -555,7 +586,7 @@ form#new_session a.signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 316, ../../../app/stylesheets/screen.scss */
+/* line 326, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }
