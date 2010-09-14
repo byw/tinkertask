@@ -41,7 +41,6 @@ body {
       @include clearfix;
       text-align: center;
       a.feedback {
-        display: block;
         color: #ccc;
         text-decoration: none;
         &:hover {@include opacity(0.8);}
