@@ -2,6 +2,8 @@ class SessionController < ApplicationController
   def new
     if current_user
       redirect_to lists_path
+    else
+      flash[:login_error] = nil
     end
   end
 
