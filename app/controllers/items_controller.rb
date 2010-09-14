@@ -32,7 +32,7 @@ class ItemsController < ApplicationController
   protected
   
     def resource
-      @item ||= list.items.find!(params[:id])
+      @item ||= list.items.find(params[:id]) || raise(MongoMapper::DocumentNotFound)
     end
   
     def list
