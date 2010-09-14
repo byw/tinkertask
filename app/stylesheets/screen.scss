@@ -155,6 +155,12 @@ input[type="button"], input[type="submit"] {
   }
 }
 
+#feedback_success {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 50px;
+}
+
 form#new_session {
   @include clearfix;
   width: 300px;

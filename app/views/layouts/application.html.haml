@@ -15,6 +15,9 @@
         -if current_user
           -unless controller_name == 'lists' && action_name == 'index'
             =link_to("< back to my lists", lists_path, :id => "my_lists")
+        -else
+          -unless controller_name == 'session'
+            =link_to("< home", "/")
         #account
           -if current_user
             =link_to h(current_user.username), edit_user_path

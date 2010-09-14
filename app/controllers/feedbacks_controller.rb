@@ -10,7 +10,7 @@ class FeedbacksController < ApplicationController
     @feedback.body = params[:feedback][:body]
     if @feedback.valid?
       @feedback.deliver
-      redirect_to "/"
+      render :success
     else
       render :new
     end
