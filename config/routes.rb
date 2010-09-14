@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.login '/login', :controller => 'session', :action => 'new', :conditions => {:method => :get}
+  map.login '/login', :controller => 'session', :action => 'create', :conditions => {:method => :post}
+  map.logout '/logout', :controller => 'session', :action => 'destroy', :conditions => {:method => :delete}
+  
   map.root :controller => "session", :action => "new"
   map.resources :users, :only => [:new, :create], :as => "users"
   map.resource :user, :only => [:edit, :update, :destroy], :as => "user"
