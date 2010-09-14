@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   inherit_resources
   include InheritedResources::DSL
   before_filter :require_user
-  filter_param :item, :allow => [:body]
+  filter_param :item, :allow => [:body, :complete]
   
   create! do |success|
     success.js {render :partial => "lists/item", :object => @item}

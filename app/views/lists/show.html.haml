@@ -125,7 +125,7 @@
     function markComplete(e) {
       var item = $(this).parents(".item:first"),
           url = "/lists/#{@list.id}/items/" + item.attr("id") + ".js",
-          data = {'_method':'put', 'item':{'complete':false}};
+          data = {'_method':'put', 'item':{'complete':$(this).attr("checked")}};
       if (item.hasClass("complete")) {
         item.removeClass("complete");
         //$("#items").append(item);
