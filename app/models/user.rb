@@ -25,7 +25,7 @@ class User
   validates_format_of :email, :with => EMAIL_FORMAT, :allow_blank => true, 
     :message => "please enter a valid email"
     
-  after_save :clear_passwords
+  after_validation :clear_passwords
   
   def password=(pw)
     unless pw.blank?
