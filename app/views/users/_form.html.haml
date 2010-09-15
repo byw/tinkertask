@@ -3,3 +3,8 @@
   =form.input :email, :required => false, :label => "email (optional)"
   =form.input :password, :label => ("password (leave blank if you're not changing)" unless @user.new_record?)
   =form.input :password_confirmation
+  
+:javascript
+  $(document).ready(function() {
+    $('form.user:first .inputs:first li:first input:first, form.user:first .inputs:first li.error:first input:first').select();
+  });
