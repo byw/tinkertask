@@ -29,8 +29,8 @@ class User
     unless pw.blank?
       self.salt = User.generate_salt
       self.crypted_password = User.encrypt_password(pw, self.salt)
-      @password = pw
-    end
+    end  
+    @password = pw
   end
   
   def cookie_code

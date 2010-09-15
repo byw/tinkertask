@@ -11,13 +11,19 @@ class UsersController < ApplicationController
       redirect_to lists_path
     end
     failure.html do
+      @user.password = ""
+      @user.password_confirmation = ""
       render :new
     end
   end
   
   update! do |success, failure|
     success.html {redirect_to lists_path}
-    failure.html {render :edit}
+    failure.html do
+      @user.password = ""
+      @user.password_confirmation = ""
+      render :edit
+    end
   end
   
   protected
