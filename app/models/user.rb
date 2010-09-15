@@ -20,7 +20,7 @@ class User
   validates_presence_of :password, :if => :new_record?
   validates_length_of :password, :within => 5..100, 
     :message => 'should be 5 to 100 characters long', :allow_blank => true
-  validates_confirmation_of :password, :if => Proc.new {|u| !u.password.blank?}
+  validates_confirmation_of :password, :if => Proc.new {|u| u.password && (5..100).include?(u.password.length)}
   
   validates_format_of :email, :with => EMAIL_FORMAT, :allow_blank => true, 
     :message => "please enter a valid email"
