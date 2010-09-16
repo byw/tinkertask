@@ -25,8 +25,6 @@ class User
   validates_format_of :email, :with => EMAIL_FORMAT, :allow_blank => true, 
     :message => "please enter a valid email"
     
-  after_validation :clear_passwords
-  
   def password=(pw)
     unless pw.blank?
       self.salt = User.generate_salt
@@ -54,12 +52,4 @@ class User
       end
     end
   end
-  
-  protected
-  
-    def clear_passwords
-      self.password = ""
-      self.password_confirmation = ""
-    end
-  
 end

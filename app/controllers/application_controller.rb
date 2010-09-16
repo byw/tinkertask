@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
   
+  before_filter :clear_identity_map
+  
   def current_user
     unless @current_user
       unless session[:user_id]
@@ -44,5 +46,10 @@ class ApplicationController < ActionController::Base
     
     def render_404
       render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
+    end
+    
+    def clear_identity_map
+      # clear once per request
+      MongoMapper::Plugins::IdentityMap.clear
     end
 end
