@@ -3,4 +3,21 @@
   =render :partial => "users/form", :object => form
   -form.buttons do
     =form.commit_button "sign up"
+
+-if action_name == 'new'
+  :javascript
+    $(document).ready(function () {
+      var username = $("#user_username"),
+          password = $("#user_password"),
+          password_confirmation = $("#user_password_confirmation");
+        
+      if (username.val()) {
+        if (password.val())
+          password_confirmation.select();
+        else
+          password.select();
+      } else {
+        username.select();
+      }
+    })
     

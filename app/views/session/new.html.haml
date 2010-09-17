@@ -41,7 +41,7 @@
       var username = $("#username").val(),
           password = $("#password").val(),
           href = $(this).attr("href") + "?user[username]=" + username + "&user[password]=" + password;
-      if (username)
+      if (username || password)
         $(this).attr("href", href);
       return true;
     });
