@@ -195,8 +195,9 @@ form#new_session {
   }
   .signup {
     @include border-radius(5px);
-    @include clearfix;
-    margin-top: 30px;
+    //@include clearfix;
+    @include float-right;
+    margin-top: 3px;
     background-color: #aaa;
     //background-color: #6699cc;
     color: #fff;
