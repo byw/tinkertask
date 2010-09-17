@@ -185,22 +185,24 @@ form#new_session {
     }
   }
   hr {
-    margin-top: 16px;
-    margin-bottom: 21px;
+    margin: 11px 0 0 0;
+    //margin-top: 16px;
+    //margin-bottom: 21px;
     @include float-left;
     width: 100%;
-    border-color: #d3d3d3;
+    border-color: #eee;
     border-style: solid;
   }
   a.signup {
     @include border-radius(5px);
-    margin-top: 16px;
-    background-color: #6699cc;
+    @include clearfix;
+    margin-top: 30px;
+    background-color: #aaa;
+    //background-color: #6699cc;
     color: #fff;
     text-align: center;
 //    @include float-left;
     padding: 16px;
-    @include clearfix;
     text-decoration: none;
     &:hover{@include opacity(0.8);}
   }

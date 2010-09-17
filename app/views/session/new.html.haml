@@ -38,4 +38,11 @@
 :javascript
   $(document).ready(function() {
     $("#username").select();
+    $("a.signup").click(function(e) {
+      var username = $("#username").val(),
+          href = $(this).attr("href") + "?user[username]=" + username;
+      if (username)
+        $(this).attr("href", href);
+      return true;
+    });
   });
