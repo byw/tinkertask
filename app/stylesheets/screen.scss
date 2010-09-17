@@ -184,15 +184,25 @@ form#new_session {
       margin: 3px 0 8px 0;
     }
   }
+  hr {
+    margin-top: 16px;
+    margin-bottom: 21px;
+    @include float-left;
+    width: 100%;
+    border-color: #d3d3d3;
+    border-style: solid;
+  }
   a.signup {
     @include border-radius(5px);
     margin-top: 16px;
-    background-color: #aaa;
+    background-color: #6699cc;
     color: #fff;
-    @include float-right;
+    text-align: center;
+//    @include float-left;
     padding: 16px;
+    @include clearfix;
     text-decoration: none;
-    &:hover{background-color: #ccc;}
+    &:hover{@include opacity(0.8);}
   }
 }
 
