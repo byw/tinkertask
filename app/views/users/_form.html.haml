@@ -1,6 +1,6 @@
 -form.inputs do
   =form.input :username if @user.new_record?
-  =form.input :email, :required => false, :label => "email (optional)"
+  =#form.input :email, :required => false, :label => "email (optional)"
   =form.input :password, :label => ("new password" unless @user.new_record?)
   =form.input :password_confirmation
   
