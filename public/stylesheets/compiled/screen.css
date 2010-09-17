@@ -85,7 +85,7 @@ body #container #header {
   display: block;
 }
 /* line 26, ../../../app/stylesheets/screen.scss */
-body #container #header a#my_lists {
+body #container #header a.top_nav {
   display: inline;
   float: left;
   font-weight: bold;

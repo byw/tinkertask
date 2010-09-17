@@ -23,7 +23,7 @@ body {
     #header {
       @include clearfix;
       padding: 16px 0 16px 0;
-      a#my_lists {
+      a.top_nav {
         @include float-left;
         font-weight: bold;
         font-size: 1.2em;
