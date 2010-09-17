@@ -40,7 +40,8 @@
     $("#username").select();
     $("a.signup").click(function(e) {
       var username = $("#username").val(),
-          href = $(this).attr("href") + "?user[username]=" + username;
+          password = $("#password").val(),
+          href = $(this).attr("href") + "?user[username]=" + username + "&user[password]=" + password;
       if (username)
         $(this).attr("href", href);
       return true;

@@ -5,6 +5,16 @@ class UsersController < ApplicationController
 #  before_filter {|c|c.render :text => c.action_name}
   filter_param :user, :allow => [:username, :password, :password_confirmation, :email]
   
+  def new
+    if params[:user]
+      flash[:user] = params[:user]
+      redirect_to new_user_path
+    elsif flash[:user]
+      params[:user] = flash[:user]
+    end  
+    build_resource
+  end
+  
   create! do |success, failure|
     success.html do
       session[:user_id] = @user.id

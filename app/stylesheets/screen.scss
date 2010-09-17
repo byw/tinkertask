@@ -193,7 +193,7 @@ form#new_session {
     border-color: #eee;
     border-style: solid;
   }
-  a.signup {
+  .signup {
     @include border-radius(5px);
     @include clearfix;
     margin-top: 30px;

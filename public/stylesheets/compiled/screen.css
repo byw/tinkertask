@@ -359,7 +359,7 @@ form#new_session hr {
   border-style: solid;
 }
 /* line 196, ../../../app/stylesheets/screen.scss */
-form#new_session a.signup {
+form#new_session .signup {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -376,11 +376,11 @@ form#new_session a.signup {
   text-decoration: none;
 }
 /* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-form#new_session a.signup {
+form#new_session .signup {
   display: block;
 }
 /* line 207, ../../../app/stylesheets/screen.scss */
-form#new_session a.signup:hover {
+form#new_session .signup:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
   -o-opacity: 0.8;
