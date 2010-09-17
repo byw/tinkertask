@@ -11,9 +11,9 @@ class User
   attr_accessor :password, :password_confirmation
   
   EMAIL_FORMAT = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  USERNAME_FORMAT = /^[a-z|0-9|-]+$/
-  validates_format_of :username, :with => USERNAME_FORMAT, 
-    :message => 'can only contain letters, numbers, and -', :allow_blank => true
+  USERNAME_FORMAT = /^[a-z|A-Z|0-9|-]+$/
+  #validates_format_of :username, :with => USERNAME_FORMAT, 
+  #  :message => 'can only contain letters, numbers, and -', :allow_blank => true
   validates_length_of :username, :within => 2..100, :message => 'should be 2 to 100 characters long',
     :if => Proc.new {|u| USERNAME_FORMAT =~ u.username || u.username.blank?}
     
