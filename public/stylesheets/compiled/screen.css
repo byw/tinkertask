@@ -330,26 +330,43 @@ form#new_session .fields {
 }
 /* line 171, ../../../app/stylesheets/screen.scss */
 form#new_session .fields input[type="text"], form#new_session .fields input[type="password"] {
-  display: block;
+  display: inline;
   margin-bottom: 8px;
-  width: 283px;
+  width: 284px;
   display: inline;
   float: left;
 }
 /* line 177, ../../../app/stylesheets/screen.scss */
-form#new_session .fields label {
+form#new_session .fields label.text {
   display: inline;
   float: left;
-  margin: 11px 0 0 0;
+  width: 300px;
+  font-size: 0.8em;
 }
 /* line 181, ../../../app/stylesheets/screen.scss */
+form#new_session .fields label.text span {
+  display: inline;
+  float: left;
+  position: absolute;
+  color: #aaa;
+  padding: 10px;
+}
+/* line 188, ../../../app/stylesheets/screen.scss */
+form#new_session .fields label.remember_label {
+  font-size: 0.7em;
+  display: inline;
+  float: left;
+  display: inline;
+  margin: 11px 0 0 0;
+}
+/* line 194, ../../../app/stylesheets/screen.scss */
 form#new_session .fields input[type="submit"] {
   display: inline;
   float: right;
   font-size: 1em;
   margin: 3px 0 8px 0;
 }
-/* line 187, ../../../app/stylesheets/screen.scss */
+/* line 200, ../../../app/stylesheets/screen.scss */
 form#new_session hr {
   margin: 11px 0 0 0;
   display: inline;
@@ -358,7 +375,7 @@ form#new_session hr {
   border-color: #eee;
   border-style: solid;
 }
-/* line 196, ../../../app/stylesheets/screen.scss */
+/* line 209, ../../../app/stylesheets/screen.scss */
 form#new_session .signup {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -375,7 +392,7 @@ form#new_session .signup {
   padding: 16px;
   text-decoration: none;
 }
-/* line 208, ../../../app/stylesheets/screen.scss */
+/* line 221, ../../../app/stylesheets/screen.scss */
 form#new_session .signup:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -386,7 +403,7 @@ form#new_session .signup:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 212, ../../../app/stylesheets/screen.scss */
+/* line 225, ../../../app/stylesheets/screen.scss */
 .nav {
   overflow: hidden;
   display: inline-block;
@@ -397,7 +414,7 @@ form#new_session .signup:hover {
 .nav {
   display: block;
 }
-/* line 216, ../../../app/stylesheets/screen.scss */
+/* line 229, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button {
   padding: 0.8em 1em 0.8em 1em;
   background-color: #888;
@@ -411,7 +428,7 @@ form#new_session .signup:hover {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 223, ../../../app/stylesheets/screen.scss */
+/* line 236, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -422,7 +439,7 @@ form#new_session .signup:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 229, ../../../app/stylesheets/screen.scss */
+/* line 242, ../../../app/stylesheets/screen.scss */
 #lists .list {
   overflow: hidden;
   display: inline-block;
@@ -434,7 +451,7 @@ form#new_session .signup:hover {
 #lists .list {
   display: block;
 }
-/* line 234, ../../../app/stylesheets/screen.scss */
+/* line 247, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
   display: inline;
   float: left;
@@ -444,74 +461,74 @@ form#new_session .signup:hover {
   padding: 0.5em;
   cursor: url(/images/grab.png), move;
 }
-/* line 241, ../../../app/stylesheets/screen.scss */
+/* line 254, ../../../app/stylesheets/screen.scss */
 #lists .list .handle:active {
   cursor: url(/images/grabbing.png), move;
 }
-/* line 243, ../../../app/stylesheets/screen.scss */
+/* line 256, ../../../app/stylesheets/screen.scss */
 #lists .list .name {
   display: inline;
   float: left;
   margin-left: 16px;
   width: 388px;
 }
-/* line 247, ../../../app/stylesheets/screen.scss */
+/* line 260, ../../../app/stylesheets/screen.scss */
 #lists .list .name .items_count {
   display: inline;
   color: #888;
   font-size: 0.5em;
   font-weight: bold;
 }
-/* line 254, ../../../app/stylesheets/screen.scss */
+/* line 267, ../../../app/stylesheets/screen.scss */
 #lists .list .delete.button {
   text-decoration: none;
   display: inline;
   float: right;
 }
 
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 275, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
   margin: 11px 0 28px 0;
 }
-/* line 265, ../../../app/stylesheets/screen.scss */
+/* line 278, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 271, ../../../app/stylesheets/screen.scss */
+/* line 284, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   margin: 0 auto 0 auto;
   width: 300px;
 }
-/* line 275, ../../../app/stylesheets/screen.scss */
+/* line 288, ../../../app/stylesheets/screen.scss */
 #list #info form .loader {
   padding: 8px;
   position: absolute;
   visibility: hidden;
 }
-/* line 282, ../../../app/stylesheets/screen.scss */
+/* line 295, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin: 32px 0 25px 0;
 }
-/* line 286, ../../../app/stylesheets/screen.scss */
+/* line 299, ../../../app/stylesheets/screen.scss */
 #list form#new_item .fields #item_body {
   width: 300px;
   margin-right: 11px;
 }
-/* line 287, ../../../app/stylesheets/screen.scss */
+/* line 300, ../../../app/stylesheets/screen.scss */
 #list form#new_item .fields input[type="submit"] {
   width: 80px;
 }
-/* line 289, ../../../app/stylesheets/screen.scss */
+/* line 302, ../../../app/stylesheets/screen.scss */
 #list form#new_item .loader {
   margin: 8px 0 8px 3px;
   position: absolute;
   visibility: hidden;
 }
-/* line 296, ../../../app/stylesheets/screen.scss */
+/* line 309, ../../../app/stylesheets/screen.scss */
 #list .items .item {
   overflow: hidden;
   display: inline-block;
@@ -531,11 +548,11 @@ form#new_session .signup:hover {
 #list .items .item {
   display: block;
 }
-/* line 304, ../../../app/stylesheets/screen.scss */
+/* line 317, ../../../app/stylesheets/screen.scss */
 #list .items .item:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 305, ../../../app/stylesheets/screen.scss */
+/* line 318, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   -moz-opacity: 0.7;
   -webkit-opacity: 0.7;
@@ -545,14 +562,14 @@ form#new_session .signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 }
-/* line 306, ../../../app/stylesheets/screen.scss */
+/* line 319, ../../../app/stylesheets/screen.scss */
 #list .items .item .checkbox_wrapper {
   display: inline;
   float: left;
   padding: 11px;
   cursor: default;
 }
-/* line 311, ../../../app/stylesheets/screen.scss */
+/* line 324, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
   padding: 10px 0 8px 0;
   display: inline;
@@ -560,7 +577,7 @@ form#new_session .signup:hover {
   width: 388px;
   line-height: 1.8em;
 }
-/* line 317, ../../../app/stylesheets/screen.scss */
+/* line 330, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   display: inline;
   float: left;
@@ -568,14 +585,14 @@ form#new_session .signup:hover {
   padding: 0px;
   margin: 12px 0 12px 0;
 }
-/* line 323, ../../../app/stylesheets/screen.scss */
+/* line 336, ../../../app/stylesheets/screen.scss */
 #list .items .item .loader {
   display: inline;
   float: left;
   margin: 12px 0px 12px 12px;
   visibility: hidden;
 }
-/* line 329, ../../../app/stylesheets/screen.scss */
+/* line 342, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   display: inline;
   float: right;
@@ -583,16 +600,16 @@ form#new_session .signup:hover {
   text-decoration: none;
   color: #aaa;
 }
-/* line 334, ../../../app/stylesheets/screen.scss */
+/* line 347, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
   color: #c60;
 }
-/* line 338, ../../../app/stylesheets/screen.scss */
+/* line 351, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #eee;
   color: #aaa;
 }
-/* line 341, ../../../app/stylesheets/screen.scss */
+/* line 354, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -602,7 +619,7 @@ form#new_session .signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 341, ../../../app/stylesheets/screen.scss */
+/* line 354, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -612,7 +629,7 @@ form#new_session .signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 345, ../../../app/stylesheets/screen.scss */
+/* line 358, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }

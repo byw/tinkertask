@@ -25,11 +25,15 @@
 
 -form_tag login_path, :id => 'new_session' do
   .fields
-    =text_field_tag :username
-    =password_field_tag :password
+    %label.text(for="username")
+      %span.username username
+      =text_field_tag :username
+    %label.text(for="password")  
+      %span.password password
+      =password_field_tag :password
     %label.remember_label(for="remember_me")
       =check_box_tag :remember_me
-      remember me
+      %span remember me
     =submit_tag "login", :id => "login_button"
 
   =link_to '(almost) instant <b>sign up</b>', new_user_path, :class => "signup"
@@ -41,8 +45,30 @@
       var username = $("#username").val(),
           password = $("#password").val(),
           href = $(this).attr("href") + "?user[username]=" + username + "&user[password]=" + password;
+          
+      if (username == 'username')
+        username = '';
+      if (password == 'password')
+        password = '';
+      
       if (username || password)
         $(this).attr("href", href);
       return true;
     });
+    
+    function toggleLabel(e) {
+      var textField = $(this),
+          label = $(this).siblings("span:first");
+      setTimeout(function() { // a slight delay needed for paste event to catch textfield value
+        if (textField.val() != '')
+          label.fadeOut();
+        else
+          label.fadeIn();
+      }, 100);
+    }
+    var textField = $("label.text input");
+    textField.bind("paste", toggleLabel);
+    textField.keyup(toggleLabel);
+    textField.focus(toggleLabel);
+    textField.blur(toggleLabel);
   });

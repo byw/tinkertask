@@ -169,13 +169,26 @@ form#new_session {
   .fields {
     @include float-left;
     input[type="text"], input[type="password"] {
-      display: block;
+      display: inline;
       margin-bottom: 8px;
-      width: 283px;
+      width: 284px;
       @include float-left;
     }
-    label {
+    label.text {
       @include float-left;
+      width: 300px;
+      font-size: 0.8em;
+      span {
+        @include float-left;
+        position: absolute;
+        color: #aaa;
+        padding: 10px;
+        }
+    }
+    label.remember_label {
+      font-size: 0.7em;
+      @include float-left;
+      display: inline;
       margin: 11px 0 0 0;
     }
     input[type="submit"] {
