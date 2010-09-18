@@ -17,7 +17,11 @@ class ItemsController < ApplicationController
   def destroy
     list.items.delete_if {|i| i == resource}
     list.save
-    redirect_to list_path(list)
+    if request.xhr?
+      render :text => 'ok'
+    else
+      redirect_to list_path(list)
+    end
   end
   
   def reorder

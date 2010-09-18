@@ -8,5 +8,9 @@
     =image_tag("loader_fff_on_ddd.gif", :class => "loader")
   
   .delete_wrapper
-    =link_to 'x', list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"
+    =#link_to 'x', list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"
+    %a.delete.button(href="#" title="delete") x
+    %span.confirm
+      %a.cancel(href="#") cancel 
+      %a.proceed(href="#") delete
     =#link_to image_tag("delete_lite.png"), list_item_path(@list, item), :method => :delete, :confirm => 'Delete this item?', :class => 'delete button', :title => "delete"

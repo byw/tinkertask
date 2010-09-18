@@ -315,7 +315,7 @@ form#new_session {
       font-size: 0.8em;
       cursor: url(/images/grab.png), default;
       &:active {cursor: url(/images/grabbing.png), default;}
-      &:hover {@include opacity(0.7);}
+      &:hover {background-color: #e3e3e3;}
       .checkbox_wrapper {
         @include float-left;
         padding: 11px;
@@ -339,6 +339,23 @@ form#new_session {
         visibility: hidden;
       }
       .delete_wrapper {
+        @include float-right;
+        .confirm {
+          @include border-top-right-radius(3px);
+          @include border-bottom-right-radius(3px);
+          display: none;
+          position: absolute;
+          margin-top: 8px;
+          margin-left: 32px;
+          padding: 5px 8px 5px 8px;
+          background-color: #aaa;
+          a {
+            padding: 5px 0 6px 0;
+            color: #fff;
+            text-decoration: none;
+            &:hover {color: #F0E68C;};
+          }
+        }
         .delete.button {
           @include float-right;
           padding: 12px;

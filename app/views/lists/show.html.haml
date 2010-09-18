@@ -39,6 +39,7 @@
       var form = item.find("form:first");
       form.submit(submitItem);
       item.find('form:first input.item_body').blur(function() {form.submit()});
+      bindDelete(item);
     }
     function editItem(e) {
       var item = $(this).parents(".item:first"),
@@ -65,6 +66,34 @@
         loader.css("visibility", "hidden");
       }, "json");
       return false;
+    }
+    function bindDelete(item) {
+      var xButton = item.find(".delete.button:first"),
+          cancelButton = item.find(".delete_wrapper .confirm a.cancel"),
+          proceedButton = item.find(".delete_wrapper .confirm a.proceed");
+      xButton.click(function(e) {
+        $(this).siblings(".confirm:first").fadeIn(300);
+      });
+      cancelButton.click(function(e) {
+        $(this).parents(".confirm:first").fadeOut(300);
+      });
+      proceedButton.click(function(e) {
+        var item = $(this).parents(".item:first"),
+            itemId = item.attr("id"),
+            confirmBox = $(this).parents(".confirm:first"),
+            url = "/lists/#{@list.id}/items/" + itemId,
+            data = {'_method':'delete'};
+        $.post(url, data, function(data) {
+          alert(data);
+          if (data == 'ok') {
+            confirmBox.fadeOut(300, function() {
+              item.slideUp(500, function() {
+                item.remove();
+              })
+            });
+          }
+        });
+      });
     }
     
     

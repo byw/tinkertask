@@ -554,13 +554,7 @@ form#new_session .signup:hover {
 }
 /* line 318, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
-  -moz-opacity: 0.7;
-  -webkit-opacity: 0.7;
-  -o-opacity: 0.7;
-  -khtml-opacity: 0.7;
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  background-color: #e3e3e3;
 }
 /* line 319, ../../../app/stylesheets/screen.scss */
 #list .items .item .checkbox_wrapper {
@@ -592,7 +586,43 @@ form#new_session .signup:hover {
   margin: 12px 0px 12px 12px;
   visibility: hidden;
 }
-/* line 342, ../../../app/stylesheets/screen.scss */
+/* line 341, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete_wrapper {
+  display: inline;
+  float: right;
+}
+/* line 343, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete_wrapper .confirm {
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -o-border-top-right-radius: 3px;
+  -ms-border-top-right-radius: 3px;
+  -khtml-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -o-border-bottom-right-radius: 3px;
+  -ms-border-bottom-right-radius: 3px;
+  -khtml-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 32px;
+  padding: 5px 8px 5px 8px;
+  background-color: #aaa;
+}
+/* line 352, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete_wrapper .confirm a {
+  padding: 5px 0 6px 0;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 356, ../../../app/stylesheets/screen.scss */
+#list .items .item .delete_wrapper .confirm a:hover {
+  color: #F0E68C;
+}
+/* line 359, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   display: inline;
   float: right;
@@ -600,16 +630,16 @@ form#new_session .signup:hover {
   text-decoration: none;
   color: #aaa;
 }
-/* line 347, ../../../app/stylesheets/screen.scss */
+/* line 364, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
   color: #c60;
 }
-/* line 351, ../../../app/stylesheets/screen.scss */
+/* line 368, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #eee;
   color: #aaa;
 }
-/* line 354, ../../../app/stylesheets/screen.scss */
+/* line 371, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -619,7 +649,7 @@ form#new_session .signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 354, ../../../app/stylesheets/screen.scss */
+/* line 371, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -629,7 +659,7 @@ form#new_session .signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 358, ../../../app/stylesheets/screen.scss */
+/* line 375, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }
