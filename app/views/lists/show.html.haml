@@ -12,7 +12,8 @@
     -for item in @list.items
       -unless item.complete
         =render :partial => "lists/item", :object => item
-        
+    
+    
   %form#new_item(method="post")
     =text_field_tag "item[body]"
     =submit_tag "add item"

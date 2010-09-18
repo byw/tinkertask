@@ -313,7 +313,7 @@ form#new_session {
   }
   form#new_item {
     text-align: center;
-    margin: 32px 0 25px 0;
+    margin: 28px 0 25px 0;
     .fields{
       #item_body {width: 300px; margin-right: 11px;}
       input[type="submit"] {width: 80px;}
@@ -325,6 +325,8 @@ form#new_session {
     }
   }
   .items {
+    @include clearfix;
+    min-height:1px;
     .item {
       @include clearfix;
       @include border-radius(5px);
