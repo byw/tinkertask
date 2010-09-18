@@ -84,7 +84,6 @@
             url = "/lists/#{@list.id}/items/" + itemId,
             data = {'_method':'delete'};
         $.post(url, data, function(data) {
-          alert(data);
           if (data == 'ok') {
             confirmBox.fadeOut(300, function() {
               item.slideUp(500, function() {
