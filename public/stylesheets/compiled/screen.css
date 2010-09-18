@@ -351,21 +351,22 @@ form#new_session .fields label.text {
   display: inline;
   float: left;
   width: 300px;
+  height: 30px;
   font-size: 0.8em;
   margin-bottom: 8px;
 }
-/* line 185, ../../../app/stylesheets/screen.scss */
+/* line 186, ../../../app/stylesheets/screen.scss */
 form#new_session .fields label.text span {
   font-weight: bold;
   width: 300px;
   display: inline;
   float: left;
-  margin-left: -300;
   color: #000;
+  position: absolute;
   padding: 10px;
   z-index: 1;
 }
-/* line 196, ../../../app/stylesheets/screen.scss */
+/* line 197, ../../../app/stylesheets/screen.scss */
 form#new_session .fields label.remember_label {
   font-size: 0.7em;
   display: inline;
@@ -373,14 +374,14 @@ form#new_session .fields label.remember_label {
   display: inline;
   margin: 11px 0 0 0;
 }
-/* line 202, ../../../app/stylesheets/screen.scss */
+/* line 203, ../../../app/stylesheets/screen.scss */
 form#new_session .fields input[type="submit"] {
   display: inline;
   float: right;
   font-size: 1em;
   margin: 3px 0 8px 0;
 }
-/* line 208, ../../../app/stylesheets/screen.scss */
+/* line 209, ../../../app/stylesheets/screen.scss */
 form#new_session hr {
   margin: 11px 0 0 0;
   display: inline;
@@ -389,7 +390,7 @@ form#new_session hr {
   border-color: #eee;
   border-style: solid;
 }
-/* line 217, ../../../app/stylesheets/screen.scss */
+/* line 218, ../../../app/stylesheets/screen.scss */
 form#new_session .signup {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -406,7 +407,7 @@ form#new_session .signup {
   padding: 16px;
   text-decoration: none;
 }
-/* line 229, ../../../app/stylesheets/screen.scss */
+/* line 230, ../../../app/stylesheets/screen.scss */
 form#new_session .signup:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -417,7 +418,7 @@ form#new_session .signup:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 234, ../../../app/stylesheets/screen.scss */
 .nav {
   overflow: hidden;
   display: inline-block;
@@ -428,7 +429,7 @@ form#new_session .signup:hover {
 .nav {
   display: block;
 }
-/* line 237, ../../../app/stylesheets/screen.scss */
+/* line 238, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button {
   padding: 0.8em 1em 0.8em 1em;
   background-color: #888;
@@ -442,7 +443,7 @@ form#new_session .signup:hover {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 244, ../../../app/stylesheets/screen.scss */
+/* line 245, ../../../app/stylesheets/screen.scss */
 .nav .new_list.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -453,7 +454,7 @@ form#new_session .signup:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
 
-/* line 250, ../../../app/stylesheets/screen.scss */
+/* line 251, ../../../app/stylesheets/screen.scss */
 #lists .list {
   overflow: hidden;
   display: inline-block;
@@ -465,7 +466,7 @@ form#new_session .signup:hover {
 #lists .list {
   display: block;
 }
-/* line 255, ../../../app/stylesheets/screen.scss */
+/* line 256, ../../../app/stylesheets/screen.scss */
 #lists .list .handle {
   display: inline;
   float: left;
@@ -475,99 +476,106 @@ form#new_session .signup:hover {
   padding: 0.5em;
   cursor: url(/images/grab.png), move;
 }
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 263, ../../../app/stylesheets/screen.scss */
 #lists .list .handle:active {
   cursor: url(/images/grabbing.png), move;
 }
-/* line 264, ../../../app/stylesheets/screen.scss */
+/* line 265, ../../../app/stylesheets/screen.scss */
 #lists .list .name {
   display: inline;
   float: left;
   margin-left: 16px;
   width: 388px;
 }
-/* line 268, ../../../app/stylesheets/screen.scss */
+/* line 269, ../../../app/stylesheets/screen.scss */
 #lists .list .name .items_count {
   display: inline;
   color: #888;
   font-size: 0.5em;
   font-weight: bold;
 }
-/* line 275, ../../../app/stylesheets/screen.scss */
-#lists .list .delete.button {
+/* line 276, ../../../app/stylesheets/screen.scss */
+#lists .list .delete_wrapper {
+  display: inline;
+  float: right;
+}
+/* line 278, ../../../app/stylesheets/screen.scss */
+#lists .list .delete_wrapper .delete.button {
   text-decoration: none;
   display: inline;
   float: right;
   cursor: pointer;
 }
-/* line 280, ../../../app/stylesheets/screen.scss */
-#lists .list span.confirm_delete {
+/* line 283, ../../../app/stylesheets/screen.scss */
+#lists .list .delete_wrapper span.confirm_delete {
+  display: inline;
+  float: right;
   cursor: pointer;
   display: none;
   background-color: #aaa;
   font-size: 0.8em;
   padding: 5px;
   position: absolute;
-  margin-left: 48px;
+  margin-left: 26px;
   margin-top: -1px;
 }
-/* line 289, ../../../app/stylesheets/screen.scss */
-#lists .list span.confirm_delete a {
+/* line 293, ../../../app/stylesheets/screen.scss */
+#lists .list .delete_wrapper span.confirm_delete a {
   color: #fff;
   text-decoration: none;
 }
-/* line 294, ../../../app/stylesheets/screen.scss */
-#lists .list span.confirm_delete a.cancel:hover {
+/* line 297, ../../../app/stylesheets/screen.scss */
+#lists .list .delete_wrapper span.confirm_delete a.cancel:hover {
   color: #CCFFFF;
 }
-/* line 295, ../../../app/stylesheets/screen.scss */
-#lists .list span.confirm_delete a.proceed:hover {
+/* line 298, ../../../app/stylesheets/screen.scss */
+#lists .list .delete_wrapper span.confirm_delete a.proceed:hover {
   color: #FFCCCC;
 }
 
-/* line 302, ../../../app/stylesheets/screen.scss */
+/* line 306, ../../../app/stylesheets/screen.scss */
 #list #info {
   text-align: center;
   margin: 11px 0 28px 0;
 }
-/* line 305, ../../../app/stylesheets/screen.scss */
+/* line 309, ../../../app/stylesheets/screen.scss */
 #list #info #name {
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 311, ../../../app/stylesheets/screen.scss */
+/* line 315, ../../../app/stylesheets/screen.scss */
 #list #info form input[type="text"] {
   margin: 0 auto 0 auto;
   width: 300px;
 }
-/* line 315, ../../../app/stylesheets/screen.scss */
+/* line 319, ../../../app/stylesheets/screen.scss */
 #list #info form .loader {
   padding: 8px;
   position: absolute;
   visibility: hidden;
 }
-/* line 322, ../../../app/stylesheets/screen.scss */
+/* line 326, ../../../app/stylesheets/screen.scss */
 #list form#new_item {
   text-align: center;
   margin: 28px 0 25px 0;
 }
-/* line 326, ../../../app/stylesheets/screen.scss */
+/* line 330, ../../../app/stylesheets/screen.scss */
 #list form#new_item .fields #item_body {
   width: 300px;
   margin-right: 11px;
 }
-/* line 327, ../../../app/stylesheets/screen.scss */
+/* line 331, ../../../app/stylesheets/screen.scss */
 #list form#new_item .fields input[type="submit"] {
   width: 80px;
 }
-/* line 329, ../../../app/stylesheets/screen.scss */
+/* line 333, ../../../app/stylesheets/screen.scss */
 #list form#new_item .loader {
   margin: 8px 0 8px 3px;
   position: absolute;
   visibility: hidden;
 }
-/* line 336, ../../../app/stylesheets/screen.scss */
+/* line 340, ../../../app/stylesheets/screen.scss */
 #list .items .item {
   overflow: hidden;
   display: inline-block;
@@ -587,22 +595,22 @@ form#new_session .signup:hover {
 #list .items .item {
   display: block;
 }
-/* line 344, ../../../app/stylesheets/screen.scss */
+/* line 348, ../../../app/stylesheets/screen.scss */
 #list .items .item:active {
   cursor: url(/images/grabbing.png), default;
 }
-/* line 345, ../../../app/stylesheets/screen.scss */
+/* line 349, ../../../app/stylesheets/screen.scss */
 #list .items .item:hover {
   background-color: #e3e3e3;
 }
-/* line 346, ../../../app/stylesheets/screen.scss */
+/* line 350, ../../../app/stylesheets/screen.scss */
 #list .items .item .checkbox_wrapper {
   display: inline;
   float: left;
   padding: 11px;
   cursor: default;
 }
-/* line 351, ../../../app/stylesheets/screen.scss */
+/* line 355, ../../../app/stylesheets/screen.scss */
 #list .items .item .body {
   padding: 10px 0 8px 0;
   display: inline;
@@ -610,7 +618,7 @@ form#new_session .signup:hover {
   width: 388px;
   line-height: 1.8em;
 }
-/* line 357, ../../../app/stylesheets/screen.scss */
+/* line 361, ../../../app/stylesheets/screen.scss */
 #list .items .item input.item_body {
   display: inline;
   float: left;
@@ -618,23 +626,23 @@ form#new_session .signup:hover {
   padding: 0px;
   margin: 12px 0 12px 0;
 }
-/* line 363, ../../../app/stylesheets/screen.scss */
+/* line 367, ../../../app/stylesheets/screen.scss */
 #list .items .item .loader {
   display: inline;
   float: left;
   margin: 12px 0px 12px 12px;
   visibility: hidden;
 }
-/* line 368, ../../../app/stylesheets/screen.scss */
+/* line 372, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper {
   display: inline;
   float: right;
 }
-/* line 370, ../../../app/stylesheets/screen.scss */
+/* line 374, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper a {
   cursor: pointer;
 }
-/* line 371, ../../../app/stylesheets/screen.scss */
+/* line 375, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .confirm {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
@@ -655,21 +663,21 @@ form#new_session .signup:hover {
   padding: 5px 8px 5px 8px;
   background-color: #aaa;
 }
-/* line 380, ../../../app/stylesheets/screen.scss */
+/* line 384, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .confirm a {
   padding: 5px 0 6px 0;
   color: #fff;
   text-decoration: none;
 }
-/* line 385, ../../../app/stylesheets/screen.scss */
+/* line 389, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .confirm a.cancel:hover {
   color: #CCFFFF;
 }
-/* line 386, ../../../app/stylesheets/screen.scss */
+/* line 390, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .confirm a.proceed:hover {
   color: #FFCCCC;
 }
-/* line 388, ../../../app/stylesheets/screen.scss */
+/* line 392, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button {
   display: inline;
   float: right;
@@ -677,16 +685,16 @@ form#new_session .signup:hover {
   text-decoration: none;
   color: #aaa;
 }
-/* line 393, ../../../app/stylesheets/screen.scss */
+/* line 397, ../../../app/stylesheets/screen.scss */
 #list .items .item .delete_wrapper .delete.button:hover {
   color: #c60;
 }
-/* line 397, ../../../app/stylesheets/screen.scss */
+/* line 401, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete {
   background-color: #eee;
   color: #aaa;
 }
-/* line 400, ../../../app/stylesheets/screen.scss */
+/* line 404, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -696,7 +704,7 @@ form#new_session .signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 400, ../../../app/stylesheets/screen.scss */
+/* line 404, ../../../app/stylesheets/screen.scss */
 #list .items .item.complete .delete.button:hover {
   -moz-opacity: 0.8;
   -webkit-opacity: 0.8;
@@ -706,7 +714,7 @@ form#new_session .signup:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 }
-/* line 404, ../../../app/stylesheets/screen.scss */
+/* line 408, ../../../app/stylesheets/screen.scss */
 #list #completed_items .item {
   cursor: default;
 }

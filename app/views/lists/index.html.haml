@@ -10,11 +10,12 @@
           =link_to h(list.name), list_path(list)
           .items_count
             #{pluralize(list.active_items_count, "item")}
-        %a.delete.button(title="delete") x
-        =#link_to 'x', "", :class => 'delete button', :title => "delete"
-        %span.confirm_delete
-          %a.cancel() cancel
-          %a.proceed() delete
+        .delete_wrapper
+          %a.delete.button(title="delete") x
+          =#link_to 'x', "", :class => 'delete button', :title => "delete"
+          %span.confirm_delete
+            %a.cancel() cancel
+            %a.proceed() delete
         
 :javascript
   // dragging cursor works properly

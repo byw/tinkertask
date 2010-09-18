@@ -180,15 +180,16 @@ form#new_session {
     label.text {
       @include float-left;
       width: 300px;
+      height: 30px;
       font-size: 0.8em;
       margin-bottom: 8px;
       span {
         font-weight: bold;
         width: 300px;
         @include float-left;
-        //position: absolute;
-        margin-left: -300;
+//        margin-left: -300;
         color: #000;
+        position: absolute;
         padding: 10px;
         z-index: 1;
       }
@@ -272,27 +273,30 @@ form#new_session {
         font-weight: bold;
       }
     }
-    .delete.button {
-      text-decoration: none;
+    .delete_wrapper {
       @include float-right;
-      cursor: pointer;
-    }
-    span.confirm_delete {
-      cursor: pointer;
-      display: none;
-      background-color: #aaa;
-      font-size: 0.8em;
-      padding: 5px;
-      position: absolute;
-      margin-left: 48px;
-      margin-top: -1px;
-      a {
-        color: #fff;
+      .delete.button {
         text-decoration: none;
-//        &:hover {color: #CCFFFF;}
+        @include float-right;
+        cursor: pointer;
       }
-      a.cancel:hover {color: #CCFFFF;}
-      a.proceed:hover {color: #FFCCCC;}
+      span.confirm_delete {
+        @include float-right;
+        cursor: pointer;
+        display: none;
+        background-color: #aaa;
+        font-size: 0.8em;
+        padding: 5px;
+        position: absolute;
+        margin-left: 26px;
+        margin-top: -1px;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        a.cancel:hover {color: #CCFFFF;}
+        a.proceed:hover {color: #FFCCCC;}
+      }
     }
     
   }

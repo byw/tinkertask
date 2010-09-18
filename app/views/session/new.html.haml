@@ -55,21 +55,16 @@
     });
     
     function toggleLabel(e) {
-      var textField = $(this),
-          label = $(this).siblings("span:first");
-      setTimeout(function() { // a slight delay needed for paste event to catch textfield value
-        if (textField.val() != '') {
-          //label.animate({opacity:0}, 300);
-          textField.animate({opacity:1}, 500);
-        } else {
-          //label.animate({opacity:1}, 300);
-          textField.animate({opacity:0.7}, 500);
-        }
-      }, 50);
+      var textField = $(this);
+      setTimeout(function() {
+        if (textField.val() != '')
+          textField.animate({opacity:1}, 300);
+        else
+          textField.animate({opacity:0.7}, 300);
+      }, 100);
     }
     var textField = $("label.text input");
     textField.bind("paste", toggleLabel);
     textField.keyup(toggleLabel);
-    textField.focus(toggleLabel);
-    textField.blur(toggleLabel);
+    textField.change(toggleLabel);
   });
