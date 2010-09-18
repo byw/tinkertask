@@ -267,7 +267,26 @@ form#new_session {
     .delete.button {
       text-decoration: none;
       @include float-right;
+      cursor: pointer;
     }
+    span.confirm_delete {
+      cursor: pointer;
+      display: none;
+      background-color: #aaa;
+      font-size: 0.8em;
+      padding: 5px;
+      position: absolute;
+      margin-left: 48px;
+      margin-top: -1px;
+      a {
+        color: #fff;
+        text-decoration: none;
+//        &:hover {color: #CCFFFF;}
+      }
+      a.cancel:hover {color: #CCFFFF;}
+      a.proceed:hover {color: #FFCCCC;}
+    }
+    
   }
 }
 
@@ -340,21 +359,23 @@ form#new_session {
       }
       .delete_wrapper {
         @include float-right;
+        a {cursor: pointer;}
         .confirm {
           @include border-top-right-radius(3px);
           @include border-bottom-right-radius(3px);
           display: none;
           position: absolute;
           margin-top: 8px;
-          margin-left: 32px;
+          margin-left: 33px;
           padding: 5px 8px 5px 8px;
           background-color: #aaa;
           a {
             padding: 5px 0 6px 0;
             color: #fff;
             text-decoration: none;
-            &:hover {color: #F0E68C;};
           }
+          a.cancel:hover {color: #CCFFFF;}
+          a.proceed:hover {color: #FFCCCC;}
         }
         .delete.button {
           @include float-right;

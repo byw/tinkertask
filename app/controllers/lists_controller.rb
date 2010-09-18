@@ -15,6 +15,10 @@ class ListsController < ApplicationController
     end
   end
   
+  destroy! do |success|
+    success.js {render :text => 'ok'}
+  end
+  
   def reorder
     lists = current_user.lists #cache them in identity map
     new_positions = {}

@@ -10,7 +10,11 @@
           =link_to h(list.name), list_path(list)
           .items_count
             #{pluralize(list.active_items_count, "item")}
-        =link_to 'x', list_path(list), :method => :delete, :confirm => "Delete this list?", :class => 'delete button', :title => "delete"
+        %a.delete.button(title="delete") x
+        =#link_to 'x', "", :class => 'delete button', :title => "delete"
+        %span.confirm_delete
+          %a.cancel() cancel
+          %a.proceed() delete
         
 :javascript
   // dragging cursor works properly
@@ -23,4 +27,28 @@
         
       }, "json");
     }});
+    
+    $(".delete.button").click(function(e) {
+      $(this).siblings(".confirm_delete:first").fadeIn(300);
+    });
+    
+    $(".confirm_delete .cancel").click(function(e) {
+      $(this).parents(".confirm_delete").fadeOut(300);
+    });
+    
+    $(".confirm_delete .proceed").click(function(e) {
+      var list = $(this).parents(".list"),
+          listId = list.attr("id"),
+          url = "/lists/" + listId + ".js",
+          data = {'_method':'delete'};
+      $.post(url, data, function(data) {
+        if (data == 'ok') {
+          list.find(".confirm_delete").fadeOut(300, function() {
+            list.slideUp(500, function() {
+              list.remove();
+            });
+          });
+        }
+      });
+    })
   });
