@@ -73,7 +73,11 @@
           cancelButton = item.find(".delete_wrapper .confirm a.cancel"),
           proceedButton = item.find(".delete_wrapper .confirm a.proceed");
       xButton.click(function(e) {
-        $(this).siblings(".confirm:first").fadeIn(300);
+        var confirmBox = $(this).siblings(".confirm:first");
+        if (confirmBox.css("display") == "none")
+          $(this).siblings(".confirm:first").fadeIn(300);
+        else
+          cancelButton.click();
       });
       cancelButton.click(function(e) {
         $(this).parents(".confirm:first").fadeOut(300);

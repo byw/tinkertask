@@ -29,7 +29,11 @@
     }});
     
     $(".delete.button").click(function(e) {
-      $(this).siblings(".confirm_delete:first").fadeIn(300);
+      var confirmBox = $(this).siblings(".confirm_delete:first")
+      if (confirmBox.css("display") == 'none')
+        confirmBox.fadeIn(300);
+      else
+        confirmBox.find(".cancel:first").click();
     });
     
     $(".confirm_delete .cancel").click(function(e) {
