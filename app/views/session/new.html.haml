@@ -13,9 +13,7 @@
       \---
 
     %ul.pitch
-      %li darn-simple todo-list
-      %li in-place sorting
-      %li double-click editing
+      Awesomest todo lists
 
 
 -if flash[:login_error]
@@ -26,11 +24,11 @@
 -form_tag login_path, :id => 'new_session' do
   .fields
     %label.text(for="username")
-      %span.username username
       =text_field_tag :username
-    %label.text(for="password")  
-      %span.password password
+      %span.username username
+    %label.text(for="password")
       =password_field_tag :password
+      %span.password password
     %label.remember_label(for="remember_me")
       =check_box_tag :remember_me
       %span remember me
@@ -60,11 +58,14 @@
       var textField = $(this),
           label = $(this).siblings("span:first");
       setTimeout(function() { // a slight delay needed for paste event to catch textfield value
-        if (textField.val() != '')
-          label.fadeOut();
-        else
-          label.fadeIn();
-      }, 100);
+        if (textField.val() != '') {
+          //label.animate({opacity:0}, 300);
+          textField.animate({opacity:1}, 500);
+        } else {
+          //label.animate({opacity:1}, 300);
+          textField.animate({opacity:0.7}, 500);
+        }
+      }, 50);
     }
     var textField = $("label.text input");
     textField.bind("paste", toggleLabel);

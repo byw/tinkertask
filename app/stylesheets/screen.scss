@@ -173,17 +173,26 @@ form#new_session {
       margin-bottom: 8px;
       width: 284px;
       @include float-left;
+      z-index: 300;
+      position: absolute;
+      @include opacity(0.7);
+      color: #000;
     }
     label.text {
       @include float-left;
       width: 300px;
       font-size: 0.8em;
+      margin-bottom: 8px;
       span {
+        font-weight: bold;
+        width: 300px;
         @include float-left;
-        position: absolute;
-        color: #aaa;
+        //position: absolute;
+        margin-left: -300;
+        color: #000;
         padding: 10px;
-        }
+        z-index: 1;
+      }
     }
     label.remember_label {
       font-size: 0.7em;
