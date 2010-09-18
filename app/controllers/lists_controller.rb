@@ -42,7 +42,7 @@ class ListsController < ApplicationController
     end
   
     def collection
-      @lists ||= current_user.lists.all
+      @lists ||= current_user.lists.all :order => "position ASC, id ASC"
     end
     
 end
