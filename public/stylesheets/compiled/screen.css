@@ -297,9 +297,8 @@ input[type="button"]:hover, input[type="submit"]:hover {
 /* line 145, ../../../app/stylesheets/screen.scss */
 #home #description .pitch {
   list-style: square;
-  font-family: 'courier';
   color: #888;
-  font-size: 1em;
+  font-size: 1.08em;
   line-height: 1.5em;
   margin-left: 50px;
 }
