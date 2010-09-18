@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   filter_param :item, :allow => [:body, :complete]
   
   create! do |success|
-    success.js {render :partial => "lists/item", :object => @item, :locals => {:hidden => true}}
+    success.js {render :partial => "lists/item", :object => @item}
     success.html {redirect_to list_path(list)}
   end
   

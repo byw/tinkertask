@@ -325,8 +325,6 @@ form#new_session {
     }
   }
   .items {
-    @include clearfix;
-    min-height:1px;
     .item {
       @include clearfix;
       @include border-radius(5px);

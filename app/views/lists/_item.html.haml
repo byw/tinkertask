@@ -1,5 +1,4 @@
--hidden ||= false
-.item{:id => item.id, :class => "#{'complete' if item.complete}", :style => "#{'display:none' if hidden}"}
+.item{:id => item.id, :class => "#{'complete' if item.complete}"}
   .checkbox_wrapper
     =check_box_tag "item[complete]", "1", item.complete, :class => "item_complete"
   .body(title="double-click to edit")
