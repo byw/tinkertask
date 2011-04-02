@@ -20,7 +20,7 @@
     #login_error
       =flash[:login_error]
 
--form_tag login_path, :id => 'new_session' do
+-form_tag session_path, :id => 'new_session' do
   .fields
     %label.text(for="username")
       =text_field_tag :username

@@ -16,7 +16,7 @@ class User
   #  :message => 'can only contain letters, numbers, and -', :allow_blank => true
   validates_length_of :username, :within => 2..100, :message => 'should be 2 to 100 characters long',
     :if => Proc.new {|u| USERNAME_FORMAT =~ u.username || u.username.blank?}
-  validates_exclusion_of :username, :within => %w(username)
+  validates_exclusion_of :username, :in => %w(username)
     
   validates_presence_of :password, :if => :new_record?
   validates_length_of :password, :within => 5..100, 

@@ -45,7 +45,7 @@ class ApplicationController < ActionController::Base
     end
     
     def render_404
-      render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
+      render :file => "#{Rails.root}/public/404.html", :status => 404
     end
     
     def clear_identity_map
