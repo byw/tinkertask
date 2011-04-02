@@ -30,6 +30,6 @@
         =yield
       #footer
         -unless controller_name == 'feedbacks'
-          %a.feedback{:href => new_feedback_path}
+          %a.feedback{:href => 'https://github.com/byw/tinkertask/issues'}
             =image_tag("logo_tiny_dim.png", :title => "Tinker the taskbot", :class => 'logo') unless controller_name == 'session'
-            feedback
+            source/feedback

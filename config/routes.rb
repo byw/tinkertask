@@ -12,7 +12,6 @@ Tinkertask::Application.routes.draw do
       end
     end
   end
-  resources :feedbacks
   #match '/:controller(/:action(/:id))'
   #match '/login' => 'session#new', :as => :login, :via => get
   #match '/login' => 'session#create', :as => :login, :via => post
