@@ -5,15 +5,16 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.5'
 
 gem 'compass'
-gem 'mongo_mapper', :git => 'git://github.com/jnunemaker/mongomapper.git'
 gem 'bson_ext'
+gem 'mongo_mapper', :git => 'git://github.com/jnunemaker/mongomapper.git'
 gem 'haml'
-gem 'inherited_resources', '1.0.6'
+gem 'inherited_resources', '>=1.2.1'
 gem 'formtastic'
 gem 'exceptional'
 
 group :development do
   gem 'mongrel'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :test do

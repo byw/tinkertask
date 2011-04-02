@@ -23,7 +23,7 @@
   $(document).ready(function() {
     $("#lists").sortable({axis:'y', handle:'.handle', tolerance:'pointer', containment:'parent', update:function(event, ui) {
       var url = "#{reorder_lists_path}",
-         data = {lists : $("#lists").sortable('toArray')};
+         data = {lists : $("#lists").sortable('toArray'), authenticity_token:'#{form_authenticity_token}'};
       $.post(url, data, function(data) {
         
       }, "json");
@@ -45,7 +45,7 @@
       var list = $(this).parents(".list"),
           listId = list.attr("id"),
           url = "/lists/" + listId + ".js",
-          data = {'_method':'delete'};
+          data = {'_method':'delete', 'authenticity_token':'#{form_authenticity_token}'};
       $.post(url, data, function(data) {
         if (data == 'ok') {
           list.find(".confirm_delete").fadeOut(300, function() {

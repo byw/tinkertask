@@ -7,9 +7,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   rescue_from MongoMapper::DocumentNotFound, :with => :render_404
 
-  # Scrub sensitive parameters from your log
-  filter_parameter_logging :password
-  
   before_filter :clear_identity_map
   
   def current_user
@@ -17,7 +14,6 @@ class ApplicationController < ActionController::Base
       unless session[:user_id]
         if cookies[:remember_me_id] && cookies[:remember_me_code] && 
            (user = User.find(cookies[:remember_me_id])) && user.cookie_code == cookies[:remember_me_code]
-          
           session[:user_id] = user.id
         end
       end

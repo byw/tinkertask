@@ -15,6 +15,7 @@
     
     
   %form#new_item(method="post")
+    =hidden_field_tag 'authenticity_token', form_authenticity_token
     =text_field_tag "item[body]"
     =submit_tag "add item"
     =image_tag "loader_ccc_on_eee.gif", :class => "loader"
@@ -87,7 +88,7 @@
             itemId = item.attr("id"),
             confirmBox = $(this).parents(".confirm:first"),
             url = "/lists/#{@list.id}/items/" + itemId,
-            data = {'_method':'delete'};
+            data = {'_method':'delete', 'authenticity_token':'#{form_authenticity_token}'};
         $.post(url, data, function(data) {
           if (data == 'ok') {
             confirmBox.fadeOut(300, function() {
@@ -119,7 +120,7 @@
     
     
     $("#items").sortable({axis:"y", containment:'parent', tolerance:'pointer', update:function(event, ui) {
-      var data = {items : $("#items").sortable('toArray')};
+      var data = {items : $("#items").sortable('toArray'), authenticity_token:'#{form_authenticity_token}'};
       $.post("#{reorder_list_items_path(@list)}", data);
     }});
     
@@ -159,7 +160,7 @@
     function markComplete(e) {
       var item = $(this).parents(".item:first"),
           url = "/lists/#{@list.id}/items/" + item.attr("id") + ".js",
-          data = {'_method':'put', 'item':{'complete':$(this).attr("checked")}};
+          data = {'_method':'put', 'item':{'complete':$(this).attr("checked")}, 'authenticity_token':'#{form_authenticity_token}'};
       if (item.hasClass("complete")) {
         item.removeClass("complete");
         //$("#items").append(item);

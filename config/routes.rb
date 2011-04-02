@@ -1,8 +1,11 @@
 Tinkertask::Application.routes.draw do
-  resources :users
-  resource :user
-  resource :session
+  resources :users, :only => [:new, :create]
+  resource :user, :only => [:edit, :update, :destroy]
+  resource :session, :controller => 'session'
   resources :lists do
+    collection do
+      post :reorder
+    end
     resources :items do
       collection do
         post :reorder

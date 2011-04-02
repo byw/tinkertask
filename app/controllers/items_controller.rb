@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  before_filter do
+    #debugger
+  end
   inherit_resources
   include InheritedResources::DSL
   before_filter :require_user
