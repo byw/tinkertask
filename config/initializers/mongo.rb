@@ -1,6 +1,7 @@
-require "#{RAILS_ROOT}/lib/logger_format"
+rails_root = (defined?(Rails) ? Rails.root : RAILS_ROOT).to_s
+require "#{rails_root}/lib/logger_format"
 
-db_config = YAML::load(File.read(RAILS_ROOT + "/config/database.yml"))
+db_config = YAML::load(File.read(rails_root + "/config/database.yml"))
 
 if db_config[Rails.env] && db_config[Rails.env]['adapter'] == 'mongodb'
   mongo = db_config[Rails.env]

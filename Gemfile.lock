@@ -47,10 +47,11 @@ GEM
     activesupport (3.0.5)
     arel (2.0.9)
     bson (1.2.4)
-    bson_ext (1.2.0)
+    bson_ext (1.2.4)
     builder (2.1.2)
     compass (0.10.6)
       haml (>= 3.0.4)
+    database_cleaner (0.6.6)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -110,6 +111,8 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.5.0)
+    shoulda-matchers (1.0.0.beta2)
+    spork (0.9.0.rc4)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -121,6 +124,7 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   compass
+  database_cleaner
   exceptional
   formtastic
   haml
@@ -129,3 +133,5 @@ DEPENDENCIES
   mongo_mapper!
   rails (= 3.0.5)
   rspec-rails
+  shoulda-matchers
+  spork (>= 0.9.0.rc4)

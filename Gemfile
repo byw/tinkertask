@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.5'
 
 gem 'compass'
-gem 'bson_ext'
+gem 'bson_ext', :require => false
 gem 'mongo_mapper', :git => 'git://github.com/jnunemaker/mongomapper.git'
 gem 'haml'
 gem 'inherited_resources', '>=1.2.1'
@@ -19,6 +19,10 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'spork', '>=0.9.0.rc4'
+  gem 'database_cleaner'
+  gem 'capybara'
 end
 
 group :production do
