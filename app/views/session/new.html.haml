@@ -33,7 +33,7 @@
       %span remember me
     =submit_tag "login", :id => "login_button"
 
-  =link_to '(almost) instant <b>sign up</b>', new_user_path, :class => "signup"
+  =link_to raw('(almost) instant <b>sign up</b>'), new_user_path, :class => "signup"
   
 :javascript
   $(document).ready(function() {

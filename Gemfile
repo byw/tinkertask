@@ -11,6 +11,7 @@ gem 'haml'
 gem 'inherited_resources', '>=1.2.1'
 gem 'formtastic'
 gem 'exceptional'
+gem 'jquery-rails'
 
 group :development do
   gem 'mongrel'
