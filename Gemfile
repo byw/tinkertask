@@ -13,7 +13,7 @@ gem 'formtastic'
 gem 'exceptional'
 
 group :development do
-  gem 'mongrel'
+  #gem 'mongrel'
   #gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
