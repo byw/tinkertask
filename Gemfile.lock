@@ -7,6 +7,14 @@ GIT
       activesupport (~> 3.0.0)
       plucky (~> 0.3.6)
 
+GIT
+  remote: git://github.com/koppen/hassle.git
+  revision: bb49cd8b37f5369d08398897caf1b687eaa80458
+  specs:
+    hassle (0.0.1)
+      haml
+      rack
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -116,6 +124,7 @@ DEPENDENCIES
   exceptional
   formtastic
   haml
+  hassle!
   inherited_resources (>= 1.2.1)
   mongo_mapper!
   rails (= 3.0.5)

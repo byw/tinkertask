@@ -20,3 +20,7 @@ end
 group :test do
   gem 'rspec-rails'
 end
+
+group :production do
+  gem 'hassle', :git => "git://github.com/koppen/hassle.git" #fixes compass on heroku
+end
